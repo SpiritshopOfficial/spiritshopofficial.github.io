@@ -51,30 +51,30 @@ path {
 }
 
 .logo {
-  margin: auto auto 5vh;
-  z-index: 1;
-  height: 9vw;
-  max-height: 12vh;
-}
+    margin: auto auto 5vh;
+    z-index: 1;
+    height: 9vw;
+    max-height: 9vh;
+  }
 
 span {
   display: flex;
   align-items: center;
-  margin: 5vh auto auto;
-  z-index: 1;
+    margin: 5vh auto auto;
+    z-index: 1;
 }
 
-.instagram-logo {
-  height: 6vw;
-  max-height: 8vh;
-  margin-right: 5vh;
-}
+  .instagram-logo {
+    height: 6vw;
+    max-height: 6vh;
+    margin-right: 5vh;
+  }
 
-.mixcloud-logo {
-  height: 3vw;
-  max-height: 4vh;
-  margin-right: 5vh;
-}
+  .mixcloud-logo {
+    height: 3vw;
+    max-height: 3vh;
+    margin-right: 5vh;
+  }
 
 .soundcloud-logo {
   height: 4vw;

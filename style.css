@@ -4,14 +4,24 @@
   box-sizing: border-box;
 }
 
-h1, h2 {
+html,
+body,
+div {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
   display: none;
 }
 
 .slider {
   left: 0;
-  width: 100vw;
-  height: 100vh;
   min-height: 120px;
   position: relative;
   overflow: hidden;
@@ -20,39 +30,43 @@ h1, h2 {
   background: #777;
   align-items: center;
   justify-content: center;
-}
-.slider .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  min-height: 120px;
-  filter: grayscale(100%);
-}
-.slider .overlay {
-  display: none;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("https://i.ibb.co/8g7NDx8/overlay-1.png");
-}
-.slider .logo {
-  margin: auto auto 5vh;
-  z-index: 1;
-  width: 75vw;
-  min-height: 1.25rem;
-  max-height: 10vh;
-}
-.slider .logo path {
-  fill: white;
-}
-.slider .instagram-logo {
-  margin: 5vh auto auto;
-  z-index: 1;
-  height: 8vw;
-  min-height: 1.25rem;
-  max-height: 8vh;
-}
-.slider .instagram-logo path {
-  fill: white;
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 120px;
+    filter: grayscale(100%);
+  }
+  .overlay {
+//    display: none;
+    background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0));
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    -webkit-backdrop-filter: blur(0.5px);
+    backdrop-filter: blur(0.5px);
+//    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+//      url("https://i.ibb.co/8g7NDx8/overlay-1.png");
+  }
+  .logo {
+    margin: auto auto 5vh;
+    z-index: 1;
+    height: 9vw;
+    min-height: 1.25rem;
+    max-height: 9vh;
+    path {
+      fill: white;
+    }
+  }
+  .instagram-logo {
+    margin: 5vh auto auto;
+    z-index: 1;
+    height: 9vw;
+    min-height: 1.25rem;
+    max-height: 9vh;
+    path {
+      fill: white;
+    }
+  }
 }
 
 @keyframes opacity-1 {
@@ -72,40 +86,45 @@ h1, h2 {
     opacity: 0;
   }
 }
+
 @keyframes zoom-1 {
   0% {
-    transform: scale(1.5) translate(10%, -10%);
+    transform: scale(1.5) translate(-10%, 0%);
   }
   100% {
-    transform: scale(1) translate 0, 0;
+    transform: scale(1) translate (10%, 10%);
   }
 }
+
 @keyframes zoom-2 {
   0% {
-    transform: scale(1.5) translate(0, 10%);
+    transform: scale(1.5) translate(10%, 0%);
   }
   100% {
-    transform: scale(1) translate 0, 0;
+    transform: scale(1) translate (-10%, 10%);
   }
 }
+
 @keyframes zoom-3 {
   0% {
     transform: scale(1.5) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate 0, 0;
+    transform: scale(1) translate (0%, 10%);
   }
 }
+
 @keyframes zoom-4 {
   0% {
-    transform: scale(1.5) translate(10%, 0);
+    transform: scale(1.5) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate 0, 0;
+    transform: scale(1) translate (0%, 10%);
   }
 }
+
 .slide-1 {
-  background: url("https://i.ibb.co/C951q1X/spiritshop-pic-3.jpg");
+  background: url("https://i.ibb.co/q9KGDRC/spiritshop-pic-7.jpg");
   background-size: cover;
   background-position: center;
   animation: 16s opacity-1 linear infinite, 8s zoom-1 linear infinite;
@@ -119,7 +138,7 @@ h1, h2 {
 }
 
 .slide-3 {
-  background: url("https://i.ibb.co/0jLDFN8/spiritshop-pic-2.jpg");
+  background: url("https://i.ibb.co/5G7MWMt/spiritshop-pic-6.jpg");
   background-size: cover;
   background-position: center;
   animation: 16s opacity-1 linear 8s infinite, 8s zoom-3 linear infinite;
@@ -131,3 +150,4 @@ h1, h2 {
   background-position: center;
   animation: 16s opacity-1 linear 12s infinite, 8s zoom-4 linear 4s infinite;
 }
+

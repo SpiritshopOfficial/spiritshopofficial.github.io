@@ -35,27 +35,17 @@ h2 {
   background: #777;
   align-items: center;
   justify-content: center;
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 120px;
-    filter: grayscale(100%);
-  }
-  .overlay {
-    //    display: none;
-    background: linear-gradient(
-      0deg,
-      rgba(34, 34, 34, 0.5),
-      rgba(34, 34, 34, 0)
-    ),url("https://i.ibb.co/8g7NDx8/overlay-1.png");
-    //filter: blur(8px);
-    //-webkit-filter: blur(8px);
-    //-webkit-backdrop-filter: blur(0.5px);
-    backdrop-filter: blur(0.5px);
-    //    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    //    url("https://i.ibb.co/8g7NDx8/overlay-1.png");
-  }
+}
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 120px;
+  filter: grayscale(100%);
+}
+.slider .overlay {
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)), url("https://i.ibb.co/8g7NDx8/overlay-1.png");
+  backdrop-filter: blur(0.5px);
 }
 
 path {
@@ -132,43 +122,38 @@ svg:hover {
     opacity: 0;
   }
 }
-
 @keyframes zoom-1 {
   0% {
     transform: scale(1.75) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0, 0);
+    transform: scale(1) translate 0, 0;
   }
 }
-
 @keyframes zoom-2 {
   0% {
     transform: scale(1.75) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0, 0);
+    transform: scale(1) translate 0, 0;
   }
 }
-
 @keyframes zoom-3 {
   0% {
     transform: scale(1.75) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0%, 0);
+    transform: scale(1) translate 0%, 0;
   }
 }
-
 @keyframes zoom-4 {
   0% {
     transform: scale(1.75) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0%, 0);
+    transform: scale(1) translate 0%, 0;
   }
 }
-
 .slide-1 {
   background: url("https://i.ibb.co/q9KGDRC/spiritshop-pic-7.jpg");
   background-size: cover;
@@ -196,4 +181,3 @@ svg:hover {
   background-position: center;
   animation: 16s opacity-1 linear 12s infinite, 8s zoom-4 linear 4s infinite;
 }
-

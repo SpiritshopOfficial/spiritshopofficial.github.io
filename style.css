@@ -45,11 +45,10 @@ h2 {
 }
 .slider .overlay {
   background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)), url("https://i.ibb.co/8g7NDx8/overlay-1.png");
-  backdrop-filter: blur(0.5px);
 }
 
 path {
-  fill: white;
+  fill: #fff;
 }
 
 #spiritshop {

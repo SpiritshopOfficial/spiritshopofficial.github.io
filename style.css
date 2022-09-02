@@ -38,14 +38,11 @@ h2 {
     filter: grayscale(100%);
   }
   .overlay {
-//    display: none;
     background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0));
     filter: blur(8px);
     -webkit-filter: blur(8px);
     -webkit-backdrop-filter: blur(0.5px);
     backdrop-filter: blur(0.5px);
-//    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-//      url("https://i.ibb.co/8g7NDx8/overlay-1.png");
   }
   .logo {
     margin: auto auto 5vh;

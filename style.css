@@ -94,9 +94,9 @@ span {
 }
 
 .soundcloud-logo {
-  height: 7vw;
-  max-height: 3.5vh;
-  min-height: 0.7rem;
+  height: 6.5vw;
+  max-height: 3.25vh;
+  min-height: 0.65rem;
 }
 
 svg:hover {

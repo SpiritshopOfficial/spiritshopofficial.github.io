@@ -6,49 +6,52 @@
 
 html,
 body {
-  background: #222222;
-}
-
-html,
-body,
-div {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 html {
-  font-family: sans-serif;
+	font-family: sans-serif;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  color: white;
+  background: #222;
 }
 
-h1,
-h2 {
-  display: none;
-}
-
-.slider {
-  left: 0;
+.slide {
+  width: 100%;
+  height: 100%;
   min-height: 120px;
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-flow: column;
+  scroll-snap-align: start;
+}
+
+#slide-1 {
+  left: 0;
+  position: relative;
+  overflow: hidden;
   background: #777;
   align-items: center;
   justify-content: center;
 }
-.slider .slide {
+
+.img-slide {
   position: absolute;
   top: 0;
   left: 0;
   min-height: 120px;
   filter: grayscale(100%);
 }
-.slider .overlay {
-  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)), url("https://i.ibb.co/8g7NDx8/overlay-1.png");
+
+.overlay {
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)),
+    url("https://i.ibb.co/8g7NDx8/overlay-1.png");
+  backdrop-filter: blur(0.5px);
 }
 
 path {
-  fill: #fff;
+  fill: white;
 }
 
 #spiritshop {
@@ -72,34 +75,25 @@ path {
 span {
   display: flex;
   align-items: center;
-  height: 11vw;
-  max-height: 5.5vh;
-  min-height: 1.1rem;
-  margin: 5vh auto 10vh;
+  justify-content: center;
   z-index: 1;
 }
 
-.instagram-logo {
-  height: 10vw;
-  max-height: 5vh;
-  min-height: 1rem;
-  margin-right: 4vh;
+.space {
+  margin: 5vh auto 10vh;
 }
 
-.mixcloud-logo {
-  height: 5vw;
-  max-height: 2.5vh;
-  min-height: 0.5rem;
-  margin-right: 3.6vh;
+.more {
+  margin: 5vh auto 10vh;
+  background: rgba(255,255,255, 0.25);
+  border-radius: 100rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  width: 2.75rem;
 }
 
-.soundcloud-logo {
-  height: 6.5vw;
-  max-height: 3.25vh;
-  min-height: 0.65rem;
-}
-
-svg:hover {
+svg:hover, .more:hover {
   opacity: 0.75;
   cursor: pointer;
 }
@@ -121,62 +115,172 @@ svg:hover {
     opacity: 0;
   }
 }
+
 @keyframes zoom-1 {
   0% {
     transform: scale(1.75) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate 0, 0;
+    transform: scale(1) translate (0, 0);
   }
 }
+
 @keyframes zoom-2 {
   0% {
     transform: scale(1.75) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate 0, 0;
+    transform: scale(1) translate (0, 0);
   }
 }
+
 @keyframes zoom-3 {
   0% {
     transform: scale(1.75) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate 0%, 0;
+    transform: scale(1) translate (0%, 0);
   }
 }
+
 @keyframes zoom-4 {
   0% {
     transform: scale(1.75) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate 0%, 0;
+    transform: scale(1) translate (0%, 0);
   }
 }
-.slide-1 {
+
+#img-slide-1 {
   background: url("https://i.ibb.co/q9KGDRC/spiritshop-pic-7.jpg");
   background-size: cover;
   background-position: center;
   animation: 16s opacity-1 linear infinite, 8s zoom-1 linear infinite;
 }
 
-.slide-2 {
+#img-slide-2 {
   background: url("https://i.ibb.co/XFXRbnt/spiritshop-pic-4.jpg");
   background-size: cover;
   background-position: center;
   animation: 16s opacity-1 linear 4s infinite, 8s zoom-2 linear 4s infinite;
 }
 
-.slide-3 {
+#img-slide-3 {
   background: url("https://i.ibb.co/5G7MWMt/spiritshop-pic-6.jpg");
   background-size: cover;
   background-position: center;
   animation: 16s opacity-1 linear 8s infinite, 8s zoom-3 linear infinite;
 }
 
-.slide-4 {
+#img-slide-4 {
   background: url("https://i.ibb.co/SdGgpLz/spiritshop-pic-1.jpg");
   background-size: cover;
   background-position: center;
   animation: 16s opacity-1 linear 12s infinite, 8s zoom-4 linear 4s infinite;
+}
+
+#slide-2 {
+  background: #222;
+  animation: 1s bg-pulse-1 linear infinite;
+}
+
+@keyframes bg-pulse-1 {
+  0% {
+    background: #222;
+  }
+  15% {
+    background: #333;
+  }
+  30% {
+    background: #222;
+  }
+  50% {
+    background: #333;
+  }
+}
+
+h1, h2, h3, h4, p {
+  padding: 0 5vw;
+}
+
+h1 {
+  margin: auto auto 2.5vh 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+p {
+  margin: 2.5vh auto auto 0;
+  font-size: 1.2rem;
+}
+
+#slide-player {
+  background: #111;
+}
+
+h2 {
+  margin: auto 0 2.5vh auto;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: auto auto 2.5vh 0;
+}
+
+.date {
+  font-size: calc(8vh + 8vw);
+  margin: 0 auto auto 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#instagram-about-link {
+    text-decoration: underline;
+}
+
+#instagram-about-link:hover {
+  opacity: 0.7;
+}
+
+.player {
+  margin: 2.5vh 5vw auto;
+  height: 180px;
+}
+
+#slide-about {
+  background: url("https://i.ibb.co/jLxWR7T/spiral-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+h4 {
+  margin: auto;
+  font-size: calc(2.5vh + 2.5vw);
+  font-weight: 500;
+}
+
+.instagram-logo {
+  height: 10vw;
+  max-height: 5vh;
+  min-height: 1.5rem;
+  margin-right: calc(2vw + 2vh);
+}
+
+.mixcloud-logo {
+  height: 5vw;
+  max-height: 2.5vh;
+  min-height: 0.75rem;
+  margin-right: calc(1.8vw + 1.8vh);
+}
+
+.soundcloud-logo {
+  height: 6.5vw;
+  max-height: 3.25vh;
+  min-height: 1.05rem;
 }

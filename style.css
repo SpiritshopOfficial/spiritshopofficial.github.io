@@ -11,7 +11,7 @@ html {
   color: white;
   scroll-behavior: smooth;
   background: #222;
-}
+
 
 html,
 body,
@@ -277,7 +277,7 @@ span {
 
 .player {
   margin: 2.5vh 5vw auto;
-  height: 60vh;
+  height: 50vh;
 }
 
 .instagram-logo {

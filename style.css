@@ -214,8 +214,10 @@ a:hover {
   }
 }
 
-h2 {
-  margin: auto 0 2.5vh auto;
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: auto auto 2.5vh 0;
 }
 
 .date {
@@ -281,17 +283,16 @@ h4 {
 
 #slide-player {
   background: #111;
+  padding: 5vh 0 10vh;
 }
 
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: auto auto 2.5vh 0;
+h2 {
+  margin: auto 0 5vh auto;
 }
 
 #player {
-  margin: 2.5vh 5vw auto;
-  height: 50vh;
+  margin: 0 5vw auto;
+  height: 450px;
 }
 
 #slide-gallery {
@@ -392,8 +393,5 @@ p {
   }
   .slide {
     scroll-snap-align: center;
-  }
-  #player {
-  height: 60vh;
   }
 }

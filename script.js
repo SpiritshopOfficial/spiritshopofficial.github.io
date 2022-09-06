@@ -13,3 +13,19 @@ function toogleLogo() {
     logoSwitch = 1;
   }
 }
+
+jQuery(document).on(
+  "click",
+  ".consult-header .consult-primary-menu li a",
+  function (event) {
+    event.preventDefault();
+    var thishref = jQuery(this).attr("href");
+    var url = thishref.substr(thishref.indexOf("#"));
+    jQuery("html, body").animate(
+      {
+        scrollTop: $(url).offset().top
+      },
+      2000
+    );
+  }
+);

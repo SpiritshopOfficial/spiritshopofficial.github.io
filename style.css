@@ -9,7 +9,6 @@ html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   color: white;
-  scroll-behavior: smooth;
 }
 
 html,

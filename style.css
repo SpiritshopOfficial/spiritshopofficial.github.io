@@ -71,12 +71,44 @@ h3 {
   background-size: cover;
   background-position: center;
   text-align: center;
+  position: relative;
+  justify-content: center;
+  
 }
 
 h4 {
   margin: auto;
   font-size: calc(2.5vh + 2.5vw);
   font-weight: 500;
+  position: absolute;
+}
+
+@keyframes about {
+  0% {
+    opacity: 0;
+    transform: translate(0, 15vh);
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, -15vh);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#h4-1{
+  animation: about 12s linear 3s infinite;
+}
+
+#h4-2{
+  animation: about 12s linear -3s infinite;
 }
 
 .date {
@@ -163,12 +195,6 @@ span {
   align-items: center;
   justify-content: center;
   z-index: 1;
-}
-
-.space {
-  height: 20vh;
-  background: url("https://i.ibb.co/D5RSjBj/spiritshop-web-end-background.png");
-  background-size: 20vh;
 }
 
 @keyframes opacity-1 {
@@ -332,4 +358,15 @@ span {
   background: url("https://i.ibb.co/jLDPPKL/spiritshop-pic-5.jpg");
   background-size: cover;
   background-position: 60% 30%;
+}
+
+#dead-end {
+  height: 7rem;
+  background: url("https://i.ibb.co/D5RSjBj/spiritshop-web-end-background.png");
+  background-size: 7rem;
+  margin-bottom: -7rem;
+  padding: 3rem 10vw;
+  line-height: 1rem;
+  color: #555;
+  text-align: center;
 }

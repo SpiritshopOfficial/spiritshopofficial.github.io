@@ -76,10 +76,10 @@ h3 {
 }
 
 h4 {
-  margin: auto;
   font-size: calc(2.5vh + 2.5vw);
   font-weight: 500;
   position: absolute;
+  opacity: 0;
 }
 
 @keyframes about {
@@ -97,17 +97,20 @@ h4 {
     transform: translate(0, -15vh);
     opacity: 0;
   }
+  95% {
+    
+  }
   100% {
     opacity: 0;
   }
 }
 
 #h4-1 {
-  animation: about 12s linear 3s infinite;
+  animation: about 12s linear 2s infinite;
 }
 
 #h4-2 {
-  animation: about 12s linear -3s infinite;
+  animation: about 12s linear 8s infinite;
 }
 
 .date {
@@ -369,4 +372,3 @@ span {
   color: #555;
   text-align: center;
 }
-

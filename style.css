@@ -121,6 +121,7 @@ a:hover {
   background: #777;
   align-items: center;
   justify-content: center;
+  padding: 10vh 0 0;
 }
 
 .img-slide {

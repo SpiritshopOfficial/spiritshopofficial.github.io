@@ -335,8 +335,10 @@ p {
   font-size: 1.25rem;
 }
 
-#socials-links {
+#s#socials-links {
   margin: 2.5vh auto auto;
+  display: flex;
+  align-items: center;
 }
 
 #instagram-logo {

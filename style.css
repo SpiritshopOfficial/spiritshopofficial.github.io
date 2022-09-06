@@ -18,14 +18,14 @@ body,
 .slide,
 .img-slide {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   min-height: 120px;
 }
 
 .slide {
   display: flex;
   flex-flow: column;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 #slide-img-slider {
@@ -243,17 +243,15 @@ h4 {
     opacity: 0;
     transform: translate(0, 15vh);
   }
-  5% {
+  3% {
     opacity: 1;
   }
-  45% {
+  30% {
     opacity: 1;
   }
-  50% {
+  33% {
     transform: translate(0, -15vh);
     opacity: 0;
-  }
-  95% {
   }
   100% {
     opacity: 0;
@@ -261,11 +259,15 @@ h4 {
 }
 
 #h4-1 {
-  animation: about 12s linear 2s infinite;
+  animation: about 18s linear 2s infinite;
 }
 
 #h4-2 {
-  animation: about 12s linear 8s infinite;
+  animation: about 18s linear 8s infinite;
+}
+
+#h4-3 {
+  animation: about 18s linear 14s infinite;
 }
 
 #slide-player {
@@ -297,7 +299,7 @@ h3 {
 
 .gallery-img {
   flex: 1;
-  height: 100vh;
+  height: 90vh;
   scroll-snap-align: center;
 }
 
@@ -362,12 +364,13 @@ p {
 }
 
 #dead-end {
+  margin: 5vh 0 0;
   height: 7rem;
   background: url("https://i.ibb.co/D5RSjBj/spiritshop-web-end-background.png");
   background-size: 7rem;
   margin-bottom: -7rem;
   padding: 3rem 10vw;
   line-height: 1rem;
-  color: #555;
-  text-align: center;
+  color: #444;
 }
+

@@ -7,7 +7,7 @@
 html {
   font-family: sans-serif;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   color: white;
   scroll-behavior: smooth;
   background: #222;

@@ -35,19 +35,6 @@ body,
   scroll-snap-align: start;
 }
 
-@media (min-width: 768px) {
-  html,
-  body,
-  .slide,
-  .img-slide,
-  .gallery-img {
-    height: 90vh;
-  }
-  .slide {
-    scroll-snap-align: center;
-  }
-}
-
 #slide-img-slider {
   left: 0;
   position: relative;
@@ -395,3 +382,18 @@ p {
   color: #444;
 }
 
+@media (min-width: 768px) {
+  html,
+  body,
+  .slide,
+  .img-slide,
+  .gallery-img {
+    height: 90vh;
+  }
+  .slide {
+    scroll-snap-align: center;
+  }
+  #player {
+  height: 60vh;
+  }
+}

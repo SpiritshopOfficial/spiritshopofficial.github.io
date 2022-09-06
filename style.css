@@ -8,7 +8,7 @@ html {
   font-family: sans-serif;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  color: white;
+  color: #fff;
   scroll-behavior: smooth;
   background: #222;
 }
@@ -17,30 +17,32 @@ html,
 body,
 .slide,
 .img-slide {
-  width: calc(100vw - 0.5rem);
-  height: 90vh;
+  width: 100vw;
   min-height: 120px;
+}
+
+html,
+body,
+.slide,
+.img-slide,
+.gallery-img {
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  html,
+  body,
+  .slide,
+  .img-slide,
+  .gallery-img {
+    height: 90vh;
+  }
 }
 
 .slide {
   display: flex;
   flex-flow: column;
   scroll-snap-align: center;
-}
-
-*::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-*::-webkit-scrollbar-track {
-  background: #222;
-}
-*::-webkit-scrollbar-thumb {
-  background: #999;
-  animation: pulse-3 2s linear infinite;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: #bbb;
 }
 
 #slide-img-slider {
@@ -316,7 +318,6 @@ h3 {
 
 .gallery-img {
   flex: 1;
-  height: calc(90vh - 0.5rem);
   scroll-snap-align: center;
 }
 

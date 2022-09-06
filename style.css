@@ -264,10 +264,6 @@ h4 {
   font-weight: 500;
 }
 
-#slide-footer {
-  scroll-snap-align: end;
-}
-
 .instagram-logo {
   height: 10vw;
   max-height: 5vh;

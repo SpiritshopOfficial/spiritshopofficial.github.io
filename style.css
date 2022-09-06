@@ -232,7 +232,7 @@ h2 {
 }
 
 h4 {
-  font-size: calc(2.5vh + 2.5vw);
+  font-size: calc(2vh + 2vw);
   font-weight: 500;
   position: absolute;
   opacity: 0;

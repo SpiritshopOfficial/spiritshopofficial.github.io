@@ -28,124 +28,6 @@ body,
   scroll-snap-align: start;
 }
 
-h1,
-h2,
-h3,
-h4,
-p {
-  padding: 0 5vw;
-}
-
-#slide-footer {
-  text-align: center;
-}
-
-h1 {
-  margin: auto auto 2.5vh;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-
-p {
-  margin: 2.5vh auto 2.5vh;
-  font-size: 1.2rem;
-}
-
-#socials-links {
-  margin: 2.5vh auto auto;
-}
-
-h2 {
-  margin: auto 0 2.5vh auto;
-}
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: auto auto 2.5vh 0;
-}
-
-#slide-about {
-  background: url("https://i.ibb.co/jLxWR7T/spiral-bg.png");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  position: relative;
-  justify-content: center;
-}
-
-h4 {
-  font-size: calc(2.5vh + 2.5vw);
-  font-weight: 500;
-  position: absolute;
-  opacity: 0;
-}
-
-@keyframes about {
-  0% {
-    opacity: 0;
-    transform: translate(0, 15vh);
-  }
-  5% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  50% {
-    transform: translate(0, -15vh);
-    opacity: 0;
-  }
-  95% {
-    
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-#h4-1 {
-  animation: about 12s linear 2s infinite;
-}
-
-#h4-2 {
-  animation: about 12s linear 8s infinite;
-}
-
-.date {
-  font-size: calc(8vh + 8vw);
-  margin: 0 auto 2.5vh 0;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  text-decoration: underline;
-}
-
-a:hover {
-  opacity: 0.75;
-}
-
-#more {
-  z-index: 1;
-  text-decoration: none;
-  text-align: center;
-  margin: 5vh auto auto;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 100rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.75rem;
-  width: 2.75rem;
-}
-
-#stay-tuned {
-  margin: 2.5vh auto auto 0;
-  padding: 0 5vw;
-}
-
 #slide-img-slider {
   left: 0;
   position: relative;
@@ -162,41 +44,6 @@ a:hover {
   left: 0;
   min-height: 120px;
   filter: grayscale(100%);
-}
-
-.overlay {
-  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)),
-    url("https://i.ibb.co/8g7NDx8/overlay-1.png");
-  backdrop-filter: blur(0.5px);
-}
-
-path {
-  fill: white;
-}
-
-#spiritshop {
-  display: block;
-  margin: auto auto 5vh;
-  z-index: 1;
-  height: 10vw;
-  min-height: 1rem;
-  max-height: 10vh;
-}
-
-#house {
-  display: none;
-  margin: auto auto 5vh;
-  z-index: 1;
-  height: 50vw;
-  min-height: 3.3rem;
-  max-height: 25vh;
-}
-
-span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
 }
 
 @keyframes opacity-1 {
@@ -281,6 +128,65 @@ span {
   animation: 16s opacity-1 linear 12s infinite, 8s zoom-4 linear 4s infinite;
 }
 
+.overlay {
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)),
+    url("https://i.ibb.co/8g7NDx8/overlay-1.png");
+  backdrop-filter: blur(0.5px);
+}
+
+path {
+  fill: white;
+}
+
+#spiritshop {
+  display: block;
+  margin: auto auto 5vh;
+  z-index: 1;
+  height: 10vw;
+  min-height: 1rem;
+  max-height: 10vh;
+}
+
+#house {
+  display: none;
+  margin: auto auto 5vh;
+  z-index: 1;
+  height: 50vw;
+  min-height: 3.3rem;
+  max-height: 25vh;
+}
+
+#more {
+  z-index: 1;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vh auto auto;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 100rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  width: 2.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0 5vw;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
 #slide-advertisment {
   background: #222;
   animation: 1s bg-pulse-1 linear infinite;
@@ -301,29 +207,79 @@ span {
   }
 }
 
-.player {
+h2 {
+  margin: auto 0 2.5vh auto;
+}
+
+.date {
+  font-size: calc(8vh + 8vw);
+  margin: 0 auto 2.5vh 0;
+}
+
+#stay-tuned {
+  margin: 2.5vh auto auto 0;
+  padding: 0 5vw;
+}
+
+#slide-about {
+  background: url("https://i.ibb.co/jLxWR7T/spiral-bg.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+}
+
+h4 {
+  font-size: calc(2.5vh + 2.5vw);
+  font-weight: 500;
+  position: absolute;
+  opacity: 0;
+}
+
+@keyframes about {
+  0% {
+    opacity: 0;
+    transform: translate(0, 15vh);
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, -15vh);
+    opacity: 0;
+  }
+  95% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#h4-1 {
+  animation: about 12s linear 2s infinite;
+}
+
+#h4-2 {
+  animation: about 12s linear 8s infinite;
+}
+
+#slide-player {
+  background: #333;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: auto auto 2.5vh 0;
+}
+
+#player {
   margin: 2.5vh 5vw auto;
   height: 50vh;
-}
-
-.instagram-logo {
-  height: 10vw;
-  max-height: 5vh;
-  min-height: 1.5rem;
-  margin-right: calc(2vw + 2vh);
-}
-
-.mixcloud-logo {
-  height: 5vw;
-  max-height: 2.5vh;
-  min-height: 0.75rem;
-  margin-right: calc(1.8vw + 1.8vh);
-}
-
-.soundcloud-logo {
-  height: 6.5vw;
-  max-height: 3.25vh;
-  min-height: 1.05rem;
 }
 
 #slide-gallery {
@@ -347,7 +303,7 @@ span {
 #gallery-img-1 {
   background: url("https://i.ibb.co/0jLDFN8/spiritshop-pic-2.jpg");
   background-size: cover;
-  background-position: 20% 40%;
+  background-position: 70% 40%;
 }
 
 #gallery-img-2 {
@@ -362,6 +318,46 @@ span {
   background-position: 60% 20%;
 }
 
+#slide-footer {
+  text-align: center;
+}
+
+h1 {
+  margin: auto auto 2.5vh;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+p {
+  margin: 2.5vh auto 2.5vh;
+  font-size: 1.2rem;
+}
+
+#socials-links {
+  margin: 2.5vh auto auto;
+}
+
+#instagram-logo {
+  height: 10vw;
+  max-height: 5vh;
+  min-height: 1.5rem;
+  margin-right: calc(2vw + 2vh);
+}
+
+#mixcloud-logo {
+  height: 5vw;
+  max-height: 2.5vh;
+  min-height: 0.75rem;
+  margin-right: calc(1.8vw + 1.8vh);
+}
+
+#soundcloud-logo {
+  height: 6.5vw;
+  max-height: 3.25vh;
+  min-height: 1.05rem;
+}
+
 #dead-end {
   height: 7rem;
   background: url("https://i.ibb.co/D5RSjBj/spiritshop-web-end-background.png");
@@ -372,3 +368,4 @@ span {
   color: #555;
   text-align: center;
 }
+

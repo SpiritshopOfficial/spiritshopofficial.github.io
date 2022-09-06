@@ -351,15 +351,15 @@ span {
 }
 
 #gallery-img-2 {
-  background: url("https://i.ibb.co/C951q1X/spiritshop-pic-3.jpg");
-  background-size: cover;
-  background-position: 60% 20%;
-}
-
-#gallery-img-3 {
   background: url("https://i.ibb.co/jLDPPKL/spiritshop-pic-5.jpg");
   background-size: cover;
   background-position: 60% 30%;
+}
+
+#gallery-img-3 {
+  background: url("https://i.ibb.co/C951q1X/spiritshop-pic-3.jpg");
+  background-size: cover;
+  background-position: 60% 20%;
 }
 
 #dead-end {

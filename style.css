@@ -11,7 +11,7 @@ html {
   color: white;
   scroll-behavior: smooth;
   background: #222;
-
+}
 
 html,
 body,
@@ -114,7 +114,7 @@ a:hover {
   padding: 0 5vw;
 }
 
-#img-slider {
+#slide-img-slider {
   left: 0;
   position: relative;
   overflow: hidden;

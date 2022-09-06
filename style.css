@@ -7,12 +7,9 @@
 html {
   font-family: sans-serif;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   color: white;
-}
-
-html,
-body {
+  scroll-behavior: smooth;
   background: #222;
 }
 

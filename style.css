@@ -335,7 +335,7 @@ p {
   font-size: 1.25rem;
 }
 
-#s#socials-links {
+#socials-links {
   margin: 2.5vh auto auto;
   display: flex;
   align-items: center;
@@ -371,4 +371,3 @@ p {
   color: #555;
   text-align: center;
 }
-

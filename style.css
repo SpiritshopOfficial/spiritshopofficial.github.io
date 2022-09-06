@@ -275,10 +275,6 @@ span {
   }
 }
 
-#slide-player {
-  background: #111;
-}
-
 .player {
   margin: 2.5vh 5vw auto;
   height: 60vh;
@@ -305,7 +301,7 @@ span {
 }
 
 #slide-gallery {
-  background: #000;
+  background: #111;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }

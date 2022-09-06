@@ -4,29 +4,105 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-.slide {
-  width: 100%;
-  height: 100vh;
-}
-
 html {
   font-family: sans-serif;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   color: white;
+}
+
+html,
+body {
   background: #222;
 }
 
-.slide {
+html,
+body,
+.slide,
+.img-slide {
+  width: 100vw;
+  height: 100vh;
   min-height: 120px;
+}
+
+.slide {
   display: flex;
   flex-flow: column;
   scroll-snap-align: start;
 }
 
-#slide-1 {
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0 5vw;
+}
+
+#slide-footer {
+  text-align: center;
+}
+
+h1 {
+  margin: auto auto 2.5vh;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+p {
+  margin: 2.5vh auto 2.5vh;
+  font-size: 1.2rem;
+}
+
+#socials-links {
+  margin: 2.5vh auto auto;
+}
+
+h2 {
+  margin: auto 0 2.5vh auto;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: auto auto 2.5vh 0;
+}
+
+.date {
+  font-size: calc(8vh + 8vw);
+  margin: 0 auto 2.5vh 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+#more {
+  z-index: 1;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vh auto auto;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 100rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  width: 2.75rem;
+}
+
+#stay-tuned {
+  margin: 2.5vh auto auto 0;
+  padding: 0 5vw;
+}
+
+#img-slider {
   left: 0;
   position: relative;
   overflow: hidden;
@@ -55,7 +131,7 @@ path {
 
 #spiritshop {
   display: block;
-  margin: auto;
+  margin: auto auto 5vh;
   z-index: 1;
   height: 10vw;
   min-height: 1rem;
@@ -64,7 +140,7 @@ path {
 
 #house {
   display: none;
-  margin: auto;
+  margin: auto auto 5vh;
   z-index: 1;
   height: 50vw;
   min-height: 3.3rem;
@@ -79,22 +155,7 @@ span {
 }
 
 .space {
-  margin: 5vh auto 10vh;
-}
-
-.more {
-  margin: 5vh auto 10vh;
-  background: rgba(255,255,255, 0.25);
-  border-radius: 100rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.75rem;
-  width: 2.75rem;
-}
-
-svg:hover, .more:hover {
-  opacity: 0.75;
-  cursor: pointer;
+  height: 20vh;
 }
 
 @keyframes opacity-1 {
@@ -179,7 +240,7 @@ svg:hover, .more:hover {
   animation: 16s opacity-1 linear 12s infinite, 8s zoom-4 linear 4s infinite;
 }
 
-#slide-2 {
+#slide-advertisment {
   background: #222;
   animation: 1s bg-pulse-1 linear infinite;
 }
@@ -199,57 +260,13 @@ svg:hover, .more:hover {
   }
 }
 
-h1, h2, h3, h4, p {
-  padding: 0 5vw;
-}
-
-h1 {
-  margin: auto auto 2.5vh 0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-
-p {
-  margin: 2.5vh auto auto 0;
-  font-size: 1.2rem;
-}
-
 #slide-player {
   background: #111;
 }
 
-h2 {
-  margin: auto 0 2.5vh auto;
-}
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: auto auto 2.5vh 0;
-}
-
-.date {
-  font-size: calc(8vh + 8vw);
-  margin: 0 auto auto 0;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-#instagram-about-link {
-    text-decoration: underline;
-}
-
-#instagram-about-link:hover {
-  opacity: 0.7;
-}
-
 .player {
   margin: 2.5vh 5vw auto;
-  height: 180px;
+  height: 60vh;
 }
 
 #slide-about {
@@ -283,3 +300,4 @@ h4 {
   max-height: 3.25vh;
   min-height: 1.05rem;
 }
+

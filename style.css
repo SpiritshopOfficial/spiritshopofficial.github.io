@@ -69,6 +69,19 @@ h3 {
   margin: auto auto 2.5vh 0;
 }
 
+#slide-about {
+  background: url("https://i.ibb.co/jLxWR7T/spiral-bg.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+h4 {
+  margin: auto;
+  font-size: calc(2.5vh + 2.5vw);
+  font-weight: 500;
+}
+
 .date {
   font-size: calc(8vh + 8vw);
   margin: 0 auto 2.5vh 0;
@@ -156,6 +169,8 @@ span {
 
 .space {
   height: 20vh;
+  background: url("https://i.ibb.co/D5RSjBj/spiritshop-web-end-background.png");
+  background-size: 20vh;
 }
 
 @keyframes opacity-1 {
@@ -215,28 +230,28 @@ span {
 #img-slide-1 {
   background: url("https://i.ibb.co/q9KGDRC/spiritshop-pic-7.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 60% 30%;
   animation: 16s opacity-1 linear infinite, 8s zoom-1 linear infinite;
 }
 
 #img-slide-2 {
   background: url("https://i.ibb.co/XFXRbnt/spiritshop-pic-4.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 70% 30%;
   animation: 16s opacity-1 linear 4s infinite, 8s zoom-2 linear 4s infinite;
 }
 
 #img-slide-3 {
   background: url("https://i.ibb.co/5G7MWMt/spiritshop-pic-6.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 55% 40%;
   animation: 16s opacity-1 linear 8s infinite, 8s zoom-3 linear infinite;
 }
 
 #img-slide-4 {
   background: url("https://i.ibb.co/SdGgpLz/spiritshop-pic-1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 45% 40%;
   animation: 16s opacity-1 linear 12s infinite, 8s zoom-4 linear 4s infinite;
 }
 
@@ -269,19 +284,6 @@ span {
   height: 60vh;
 }
 
-#slide-about {
-  background: url("https://i.ibb.co/jLxWR7T/spiral-bg.png");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-
-h4 {
-  margin: auto;
-  font-size: calc(2.5vh + 2.5vw);
-  font-weight: 500;
-}
-
 .instagram-logo {
   height: 10vw;
   max-height: 5vh;
@@ -302,3 +304,38 @@ h4 {
   min-height: 1.05rem;
 }
 
+#slide-gallery {
+  background: #000;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+#gallery-img-wrapper {
+  display: flex;
+  flex-flow: row;
+  width: 270vw;
+}
+
+.gallery-img {
+  flex: 1;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+#gallery-img-1 {
+  background: url("https://i.ibb.co/0jLDFN8/spiritshop-pic-2.jpg");
+  background-size: cover;
+  background-position: 20% 40%;
+}
+
+#gallery-img-2 {
+  background: url("https://i.ibb.co/C951q1X/spiritshop-pic-3.jpg");
+  background-size: cover;
+  background-position: 60% 20%;
+}
+
+#gallery-img-3 {
+  background: url("https://i.ibb.co/jLDPPKL/spiritshop-pic-5.jpg");
+  background-size: cover;
+  background-position: 60% 30%;
+}

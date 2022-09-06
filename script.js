@@ -13,8 +13,3 @@ function toogleLogo() {
     logoSwitch = 1;
   }
 }
-
-function scrollMore() {
-  window.scrollBy(0,window.innerHeight);
-}
-

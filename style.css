@@ -9,6 +9,7 @@ html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   color: white;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -30,6 +31,8 @@ body,
   flex-flow: column;
   scroll-snap-align: start;
 }
+
+
 
 h1,
 h2,

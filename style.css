@@ -29,6 +29,12 @@ body,
   height: 100vh;
 }
 
+.slide {
+  display: flex;
+  flex-flow: column;
+  scroll-snap-align: start;
+}
+
 @media (min-width: 768px) {
   html,
   body,
@@ -37,12 +43,9 @@ body,
   .gallery-img {
     height: 90vh;
   }
-}
-
-.slide {
-  display: flex;
-  flex-flow: column;
-  scroll-snap-align: center;
+  .slide {
+    scroll-snap-align: center;
+  }
 }
 
 #slide-img-slider {

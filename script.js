@@ -1,8 +1,26 @@
+var toggled = 0;
+
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  var tglr = document.getElementById("toggler");
+  if (toggled == 1) {
+    menu.style.top = null;
+    tglr.innerHTML = "Menu";
+    document.body.style.overflow = null;
+    toggled = 0;
+  } else {
+    menu.style.top = "0";
+    tglr.innerHTML = "Close";
+    document.body.style.overflow = "hidden";
+    toggled = 1
+  }
+}
+
 var logoSwitch = 0;
 
 function toogleLogo() {
-  var spiritshop = document.getElementById('spiritshop');
-  var house = document.getElementById('house');
+  var spiritshop = document.getElementById("spiritshop");
+  var house = document.getElementById("house");
   if (logoSwitch == 1) {
     spiritshop.style.display = null;
     house.style.display = null;
@@ -14,18 +32,10 @@ function toogleLogo() {
   }
 }
 
-jQuery(document).on(
-  "click",
-  ".consult-header .consult-primary-menu li a",
-  function (event) {
-    event.preventDefault();
-    var thishref = jQuery(this).attr("href");
-    var url = thishref.substr(thishref.indexOf("#"));
-    jQuery("html, body").animate(
-      {
-        scrollTop: $(url).offset().top
-      },
-      2000
-    );
+window.onscroll = function() {
+  if (window.innerHeight * 3 <= window.scrollY) {
+   document.getElementById("site-name").innerHTML = "Go to top";  
+  } else {
+document.getElementById("site-name").innerHTML = "Spiritshop Official"; 
   }
-);
+}

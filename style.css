@@ -1,17 +1,22 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  color: #fff;
-  scroll-behavior: smooth;
   background: #222;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 5vw;
+  }
 }
 
 html,
@@ -27,13 +32,121 @@ body,
 .slide,
 .img-slide,
 .gallery-img {
-  height: 100vh;
+  height: calc(100vh - 9rem);
+}
+
+body {
+  padding-top: 4.5rem;
 }
 
 .slide {
+  margin: 0 0 3rem;
+  padding: 2rem 6vw;
   display: flex;
   flex-flow: column;
-  scroll-snap-align: start;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+.navbar {
+  z-index: 10;
+  padding: 0 6vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background: rgba(34, 34, 34, 0.5);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#site-name {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 1em;
+  text-decoration: none;
+  opacity: 0.2;
+  animation: none;
+}
+
+#toggler {
+  z-index: 1000;
+  animation: color 2s linear infinite;
+  background: #fff;
+  color: #222;
+  width: 5rem;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-align: center;
+}
+
+#toggler:hover {
+  opacity: 0.66;
+}
+
+@keyframes color {
+  0% {
+    background: #ccc;
+  }
+  25% {
+    background: #999;
+  }
+  50% {
+    background: #ccc;
+  }
+  100% {
+    background: #ccc;
+  }
+}
+.menu {
+  z-index: 8;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  transition: top 0.5s;
+  background: #fff;
+  color: #222;
+  animation: color 2s linear infinite;
+  padding: 2rem 6vw;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu a {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.menu path {
+  fill: #222;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  padding: 0.5rem 0;
 }
 
 #slide-img-slider {
@@ -43,7 +156,6 @@ body,
   background: #777;
   align-items: center;
   justify-content: center;
-  padding: 10vh 0 0;
 }
 
 .img-slide {
@@ -61,53 +173,48 @@ body,
   5% {
     opacity: 1;
   }
-  30% {
+  25% {
     opacity: 1;
   }
-  35% {
+  30% {
     opacity: 0;
   }
   100% {
     opacity: 0;
   }
 }
-
 @keyframes zoom-1 {
   0% {
     transform: scale(1.75) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0, 0);
+    transform: scale(1) translate 0, 0;
   }
 }
-
 @keyframes zoom-2 {
   0% {
     transform: scale(1.75) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0, 0);
+    transform: scale(1) translate 0, 0;
   }
 }
-
 @keyframes zoom-3 {
   0% {
     transform: scale(1.75) translate(-10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0%, 0);
+    transform: scale(1) translate 0%, 0;
   }
 }
-
 @keyframes zoom-4 {
   0% {
     transform: scale(1.75) translate(10%, -10%);
   }
   100% {
-    transform: scale(1) translate (0%, 0);
+    transform: scale(1) translate 0%, 0;
   }
 }
-
 #img-slide-1 {
   background: url("https://i.ibb.co/q9KGDRC/spiritshop-pic-7.jpg");
   background-size: cover;
@@ -137,67 +244,33 @@ body,
 }
 
 .overlay {
-  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0)),
-    url("https://i.ibb.co/8g7NDx8/overlay-1.png");
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0)), url("https://i.ibb.co/8g7NDx8/overlay-1.png");
   backdrop-filter: blur(0.5px);
 }
 
 path {
-  fill: white;
+  fill: #fff;
 }
 
 #spiritshop {
-  display: block;
-  margin: auto auto 5vh;
-  z-index: 1;
-  height: 10vw;
+  z-index: 2;
+  height: 8vw;
   min-height: 1rem;
-  max-height: 10vh;
+  max-height: 8vh;
 }
 
 #house {
+  z-index: 2;
   display: none;
-  margin: auto auto 5vh;
-  z-index: 1;
-  height: 50vw;
-  min-height: 3.3rem;
-  max-height: 25vh;
-}
-
-#more {
-  z-index: 1;
-  text-decoration: none;
-  text-align: center;
-  margin: 5vh auto auto;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 100rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2.75rem;
-  width: 2.75rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  padding: 0 5vw;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  text-decoration: underline;
-}
-
-a:hover {
-  opacity: 0.75;
+  height: 20vw;
+  min-height: 2rem;
+  max-height: 20vh;
 }
 
 #slide-advertisment {
   background: #222;
   animation: 1s bg-pulse-1 linear infinite;
+  align-items: flex-start;
 }
 
 @keyframes bg-pulse-1 {
@@ -214,22 +287,43 @@ a:hover {
     background: #333;
   }
 }
-
 h3 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: auto auto 2.5vh 0;
+  margin-bottom: 1.5rem;
 }
 
 .date {
-  font-size: calc(8vh + 8vw);
-  margin: 0 auto 2.5vh 0;
+  font-size: calc(10vh + 6vw);
+  line-height: 1em;
 }
 
-#stay-tuned {
-  margin: 2.5vh auto auto 0;
-  padding: 0 5vw;
+.hashtag {
+  color: #777;
+  margin-bottom: 1.5rem;
   font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.button {
+  display: block;
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  line-height: 3rem;
+  padding: 0 3rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+#button-about {
+  color: #fff;
+  background: none;
+  border: 1.5px solid;
 }
 
 #slide-about {
@@ -237,98 +331,29 @@ h3 {
   background-size: cover;
   background-position: center;
   text-align: center;
-  position: relative;
-  justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 h4 {
-  font-size: calc(2vh + 2vw);
-  max-width: calc(35vh + 45vw);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  max-width: 60rem;
   font-weight: 500;
-  position: absolute;
-  opacity: 0;
-}
-
-@keyframes about {
-  0% {
-    opacity: 0;
-    transform: translate(0, 10vh);
-  }
-  3% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  33% {
-    transform: translate(0, -10vh);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-#h4-1 {
-  animation: about 18s linear 2s infinite;
-}
-
-#h4-2 {
-  animation: about 18s linear 8s infinite;
-}
-
-#h4-3 {
-  animation: about 18s linear 14s infinite;
 }
 
 #slide-player {
   background: #111;
-  padding: 5vh 0 10vh;
+  align-items: flex-end;
 }
 
 h2 {
-  margin: auto 0 5vh auto;
+  margin-bottom: 2.5rem;
 }
 
 #player {
-  margin: 0 5vw auto;
-  height: 450px;
-}
-
-#slide-gallery {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-}
-
-#gallery-img-wrapper {
-  display: flex;
-  flex-flow: row;
-  width: 270vw;
-}
-
-.gallery-img {
-  flex: 1;
-  scroll-snap-align: center;
-}
-
-#gallery-img-1 {
-  background: url("https://i.ibb.co/0jLDFN8/spiritshop-pic-2.jpg");
-  background-size: cover;
-  background-position: 70% 40%;
-}
-
-#gallery-img-2 {
-  background: url("https://i.ibb.co/jLDPPKL/spiritshop-pic-5.jpg");
-  background-size: cover;
-  background-position: 60% 30%;
-}
-
-#gallery-img-3 {
-  background: url("https://i.ibb.co/C951q1X/spiritshop-pic-3.jpg");
-  background-size: cover;
-  background-position: 60% 20%;
+  height: 180px;
+  width: 100%;
 }
 
 #slide-footer {
@@ -343,56 +368,90 @@ h1 {
 }
 
 p {
-  margin: 2.5vh auto 2.5vh;
+  margin: 2.5vh auto 0;
   font-size: 1.25rem;
 }
 
-#socials-links {
-  margin: 2.5vh auto auto;
+.social-links {
+  margin: 5vh auto auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-#instagram-logo {
-  height: 10vw;
-  max-height: 5vh;
-  min-height: 1.5rem;
+.instagram-logo {
+  height: 9vw;
+  max-height: 4.5vh;
+  min-height: 1.35rem;
   margin-right: calc(2vw + 2vh);
 }
 
-#mixcloud-logo {
+.mixcloud-logo {
   height: 5vw;
   max-height: 2.5vh;
   min-height: 0.75rem;
   margin-right: calc(1.8vw + 1.8vh);
 }
 
-#soundcloud-logo {
+.soundcloud-logo {
   height: 6.5vw;
   max-height: 3.25vh;
   min-height: 1.05rem;
 }
 
 #dead-end {
-  margin: 5vh 0 0;
-  height: 7rem;
+  width: 100vw;
+  margin: 4.5rem 0 0;
+  height: 8rem;
   background: url("https://i.ibb.co/D5RSjBj/spiritshop-web-end-background.png");
-  background-size: 7rem;
-  margin-bottom: -7rem;
-  padding: 3rem 10vw;
-  line-height: 1rem;
-  color: #444;
+  background-size: 8rem;
+  margin-bottom: -4rem;
 }
 
-@media (min-width: 768px) {
-  html,
-  body,
-  .slide,
-  .img-slide,
-  .gallery-img {
-    height: 90vh;
+/* FONTS
+
+.title {
+  padding-bottom: 0.5rem;
+  font-size: 15vw;
+  font-weight: 700;
+  line-height: 1em;
+  @media(min-width: 40rem) {
+    font-size: 6rem;
   }
-  .slide {
-    scroll-snap-align: center;
-  }
+}
+
+.meta {
+  padding-bottom: 2rem;
+  color: $color1;
+}
+
+.meta-menu {
+  font-size: 0.875rem;
+  padding-top: 0.25rem;
+  color: $color1;
+}
+
+.bullet {
+  margin: 0 0.5rem 0.06125rem;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background: $color4;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.text-field {
+  box-sizing: content-box;
+  margin: auto;
+  padding: 5vh 10vw;
+  max-width: 40rem;
+}
+
+ */
+a:hover {
+  opacity: 0.66 !important;
 }

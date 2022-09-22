@@ -38,7 +38,7 @@ li {
 
 .slide {
   width: 100%;
-  height: calc(100rem - 180px);
+  height: 75rem;
   padding: 6rem;
   display: flex;
   flex-flow: column;
@@ -113,12 +113,6 @@ path {
 
 .mixcloud-logo {
   height: 2.7rem;
-}
-
-iframe {
-  position: sticky;
-  top: 0;
-  z-index: 9;
 }
 
 .img-slider {

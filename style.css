@@ -99,11 +99,6 @@ path {
   text-align: center;
 }
 
-.menu a {
-  font-size: 3rem;
-  font-weight: 400;
-}
-
 .social-links {
   display: flex;
   align-items: center;

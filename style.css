@@ -195,6 +195,25 @@ path {
   max-height: 10vw;
 }
 
+.iframe-box {
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+}
+
+iframe {
+  margin-top: -2px;
+  margin-left: -1px;
+  width: calc(100% + 2px);
+  height: 58px;
+}
+
+@media (max-width: 364px) {
+  iframe {
+    width: calc(100% + 36px);
+  }
+}
+
 #slide-full-moon-party {
   background: #222;
   animation: 2s bg-pulse-1 step-end infinite;
@@ -395,3 +414,4 @@ h1 {
     transform: translate(0, 0);
   }
 }
+

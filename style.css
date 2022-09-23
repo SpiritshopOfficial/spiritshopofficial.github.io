@@ -209,12 +209,6 @@ iframe {
   height: 58px;
 }
 
-@media (max-width: 364px) {
-  iframe {
-    width: calc(100% + 36px);
-  }
-}
-
 .iframe-shade {
   pointer-events: none;
   position: absolute;
@@ -226,6 +220,18 @@ iframe {
   background: rgba(255, 255, 255, 0.0475);
   -webkit-backdrop-filter: grayscale(100%);
   backdrop-filter: grayscale(100%);
+}
+
+@media (max-width: 420px) {
+  iframe {
+    width: calc(100% + 102px);
+  }
+}
+
+@media (max-width: 364px) {
+  iframe {
+    width: calc(100% + 36px);
+  }
 }
 
 #slide-full-moon-party {

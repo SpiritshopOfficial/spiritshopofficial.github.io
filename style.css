@@ -226,9 +226,8 @@ h3 {
 }
 
 .date {
-  font-size: 12rem;
+  font-size: 11rem;
   line-height: 1em;
-  letter-spacing: 0.1em;
   word-wrap: break-word;
   font-weight: 300;
 }

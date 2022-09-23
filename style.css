@@ -39,7 +39,7 @@ li {
 
 .slide {
   width: 100%;
-  height: 75rem;
+  height: 78rem;
   padding: 6rem;
   display: flex;
   flex-flow: column;
@@ -64,7 +64,6 @@ path {
 
 #house {
   height: 10.8rem;
-  animation: shake 5s step-end infinite;
 }
 
 @keyframes shake {
@@ -75,16 +74,16 @@ path {
     transform: translate(0, 0);
   }
   92% {
-    transform: translate(-1.5rem, 0);
+    transform: translate(-1.2rem, 0);
   }
   94% {
-    transform: translate(1.5rem, 0);
+    transform: translate(1.2rem, 0);
   }
   96% {
-    transform: translate(-1.5rem, 0);
+    transform: translate(-1.2rem, 0);
   }
   98% {
-    transform: translate(1.5rem, 0);
+    transform: translate(1.2rem, 0);
   }
   100% {
     transform: translate(0, 0);
@@ -116,7 +115,7 @@ path {
   height: 2.7rem;
 }
 
-.img-slider {
+#img-slider {
   position: relative;
   overflow: hidden;
 }
@@ -328,4 +327,68 @@ h1 {
 .copyright {
   color: #666;
   font-size: 1.8rem;
+}
+
+.shake {
+  animation: shake 5s step-end infinite;
+}
+
+.shake-right {
+  animation: shake-right 5s step-end infinite;
+}
+
+.shake-right-2 {
+  animation: shake-right 5s step-end 2s infinite;
+}
+
+@keyframes shake-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  92% {
+    transform: translate(2.4rem, 0);
+  }
+  94% {
+    transform: translate(0, 0);
+  }
+  96% {
+    transform: translate(2.4rem, 0);
+  }
+  98% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.shake-left {
+  animation: shake-left 5s step-end 1s infinite;
+}
+
+@keyframes shake-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  92% {
+    transform: translate(-2.4rem, 0);
+  }
+  94% {
+    transform: translate(0, 0);
+  }
+  96% {
+    transform: translate(-2.4rem, 0);
+  }
+  98% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

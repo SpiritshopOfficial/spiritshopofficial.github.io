@@ -13,15 +13,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: #222;
-}
-
 @media (max-width: 50vh) {
   html {
     font-size: 2vw;
     letter-spacing: 0.05em;
   }
+}
+
+body {
+  background: #222;
 }
 
 a {
@@ -43,7 +43,7 @@ li {
 
 .slide {
   width: 100%;
-  height: 72rem;
+  height: 75rem;
   padding: 6rem;
   display: flex;
   flex-flow: column;
@@ -120,18 +120,17 @@ path {
 }
 
 #img-slider {
+  background: #111;
   position: relative;
   overflow: hidden;
 }
 
 .img-slide {
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
-  min-height: 120px;
   filter: grayscale(100%);
 }
 
@@ -191,6 +190,7 @@ path {
 }
 
 #spiritshop {
+  z-index: 1;
   height: 6rem;
   max-height: 10vw;
 }

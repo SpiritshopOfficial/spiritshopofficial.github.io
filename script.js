@@ -1,3 +1,3 @@
 const d = new Date();
 let year = d.getFullYear();
-document.getElementById("year").innerHTML = year + 1;
+document.getElementById("year").innerHTML = year;

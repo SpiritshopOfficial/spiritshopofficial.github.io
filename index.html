@@ -8,7 +8,12 @@
   <meta name="author" content="Spiritshop Official">
   <meta name="description" content="We care about club culture, house music, community and dance. We make parties with atmosphere. Spend some time with great music in the moment. See you in person every full moon in Brno.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./script.js"></script>
+  <script>
+  var isInstagram = navigator.userAgent.match(/instagram/i);
+  if (isInstagram) {
+    document.querySelector('html').classList.add("html-insta");
+  }
+  </script>
   
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -105,6 +110,8 @@
   <a href="#" class="shake">Back to Top ↑</a>
   <div class="copyright">© <span id="year">2022</span> - Spiritshop Official</div>
 </div> 
+  
+  <script src="./script.js"></script>
   
 </body>
 </html>

@@ -192,11 +192,12 @@ path {
 .overlay {
   background: linear-gradient(
       0deg,
-      rgba(64, 64, 64, 0.5),
-      rgba(64, 64, 64, 0.1)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.1)
     ),
     url("https://i.ibb.co/8g7NDx8/overlay-1.png");
-  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 #spiritshop {

@@ -7,15 +7,11 @@
     rgba(68, 68, 68, 1) 73%,
     rgba(34, 34, 34, 1) 100%
   );
+  text-align: center;
 }
 
 #house {
   height: 10.8rem;
-}
-
-.menu {
-  margin: 6rem 0;
-  text-align: center;
 }
 
 .social-links {

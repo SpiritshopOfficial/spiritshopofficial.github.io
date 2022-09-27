@@ -112,6 +112,8 @@
   <div class="copyright">© <span id="year">2022</span> - Spiritshop Official</div>
 </div>
   
+  <!--#include file="footer.shtml" -->
+  
   <script src="./script.js"></script>
   
 </body>

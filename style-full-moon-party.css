@@ -2,18 +2,17 @@
   position: relative;
   overflow: hidden;
   background: #111;
+  text-align: center;
 }
 
 #full-moon-party-header > a {
   z-index: 1;
-  width: 100%;
   max-width: 50rem;
 }
 
 #full-moon-party-header h1 {
   z-index: 1;
   font-size: 4.2rem;
-  width: 100%;
   max-width: 50rem;
 }
 

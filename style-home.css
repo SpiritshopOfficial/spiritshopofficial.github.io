@@ -1,1 +1,202 @@
+.header {
+  background: rgb(68, 68, 68);
+  background: linear-gradient(
+    120deg,
+    rgba(68, 68, 68, 1) 0%,
+    rgba(34, 34, 34, 1) 27%,
+    rgba(68, 68, 68, 1) 73%,
+    rgba(34, 34, 34, 1) 100%
+  );
+}
 
+#house {
+  height: 10.8rem;
+}
+
+.menu {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-logo {
+  height: 4.5rem;
+  margin-right: 3.6rem;
+}
+
+.mixcloud-logo {
+  height: 2.7rem;
+}
+
+#img-slider {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-slide {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: grayscale(100%);
+}
+
+#spiritshop {
+  z-index: 1;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.overlay {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
+}
+
+@keyframes opacity-1 {
+  0% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoom-1 {
+  0% {
+    transform: scale(1);
+  }
+  34% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+#img-slide-1 {
+  background: url("https://i.ibb.co/XFXRbnt/spiritshop-pic-4.jpg");
+  background-size: cover;
+  background-position: 70% 30%;
+  animation: 12s opacity-1 step-end infinite, 12s zoom-1 linear infinite;
+}
+
+#img-slide-2 {
+  background: url("https://i.ibb.co/5G7MWMt/spiritshop-pic-6.jpg");
+  background-size: cover;
+  background-position: 55% 40%;
+  animation: 12s opacity-1 step-end 4s infinite, 12s zoom-1 linear 4s infinite;
+}
+
+#img-slide-3 {
+  background: url("https://i.ibb.co/SdGgpLz/spiritshop-pic-1.jpg");
+  background-size: cover;
+  background-position: 45% 40%;
+  animation: 12s opacity-1 step-end 8s infinite, 12s zoom-1 linear 8s infinite;
+}
+
+.iframe-box {
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+
+iframe {
+  margin-top: -2px;
+  margin-left: -1px;
+  width: calc(100% + 2px);
+  height: 58px;
+}
+
+@media (max-width: 420px) {
+  iframe {
+    width: calc(100% + 102px);
+  }
+}
+
+@media (max-width: 364px) {
+  iframe {
+    width: calc(100% + 36px);
+  }
+}
+
+.iframe-shade {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.0475);
+  -webkit-backdrop-filter: grayscale(100%);
+  backdrop-filter: grayscale(100%);
+}
+
+#slide-full-moon-party {
+  background: #222;
+  animation: 2s bg-pulse-1 step-end infinite;
+}
+
+@keyframes bg-pulse-1 {
+  0% {
+    background: #222;
+  }
+  58% {
+    background: #333;
+  }
+  66% {
+    background: #222;
+  }
+  74% {
+    background: #333;
+  }
+  82% {
+    background: #222;
+  }
+}
+
+#slide-about {
+  background: #111;
+  color: #fff;
+}
+
+#slide-contact {
+  background: rgb(68, 68, 68);
+  background: linear-gradient(
+    240deg,
+    rgba(68, 68, 68, 1) 0%,
+    rgba(34, 34, 34, 1) 27%,
+    rgba(68, 68, 68, 1) 73%,
+    rgba(34, 34, 34, 1) 100%
+  );
+}
+
+.email {
+  font-size: 3rem;
+}
+
+.insta {
+  font-size: 2.1rem;
+  word-wrap: break-word;
+}
+
+#slide-contact p,
+.insta {
+  text-align: right;
+}
+
+#slide-footer {
+  text-align: center;
+}

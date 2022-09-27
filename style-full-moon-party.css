@@ -1,0 +1,52 @@
+#full-moon-party-header {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+#full-moon-party-header > * {
+  z-index: 1;
+  width: 100%;
+  max-width: 50rem;
+}
+
+#full-moon-party-header h1 {
+  font-size: 4.2rem;
+}
+
+.moon {
+  margin-top: -25rem;
+  margin-left: -25rem;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 30rem;
+  background: #444;
+  animation: moon 8s infinite;
+  z-index: 0;
+}
+
+@keyframes moon {
+  0% {
+    top: 75%;
+    left: 30%;
+  }
+  25% {
+    top: 25%;
+    left: 70%;
+  }
+  48% {
+    top: 90%;
+    left: 90%;
+  }
+  77% {
+    top: 10%;
+    left: 10%;
+  }
+  100% {
+    top: 75%;
+    left: 30%;
+  }
+}

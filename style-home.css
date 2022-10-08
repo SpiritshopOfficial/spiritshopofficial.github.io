@@ -101,66 +101,8 @@
   animation: 12s opacity-1 step-end 8s infinite, 12s zoom-1 linear 8s infinite;
 }
 
-.iframe-box {
-  width: 100%;
-  height: 56px;
-  overflow: hidden;
-  position: relative;
-}
-
-iframe {
-  margin-top: -2px;
-  margin-left: -1px;
-  width: calc(100% + 2px);
-  height: 58px;
-}
-
-@media (max-width: 420px) {
-  iframe {
-    width: calc(100% + 102px);
-  }
-}
-
-@media (max-width: 364px) {
-  iframe {
-    width: calc(100% + 36px);
-  }
-}
-
-.iframe-shade {
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.0475);
-  -webkit-backdrop-filter: grayscale(100%);
-  backdrop-filter: grayscale(100%);
-}
-
 #slide-full-moon-party {
   background: #222;
-  animation: 2s bg-pulse-1 step-end infinite;
-}
-
-@keyframes bg-pulse-1 {
-  0% {
-    background: #222;
-  }
-  58% {
-    background: #333;
-  }
-  66% {
-    background: #222;
-  }
-  74% {
-    background: #333;
-  }
-  82% {
-    background: #222;
-  }
 }
 
 #slide-about {
@@ -173,8 +115,6 @@ iframe {
   background: linear-gradient(
     240deg,
     rgba(68, 68, 68, 1) 0%,
-    rgba(34, 34, 34, 1) 27%,
-    rgba(68, 68, 68, 1) 73%,
     rgba(34, 34, 34, 1) 100%
   );
 }
@@ -183,12 +123,13 @@ iframe {
   font-size: 3rem;
 }
 
-.insta {
+.links {
   font-size: 2.1rem;
-  word-wrap: break-word;
 }
 
-#slide-contact p,
-.insta {
-  text-align: right;
+#slide-listen-music {
+  background: #111;
+  background-image: url("https://i.ibb.co/YbSDV3T/spiritshop-turntable-2.jpg");
+  background-size: cover;
+  text-align: center;
 }

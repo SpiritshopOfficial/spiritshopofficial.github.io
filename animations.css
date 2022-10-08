@@ -1,0 +1,139 @@
+.shake {
+  animation: shake 5s step-end infinite;
+}
+
+.shake-left {
+  animation: shake-left 5s step-end 1s infinite;
+}
+
+.shake-right {
+  animation: shake-right 5s step-end infinite;
+}
+
+.shake-right-2 {
+  animation: shake-right 5s step-end 2s infinite;
+}
+
+.shake-right-3 {
+  animation: shake-right 5s step-end 3s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  92% {
+    transform: translate(-1.2rem, 0);
+  }
+  94% {
+    transform: translate(1.2rem, 0);
+  }
+  96% {
+    transform: translate(-1.2rem, 0);
+  }
+  98% {
+    transform: translate(1.2rem, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes shake-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  92% {
+    transform: translate(-2.4rem, 0);
+  }
+  94% {
+    transform: translate(0, 0);
+  }
+  96% {
+    transform: translate(-2.4rem, 0);
+  }
+  98% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes shake-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+  92% {
+    transform: translate(2.4rem, 0);
+  }
+  94% {
+    transform: translate(0, 0);
+  }
+  96% {
+    transform: translate(2.4rem, 0);
+  }
+  98% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.beat-1 {
+  animation: beat 4s step-end infinite;
+}
+
+.beat-2 {
+  animation: beat 4s step-end 1s infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  91% {
+    transform: scale(1.15);
+  }
+  93% {
+    transform: scale(1);
+  }
+  97% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  } 
+}
+
+.pulse-1 {
+    animation: 2s pulse step-end infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background: #222;
+  }
+  58% {
+    background: #333;
+  }
+  66% {
+    background: #222;
+  }
+  74% {
+    background: #333;
+  }
+  82% {
+    background: #222;
+  }
+}

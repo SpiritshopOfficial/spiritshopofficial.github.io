@@ -126,6 +126,7 @@
 
 .links {
   font-size: 2.1rem;
+  word-break: break-all;
 }
 
 #slide-listen-music {

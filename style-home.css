@@ -121,6 +121,7 @@
 
 .email {
   font-size: 3rem;
+  word-break: break-all;
 }
 
 .links {

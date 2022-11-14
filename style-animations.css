@@ -1,5 +1,5 @@
 .shake {
-  animation: shake 5s step-end infinite;
+  animation: shake 5s step-end 3.5s infinite;
 }
 
 .shake-left {
@@ -91,24 +91,24 @@
 }
 
 .beat-1 {
-  animation: beat 4s step-end infinite;
+  animation: beat 5s step-end infinite;
 }
 
 .beat-2 {
-  animation: beat 4s step-end 1s infinite;
+  animation: beat 5s step-end 2s infinite;
 }
 
 @keyframes beat {
   0% {
     transform: scale(1);
   }
-  91% {
+  92.5% {
     transform: scale(1.15);
   }
-  93% {
+  95% {
     transform: scale(1);
   }
-  97% {
+  97.5% {
     transform: scale(1.15);
   }
   100% {
@@ -127,7 +127,7 @@
   58% {
     background: #333;
   }
-  66% {
+  66% { 
     background: #222;
   }
   74% {

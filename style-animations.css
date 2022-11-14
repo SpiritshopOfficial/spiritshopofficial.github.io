@@ -117,23 +117,23 @@
 }
 
 .pulse-1 {
-    animation: 2s pulse step-end infinite;
+    animation: 2.5s pulse step-end infinite;
 }
 
 @keyframes pulse {
   0% {
     background: #222;
   }
-  58% {
+  5% {
     background: #333;
   }
-  66% { 
+  10% { 
     background: #222;
   }
-  74% {
+  15% {
     background: #333;
   }
-  82% {
+  20% {
     background: #222;
   }
 }

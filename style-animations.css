@@ -1,5 +1,5 @@
 .shake {
-  animation: shake 5s step-end 3.5s infinite;
+  animation: shake 5s step-end 4.5s infinite;
 }
 
 .shake-left {
@@ -96,6 +96,10 @@
 
 .beat-2 {
   animation: beat 5s step-end 2s infinite;
+}
+
+.beat-3 {
+  animation: beat 5s step-end 4s infinite;
 }
 
 @keyframes beat {

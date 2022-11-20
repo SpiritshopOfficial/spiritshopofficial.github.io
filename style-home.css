@@ -20,14 +20,16 @@
   justify-content: center;
 }
 
+.social-links > a {
+  margin: 0 1.65rem;
+}
+
 .instagram-logo {
   height: 4.2rem;
-  margin-right: 3.3rem;
 }
 
 .soundcloud-logo {
   height: 3rem;
-  margin-right: 3.3rem;
 }
 
 .youtube-logo {

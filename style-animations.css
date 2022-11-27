@@ -141,3 +141,25 @@
     background: #222;
   }
 }
+
+.pulse-2 > * {
+  animation: 2.5s pulse-2 step-end infinite;
+}
+
+@keyframes pulse-2 {
+  0% {
+    color: #fff;
+  }
+  5% {
+    color: #ddd;
+  }
+  10% { 
+    color: #fff;
+  }
+  15% {
+    color: #ddd;
+  }
+  20% {
+    color: #fff;
+  }
+}

@@ -112,6 +112,16 @@
   background: #222;
 }
 
+.slide-sfm-big {
+  background: url('https://i.ibb.co/7gyNxz7/SFM8-foto-bw-web.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-sfm-big > p {
+  color: #fff;
+}
+
 #slide-about {
   background: #111;
   color: #fff;

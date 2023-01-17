@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Full Moon Parties</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-home.css">
+  <link rel="stylesheet" href="./style-full-moon-party.css">
+  <link rel="stylesheet" href="./style-animations.css">
+  <meta name="author" content="Spiritshop Official">
+  <meta name="description" content="Every Full Moon there is a party in Brno. Spend some time with great music in the moment.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  var isInstagram = navigator.userAgent.match(/instagram/i);
+  if (isInstagram) {
+    document.querySelector('html').classList.add("html-insta");
+  }
+  </script>
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="mask-icon" href="/assets/mask-icon.svg" color="#ffffff">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#222222">
+  <meta name="msapplication-config" content="/assets/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+<div class="slide" id="full-moon-party-header">
+  <div class="moon"></div>
+  <a href="index.html">← Home</a>
+  <h1>Full Moon Party</h1>
+  <a class="hashtag" href="#">#spiritshopfullmoon</a>
+</div>
+
+<div class="slide slide-text" id="slide-about-fullmoon">
+  <h3>About Spiritshop</h3>
+  <h4>We care about club culture, house music, community and dance</h4>
+  <p class="gray">We make parties with atmosphere. Spend some time with great music in the moment
+  </p>
+  <a href="https://www.instagram.com/spiritshop_official/" target="_blank" class="shake-right-2">More →</a>
+</div>
+
+<div class="slide slide-text" id="slide-footer">
+  <h1>Spiritshop Official</h1>
+  <p>Events, Music, Community, Dance. Full Moon Parties in Brno, Czechia</p>
+  <a href="#" class="shake">Back to Top ↑</a>
+  <div class="copyright gray">© <span id="year">2022</span> - Spiritshop Official</div>
+</div>
+  
+  <script src="./script.js"></script>
+  
+</body>
+</html>

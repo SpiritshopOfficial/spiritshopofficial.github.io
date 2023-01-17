@@ -8,7 +8,7 @@ const d = new Date();
 d.setDate(d.getDate() - 1);
 
 const d0 = new Date("2022-12-08")
-const d1 = new Date("2023-01-16");
+const d1 = new Date("2023-01-07");
 const d2 = new Date("2023-02-05");
 const d3 = new Date("2023-03-07");
 const d4 = new Date("2023-04-06");

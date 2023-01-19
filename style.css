@@ -118,7 +118,7 @@ path {
 }
 
 .gray {
-  color: #999;
+  color: #aaa;
 }
 
 #slide-footer {
@@ -127,7 +127,11 @@ path {
 
 #slide-listen-music {
   background: #111;
-  background-image: url("https://i.ibb.co/YbSDV3T/spiritshop-turntable-2.jpg");
-  background-size: cover;
+  background: linear-gradient(
+    120deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(34, 34, 34, 1) 42%,
+    rgba(0, 0, 0, 1) 100%
+  );
   text-align: center;
 }

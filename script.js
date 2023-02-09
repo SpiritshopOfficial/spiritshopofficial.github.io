@@ -27,85 +27,85 @@ const display = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NO
 
 if (d > d0){
   const day = d1.getDate();
-  const month = d1.getMonth();
+  const month = display.[d1.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d1){
   const day = d2.getDate();
-  const month = d2.getMonth();
+  const month = display.[d2.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d2){
   const day = d3.getDate();
-  const month = d3.getMonth();
+  const month = display.[d3.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d3){
   const day = d4.getDate();
-  const month = d4.getMonth();
+  const month = display.[d4.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d4){
   const day = d5.getDate();
-  const month = d5.getMonth();
+  const month = display.[d5.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d5){
   const day = d6.getDate();
-  const month = d6.getMonth();
+  const month = display.[d6.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d6){
   const day = d7.getDate();
-  const month = d7.getMonth();
+  const month = display.[d7.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d7){
   const day = d8.getDate();
-  const month = d8.getMonth();
+  const month = display.[d8.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d8){
   const day = d9.getDate();
-  const month = d9.getMonth();
+  const month = display.[d9.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d9){
   const day = d10.getDate();
-  const month = d10.getMonth();
+  const month = display.[d10.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d10){
   const day = d11.getDate();
-  const month = d11.getMonth();
+  const month = display.[d11.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d11){
   const day = d12.getDate();
-  const month = d12.getMonth();
+  const month = display.[d12.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d12){
   const day = d13.getDate();
-  const month = d13.getMonth();
+  const month = display.[d13.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d13){
   const day = d14.getDate();
-  const month = d14.getMonth();
+  const month = display.[d14.getMonth()];
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }

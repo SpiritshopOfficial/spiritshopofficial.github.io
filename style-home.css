@@ -88,23 +88,23 @@
 }
 
 #img-slide-1 {
-  background: url("https://i.ibb.co/XFXRbnt/spiritshop-pic-4.jpg");
+  background: url("https://spiritshopofficial.com/data/spiritshop-official-1.jpg");
   background-size: cover;
-  background-position: 70% 30%;
+  background-position: 50% 60%;
   animation: 12s opacity-1 step-end infinite, 12s zoom-1 linear infinite;
 }
 
 #img-slide-2 {
-  background: url("https://i.ibb.co/5G7MWMt/spiritshop-pic-6.jpg");
+  background: url("https://spiritshopofficial.com/data/spiritshop-official-2.jpg");
   background-size: cover;
-  background-position: 55% 40%;
+  background-position: 75% 25%;
   animation: 12s opacity-1 step-end 4s infinite, 12s zoom-1 linear 4s infinite;
 }
 
 #img-slide-3 {
-  background: url("https://i.ibb.co/SdGgpLz/spiritshop-pic-1.jpg");
+  background: url("https://spiritshopofficial.com/data/spiritshop-official-3.jpg");
   background-size: cover;
-  background-position: 45% 40%;
+  background-position: 55% 35%;
   animation: 12s opacity-1 step-end 8s infinite, 12s zoom-1 linear 8s infinite;
 }
 

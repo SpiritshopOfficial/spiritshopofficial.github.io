@@ -27,13 +27,13 @@ const display = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NO
 
 if (d > d0){
   const day = d1.getDate();
-  const month = display.[d1.getMonth()];
+  const month = d1.getMonth();
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }
 if (d > d1){
   const day = d2.getDate();
-  const month = display.[d2.getMonth()];
+  const month = d2.getMonth();
   const str = `${month} ${day}`;
   document.getElementById("date").innerHTML = str;
 }

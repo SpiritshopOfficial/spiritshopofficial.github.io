@@ -88,14 +88,14 @@
 }
 
 #img-slide-1 {
-  background: url("https://spiritshopofficial.com/data/spiritshop-official-2.jpg");
+  background: url("https://spiritshopofficial.com/data/spiritshop-official-1.jpg");
   background-size: cover;
   background-position: 50% 60%;
   animation: 12s opacity-1 step-end infinite, 12s zoom-1 linear infinite;
 }
 
 #img-slide-2 {
-  background: url("https://spiritshopofficial.com/data/spiritshop-official-1.jpg");
+  background: url("https://spiritshopofficial.com/data/spiritshop-official-2.jpg");
   background-size: cover;
   background-position: 75% 25%;
   animation: 12s opacity-1 step-end 4s infinite, 12s zoom-1 linear 4s infinite;

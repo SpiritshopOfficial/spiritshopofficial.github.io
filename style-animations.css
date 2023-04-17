@@ -128,16 +128,16 @@
   0% {
     background: #222;
   }
-  5% {
-    background: #333;
+  15% {
+    background: #262626;
   }
-  10% { 
+  30% {
     background: #222;
   }
-  15% {
-    background: #333;
+  45% {
+    background: #262626;
   }
-  20% {
+  60% {
     background: #222;
   }
 }

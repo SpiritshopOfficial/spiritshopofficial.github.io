@@ -126,12 +126,7 @@ path {
 }
 
 #slide-listen-music {
-  background: #111;
-  background: linear-gradient(
-    120deg,
-    rgba(17, 17, 17, 1) 0%,
-    rgba(34, 34, 34, 1) 42%,
-    rgba(0, 0, 0, 1) 100%
-  );
   text-align: center;
+  background-color: #111;
+  animation: partyLights .33s step-end infinite;
 }

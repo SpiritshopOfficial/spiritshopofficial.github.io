@@ -121,7 +121,15 @@ path {
   color: #aaa;
 }
 
-#slide-footer {
+.gradient {
+  background: rgb(68, 68, 68);
+  background: linear-gradient(
+    120deg,
+    rgba(68, 68, 68, 1) 0%,
+    rgba(34, 34, 34, 1) 27%,
+    rgba(68, 68, 68, 1) 73%,
+    rgba(34, 34, 34, 1) 100%
+  );
   text-align: center;
 }
 

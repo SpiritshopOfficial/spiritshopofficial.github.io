@@ -1,28 +1,33 @@
 #full-moon-parties-header {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(#111,#444);
   text-align: center;
 }
 
 #full-moon-parties-header > a {
-  z-index: 1;
   max-width: 50rem;
 }
 
 #full-moon-parties-header h1 {
-  z-index: 1;
   font-size: 4.2rem;
   max-width: 50rem;
+}
+
+.full-moon-animation {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#111, #333);
+}
+
+.full-moon-animation > * {
+    z-index: 1;
 }
 
 .moon {
   position: absolute;
   width: 95rem;
   height: 95rem;
-  max-width: auto;
+  max-width: auto !important;
   border-radius: 95rem;
-  background: #444;
+  background: #333;
   z-index: 0;
   transform-origin: 50% 100%;
   transform: rotate(-90deg);

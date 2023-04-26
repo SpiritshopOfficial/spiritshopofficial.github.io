@@ -126,19 +126,19 @@
 
 @keyframes pulse {
   0% {
-    background: #111;
+    background: #222;
   }
   15% {
-    background: #161616;
+    background: #333;
   }
   30% {
-    background: #111;
+    background: #222;
   }
   45% {
-    background: #161616;
+    background: #333;
   }
   60% {
-    background: #111;
+    background: #222;
   }
 }
 

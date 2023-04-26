@@ -39,3 +39,8 @@
     transform: rotate(90deg);
   }
 }
+
+#slide-listen-music {
+  text-align: center;
+  background-color: #222;
+}

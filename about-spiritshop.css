@@ -1,45 +1,4 @@
-#full-moon-parties-header {
-  text-align: center;
-}
-
-#full-moon-parties-header > a {
-  max-width: 50rem;
-}
-
 #full-moon-parties-header h1 {
   font-size: 4.2rem;
   max-width: 50rem;
-}
-
-.full-moon-animation {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(#111, #333);
-}
-
-.full-moon-animation > * {
-    z-index: 1;
-}
-
-.moon {
-  position: absolute;
-  width: 95rem;
-  height: 95rem;
-  max-width: auto !important;
-  border-radius: 95rem;
-  background: #333;
-  z-index: 0;
-  transform-origin: 50% 100%;
-  transform: rotate(-90deg);
-  animation: moon 10s infinite;
-}
-
-@keyframes moon {
-  50% {
-    transform: rotate(90deg);
-  }
-}
-
-#slide-listen-music {
-  text-align: center;
 }

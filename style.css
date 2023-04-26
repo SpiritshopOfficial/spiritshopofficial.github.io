@@ -98,7 +98,12 @@ path {
   align-items: center;
 }
 
-.slide-text > * {
+.slide-text > h1,
+.slide-text > h2,
+.slide-text > h3,
+.slide-text > h4,
+.slide-text > p,
+.slide-text > a {
   width: 100%;
   max-width: 50rem;
 }

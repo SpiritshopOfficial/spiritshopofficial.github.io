@@ -143,5 +143,12 @@ path {
     rgba(68, 68, 68, 1) 73%,
     rgba(34, 34, 34, 1) 100%
   );
+}
+
+.center {
   text-align: center;
+}
+
+.header > a {
+  max-width: 50rem;
 }

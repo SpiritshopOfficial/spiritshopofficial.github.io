@@ -42,30 +42,29 @@ a:hover {
   opacity: 0.66;
 }
 
-h1 {
+h1, h2, h3 {
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h1, h2 {
   font-size: 3rem;
 }
 
-h2 {
-  font-size: 4.5rem;
-  font-weight: 400;
-}
-
-#date {
-  font-size: 12rem;
-  line-height: 1em;
+.date {
+  font-size: 6rem;
   word-wrap: break-word;
 }
 
 h3 {
-  font-size: 2.4rem;
-  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 p {

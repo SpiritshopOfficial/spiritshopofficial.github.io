@@ -100,14 +100,6 @@
   background: #222;
 }
 
-#slide-full-moon-party > div {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: right;
-  text-align: right;
-}
-
 .slide-sfm-big {
   background: url('https://i.ibb.co/7gyNxz7/SFM8-foto-bw-web.jpg');
   background-size: cover;

@@ -126,6 +126,14 @@ path {
   color: #aaa;
 }
 
+.dark {
+  background: #111;
+}
+
+.basic {
+  background: #222;
+}
+
 .gradient {
   background: rgb(68, 68, 68);
   background: linear-gradient(
@@ -136,10 +144,4 @@ path {
     rgba(34, 34, 34, 1) 100%
   );
   text-align: center;
-}
-
-#slide-listen-music {
-  text-align: center;
-  background-color: #111;
-  animation: partyLights .33s step-end infinite;
 }

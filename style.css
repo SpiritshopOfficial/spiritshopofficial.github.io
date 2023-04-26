@@ -152,3 +152,7 @@ path {
 .header > a {
   max-width: 50rem;
 }
+
+.footer > h1 {
+  font-size: 3rem;
+}

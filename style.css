@@ -54,6 +54,7 @@ h1, h2 {
 
 .date {
   font-size: 12rem;
+  line-height: 1em;
   word-wrap: break-word;
 }
 

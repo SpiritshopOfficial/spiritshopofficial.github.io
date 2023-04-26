@@ -96,10 +96,6 @@
   animation: 12s opacity-1 step-end 8s infinite, 12s zoom-1 linear 8s infinite;
 }
 
-#slide-full-moon-party {
-  background: #222;
-}
-
 .slide-sfm-big {
   background: url('https://i.ibb.co/7gyNxz7/SFM8-foto-bw-web.jpg');
   background-size: cover;
@@ -113,23 +109,4 @@
 #slide-about {
   background: #111;
   color: #fff;
-}
-
-#slide-contact {
-  background: rgb(68, 68, 68);
-  background: linear-gradient(
-    240deg,
-    rgba(68, 68, 68, 1) 0%,
-    rgba(34, 34, 34, 1) 100%
-  );
-}
-
-.email {
-  font-size: 3rem;
-  word-break: break-all;
-}
-
-.links {
-  font-size: 2.1rem;
-  word-break: break-all;
 }

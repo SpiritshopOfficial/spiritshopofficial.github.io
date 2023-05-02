@@ -46,6 +46,8 @@
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   display: flex;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .photo {

@@ -41,7 +41,7 @@
 }
 
 .slide-photos {
-  height: 70rem;
+  height: 66rem;
   width: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;

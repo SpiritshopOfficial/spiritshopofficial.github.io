@@ -51,7 +51,7 @@
 .photo {
   flex: 0 0 auto;
   height: 100%;
-  min-width: 90%;
+  min-width: 80%;
   background-size: cover;
   background-position: center;
   scroll-snap-align: center;

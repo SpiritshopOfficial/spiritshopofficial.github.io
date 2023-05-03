@@ -35,6 +35,8 @@ body {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap');
+
 a {
   color: inherit;
   font-size: 2.25rem;
@@ -46,7 +48,6 @@ a:hover {
 
 h1, h2, h3 {
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -68,6 +69,7 @@ h4 {
   font-size: 2.7rem;
   text-transform: uppercase;
   font-weight: 400;
+  font-family: 'Roboto Condesed', sans-serif;
 }
 
 p {

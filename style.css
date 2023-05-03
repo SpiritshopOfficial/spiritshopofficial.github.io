@@ -9,7 +9,7 @@ html {
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 1vh;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   scroll-behavior: smooth;
 }
 
@@ -34,8 +34,6 @@ body {
     font-size: 6.6px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap');
 
 a {
   color: inherit;

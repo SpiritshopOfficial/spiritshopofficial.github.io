@@ -5,7 +5,6 @@
 }
 
 html {
-  background: #222;
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 1vh;
@@ -35,13 +34,53 @@ body {
   }
 }
 
+.header, .footer, .container {
+  display: flex;
+  width: 100%;
+  height: 81rem;
+  flex: 0 0 auto;
+}
+
+.header {
+    scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-align: center;
+}
+
+.footer {
+    scroll-snap-align: end;
+}
+
+.column {
+  padding: 6rem 3rem;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text > * {
+  width: 100%;
+  max-width: 50rem;
+}
+
 a {
   color: inherit;
   font-size: 2.25rem;
+  word-break: break-all;
 }
 
 a:hover {
   opacity: 0.66;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0.6rem 0;
 }
 
 h1, h2, h3 {
@@ -53,10 +92,8 @@ h1, h2 {
   font-size: 4.2rem;
 }
 
-.date {
-  font-size: 12rem;
-  line-height: 1em;
-  word-wrap: break-word;
+.footer > h1 {
+  font-size: 3rem;
 }
 
 h3 {
@@ -74,42 +111,27 @@ p {
   font-size: 2.1rem;
 }
 
+.huge {
+  font-size: 12rem;
+  line-height: 1em;
+  word-wrap: break-word;
+}
+
 .copyright {
   font-size: 1.8rem;
 }
 
-ul {
-  list-style-type: none;
+.email {
+  font-size: 3rem;
+  word-break: break-all;
 }
 
-li {
-  padding: 0.6rem 0;
+.center {
+  text-align: center;
 }
 
 path {
   fill: #fff;
-}
-
-.slide {
-  width: 100%;
-  height: 81rem;
-  padding: 10rem 5rem;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-  align-items: center;
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-}
-
-.slide-text > h1,
-.slide-text > h2,
-.slide-text > h3,
-.slide-text > h4,
-.slide-text > p,
-.slide-text > a {
-  width: 100%;
-  max-width: 50rem;
 }
 
 .button {
@@ -126,16 +148,12 @@ path {
   margin-top: 1rem;
 }
 
-.gray {
+.grey {
   color: #aaa;
 }
 
 .dark {
   background: #111;
-}
-
-.basic {
-  background: #222;
 }
 
 .gradient {
@@ -147,16 +165,4 @@ path {
     rgba(68, 68, 68, 1) 73%,
     rgba(34, 34, 34, 1) 100%
   );
-}
-
-.center {
-  text-align: center;
-}
-
-.header > a {
-  max-width: 50rem;
-}
-
-.footer > h1 {
-  font-size: 3rem;
 }

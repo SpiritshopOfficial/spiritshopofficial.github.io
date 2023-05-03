@@ -25,14 +25,13 @@
 }
 
 #spiritshop {
-  background: #111;
   position: relative;
   overflow: hidden;
 }
 
 .spiritshop-logo {
   z-index: 1;
-  width: 100%;
+  width: 75%;
   max-width: 50rem;
 }
 

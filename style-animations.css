@@ -120,7 +120,7 @@
   } 
 }
 
-.pulse-1 {
+.pulse {
     animation: 1s pulse step-end infinite;
 }
 
@@ -139,39 +139,5 @@
   }
   60% {
     background: #222;
-  }
-}
-
-.pulse-2 > * {
-  animation: 2.5s pulse-2 step-end infinite;
-}
-
-@keyframes pulse-2 {
-  0% {
-    color: #fff;
-  }
-  5% {
-    color: #ddd;
-  }
-  10% { 
-    color: #fff;
-  }
-  15% {
-    color: #ddd;
-  }
-  20% {
-    color: #fff;
-  }
-}
-
-@keyframes partyLights {
-  0% {
-    background-color: #111;
-  }
-  50% {
-    background-color: #161616;
-  }
-  100% {
-    background-color: #111;
   }
 }

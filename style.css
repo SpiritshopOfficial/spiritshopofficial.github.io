@@ -21,6 +21,7 @@ body {
 @media (max-width: 50vh) {
   html {
     font-size: 2vw;
+    scroll-behavior: auto;
   }
 }
 

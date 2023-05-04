@@ -60,7 +60,7 @@ body {
 }
 
 .column {
-  padding: 6rem 3rem;
+  padding: 6rem 6rem;
   flex-flow: column;
   justify-content: space-evenly;
   align-items: center;

@@ -3,11 +3,11 @@ if (isInstagram) {
   document.querySelector('html').classList.add("html-insta");
 }
 
+/* SFM Planner */
+
 const y = new Date();
 let year = y.getFullYear();
 document.getElementById("year").innerHTML = year;
-
-/* Full Moon Party Planner */
 
 const display = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
 
@@ -46,7 +46,7 @@ for (let i = 0; i < dates.length; i++) {
   }
 }
 
-const day = dates[index].getDate();
+const day = dates[index].toLocaleString("en-US", { day: "numeric", timeZone: "Europe/Prague" });
 const month = display[dates[index].getMonth()];
 const str = `${month} ${day}`;
 const dateElement = document.getElementById("date");

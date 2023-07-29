@@ -1,3 +1,13 @@
+.video-background {
+  width: 100vh;
+  height: 81rem;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: red;
+}
+
 #house {
   height: 10.8rem;
 }

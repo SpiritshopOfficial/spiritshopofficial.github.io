@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  
+
   <meta charset="UTF-8">
-  <title>DJ O'Step</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./ostep.css">
-  <link rel="stylesheet" href="./style-animations.css">
+  <title>O'Step</title>
+  <link rel="stylesheet" href="./style-ostep.css">
   <meta name="author" content="Spiritshop Official">
-  <meta name="description" content="Club music enthusiast & dancefloor seeker. Brno based dj, Comming from dance community, raised by house dance culture, music collecting over 16 years, curating events under hood of spiritshop official.">
+  <meta name="description" content="We care about club culture, house music, community and dance. We make parties with atmosphere. Spend some time with great music in the moment. See you in person every full moon in Brno.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
   <script>
-  var isInstagram = navigator.userAgent.match(/instagram/i);
-  if (isInstagram) {
-    document.querySelector('html').classList.add("html-insta");
-  }
+    var isInstagram = navigator.userAgent.match(/instagram/i);
+    if (isInstagram) {
+      document.querySelector('html').classList.add("html-insta");
+    }
   </script>
-  
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -27,48 +25,89 @@
   <meta name="msapplication-TileColor" content="#222222">
   <meta name="msapplication-config" content="/assets/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
-  
+
 </head>
+
 <body>
 
-<div class="header column text center gradient" id="about-spiritshop-header">
-  <a href="./index.html">← Home</a>
-  <h1>DJ O'Step</h1>
-  <a class="grey" href="https://www.instagram.com/explore/tags/spiritshopcrew/" target="_blank">#spiritshopcrew</a>
-</div>
+  <div class="header">
+    <div class="container column">
+      <a href="#spiritshop" class="text" style="text-decoration: none;" class="shake-left">
+        <h1>O'Step</h1>
+      </a>
+      <div class="box text">
+        <a class="button-1" href="#biography">Bio</a>
+        <a class="button-1" href="#music">Music</a>
+        <a class="button-1" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="spiritshop-photo" id="sp-3" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-1.jpg'); background-position: 55% 25%;"></div>
+    <div class="spiritshop-photo" id="sp-2" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-2.jpg'); background-position: 100% 50%;"></div>
+    <div class="spiritshop-photo" id="sp-1" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-6.jpg'); background-position: 75% 15%;"></div>
+    <div class="spiritshop-photo overlay"></div>
+  </div>
 
-<video class="video-background" autoplay loop muted>
-  <source src="http://spiritshopofficial.com/data/dj-ostep-club-video.mp4" type="video/mp4">
-  <source src="http://spiritshopofficial.com/data/dj-ostep-club-video.mov" type="video/mov">
-</video>
-  
-<div class="container column text" id="slide-about-us">
-  <h4>We are a collective of club music enthusiasts who share a passion for underground sounds and the community that comes with it</h4>
-  <p class="grey">What started as a house dance crew has evolved into a club music community that connects people through their love of beats and good vibes.</p>
-  <p>Our mission is to create a space where everyone can come together to express themselves and let loose on the dance floor. Whether you're a seasoned raver or new to the scene, you're always welcome at Spiritshop.</p>
-</div>
-  
-<div class="container" style="background-image: url('https://spiritshopofficial.com/data/as-photo-1.jpg'); background-size: cover; background-position: 50% 55%; -webkit-filter: blur(0.5px); filter: blur(0.5px);"></div>
-  
-<div class="container column text dark" id="slide-contact">
-  <h3>Contact</h3>
-  <p class="grey">Hit us up on Instagram for all the latest updates, behind-the-scenes sneak peeks, and wicked music vibes. See you in person every full moon in Brno!</p>
-  <a class="email shake-right-3" href="mailto:hi@spiritshopofficial.com">hi@spiritshopofficial.com</a>
-  <a class="links shake-right" href="https://www.instagram.com/spiritshop_official/" target="_blank">instagram.com/spiritshop_official</a>
-</div>
+  <div class="container column text gradient-1" id="biography">
+    <h3>Bio</h3>
+    <div class="box">
+      <h4>A Brno-based DJ, coming from dance community, shaped by house dance culture</h4>
+      <p>With over <span id="experience">16</span> years of music collecting expertise. O’Step crafts sets that ignite dancefloors with an infectious energy. Specializing in the dynamic fusion of deep house, UK garage, amapiano, and viby beats, mixes of O'Step transcend boundaries, captivating listeners in club settings, on the beach, or beneath the starlit sky of a park</p>
+    </div>
+  </div>
 
-<div class="container column text center gradient">
-  <h3>Spiritshop Official</h3>
-  <p class="grey">Events, Music, Community, Dance. Full Moon Parties in Brno, Czechia</p>
-  <a href="#" class="shake">Back to Top ↑</a>
-  <div class="copyright grey">© <span id="year">2022</span> - Spiritshop Official</div>
-</div>
-  
-<script src="./script.js"></script>
-  
+  <div class="container container-slideshow dark">
+    <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-7.jpg'); background-position: 45% 80%;"></div>
+    <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-5.jpg'); background-position: 50% 45%; filter: hue-rotate(340deg);"></div>
+    <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-8.jpg'); background-position: 45% 35%;"></div>
+  </div>
+
+  <div class="container column text gradient-2" id="slide-about">
+    <h3>Music</h3>
+    <div class="box">
+      <h4>Maestro of Deep House, UKG, Amapiano</h4>
+      <p>Prepare to be enchanted by the mesmerizing sounds. Always serving high-quality music</p>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1628316876&color=%23666699&auto_play=false&hide_related=true&show_comments=true&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+    </div>
+  </div>
+
+  <div class="container column text color-1 pulse-1" id="contact">
+    <h3 style="flex:2;">Contact</h3>
+    <div class="box">
+      <h4>Bookings</h4>
+      <a href="mailto:ostep@spiritshopofficial.com">ostep@spiritshopofficial.com</a>
+    </div>
+    <div class="box">
+      <h4>Social</h4>
+      <a href="https://www.instagram.com/0_step/" target="_blank">
+        instagram.com/0_step/
+      </a>
+      <a href="https://www.linktr.ee/0_step/" target="_blank">
+        linktr.ee/0_step/
+      </a>
+    </div>
+    <div class="box">
+      <h4>Stream</h4>
+      <a href="https://soundcloud.com/spiritshop/" target="_blank">
+        soundcloud.com/spiritshop/
+      </a>
+    </div>
+  </div>
+
+  <div class="container column text gradient-3">
+    <h2>O'Step</h2>
+    <div class="box">
+      <a class="button-1" href="./ostep.html" class="shake">Back to Top</a>
+      <a class="button-1" href="https://www.spiritshopofficial.com/" class="shake">Home</a>
+      <div class="copyright center">© <span id="year">2022</span> - Spiritshop Official</div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
 </body>
+
 </html>

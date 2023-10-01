@@ -281,11 +281,7 @@ p {
 }
 
 .overlay {
-  background: linear-gradient(0deg, rgba(34, 34, 51, 0.45), rgba(0, 0, 0, 0));
-  /*
-  -webkit-backdrop-filter: blur(0.5px);
-  backdrop-filter: blur(0.5px);
-  */
+  background: linear-gradient(0deg, rgba(34, 34, 51, 1), rgba(0, 0, 0, 0) 50%);
 }
 
 @keyframes opacity-1 {

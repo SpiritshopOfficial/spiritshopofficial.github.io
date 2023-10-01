@@ -73,10 +73,6 @@ body {
   justify-content: space-between;
 }
 
-.header > .column {
-  justify-content: space-between;
-}
-
 a {
   color: inherit;
   font-size: 2.4rem;
@@ -85,28 +81,6 @@ a {
 
 a:hover {
   opacity: 0.66;
-}
-
-.button-1 {
-  padding: 0 3rem;
-  border: solid 0.24rem;
-  line-height: 6rem;
-  border-radius: 6rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  animation: load-2 0.5s linear;
-}
-
-@keyframes load-2 {
-  0% {
-    opacity: 0;
-    margin-top: 3rem;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0;
-  }
 }
 
 .text > * {
@@ -155,7 +129,7 @@ h2 {
 
 h1 {
   text-decoration: none;
-  animation: load .5s linear;
+  animation: load 2s linear;
 }
 
 @keyframes load {
@@ -163,14 +137,50 @@ h1 {
     padding-right: 3em;
     opacity: 0;
   }
-  100% {
+  50% {
+    padding-right: 3em;
+    opacity: 0;
+  }
+  75% {
     padding-right: 0em;
     opacity: 1;
   }
 }
 
-.footer > h1 {
-  font-size: 3rem;
+.button-1 {
+  padding: 0 3rem;
+  border: solid 0.24rem;
+  line-height: 6rem;
+  border-radius: 6rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button-1:hover {
+  opacity: 1;
+  background: #ffffff;
+  color: #222233;
+  border-color: #ffffff;
+}
+
+.menu > .button-1 {
+  animation: load-2 2s linear;
+}
+
+@keyframes load-2 {
+  0% {
+    opacity: 0;
+    margin-top: 3rem;
+  }
+  75% {
+    opacity: 0;
+    margin-top: 3rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 
 h3 {

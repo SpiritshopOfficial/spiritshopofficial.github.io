@@ -40,8 +40,6 @@ body {
   }
 }
 
-.header,
-.footer,
 .container,
 .header > .column {
   display: flex;
@@ -61,10 +59,6 @@ body {
 .container > *:first-child {
   align-self: flex-end;
   text-align: right;
-}
-
-.footer {
-  scroll-snap-align: end;
 }
 
 .column {
@@ -129,7 +123,7 @@ h2 {
 
 h1 {
   text-decoration: none;
-  animation: load 2s linear;
+  animation: load 2s ease-in-out;
 }
 
 @keyframes load {
@@ -165,7 +159,7 @@ h1 {
 }
 
 .menu > .button-1 {
-  animation: load-2 2s linear;
+  animation: load-2 2s ease-in-out;
 }
 
 @keyframes load-2 {

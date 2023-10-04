@@ -1,3 +1,15 @@
+.sp-1 {
+  animation: 12s opacity-1 step-end infinite, 12s zoom-1 linear infinite;
+}
+
+.sp-2 {
+  animation: 12s opacity-1 step-end 4s infinite, 12s zoom-1 linear 4s infinite;
+}
+
+.sp-3 {
+  animation: 12s opacity-1 step-end 8s infinite, 12s zoom-1 linear 8s infinite;
+}
+
 @keyframes opacity-1 {
   0% {
     opacity: 1;

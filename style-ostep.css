@@ -142,20 +142,20 @@ h1 {
 }
 
 .button-1 {
+  background: none;
   padding: 0 3rem;
-  border: solid 0.24rem;
-  line-height: 6rem;
-  border-radius: 6rem;
+  border: #fff solid 0.21rem;
+  border-radius: 2.85rem;
+  line-height: 5.7rem;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
 }
 
 .button-1:hover {
   opacity: 1;
-  background: #ffffff;
-  color: #222233;
-  border-color: #ffffff;
+  color: #222;
+  background: #fff;
+  border-color: #fff;
 }
 
 .menu > .button-1 {

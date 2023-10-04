@@ -1,3 +1,14 @@
+@keyframes button-pulse {
+  0% {
+    background: none;
+    border-color: #fff;
+  }
+  100% {
+    background: #222;
+    border-color: #222;
+  }
+}
+
 .sp-1 {
   animation: 12s opacity-1 step-end infinite, 12s zoom-1 linear infinite;
 }

@@ -168,7 +168,7 @@
 }
 
 .pulse {
-    animation: 1s pulse step-end infinite;
+    animation: 1.2s pulse step-end infinite;
 }
 
 @keyframes pulse {

@@ -1,11 +1,11 @@
 @keyframes button-pulse {
   0% {
-    background: #fff;
-    color: #222;
+    background: #ffffff;
+    color: #262626;
   }
   100% {
-    background: none;
-    color: #fff;
+    background: #262626;
+    color: #ffffff;
   }
 }
 

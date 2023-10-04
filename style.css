@@ -9,7 +9,6 @@ html {
   font-family: "Inter", sans-serif;
   font-size: 1vh;
   letter-spacing: 0.06em;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -81,12 +80,33 @@ a:hover {
   opacity: 0.66;
 }
 
-ul {
-  list-style-type: none;
+.button-1 {
+  background: #222;
+  padding: 0 3rem;
+  border: #222 solid 0.21rem;
+  border-radius: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  text-decoration: none;
 }
 
-li {
-  padding: 0.6rem 0;
+.button-1:hover {
+  opacity: 1;
+  background: none;
+  border-color: #fff;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+}
+
+.box > * {
+  margin-bottom: 1.5rem;
+}
+
+.box > *:last-child {
+  margin-bottom: 0;
 }
 
 h1, h2, h3 {
@@ -128,7 +148,7 @@ p {
 }
 
 .email {
-  font-size: 2.7rem;
+  font-size: 3rem;
   word-break: break-all;
 }
 

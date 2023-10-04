@@ -94,9 +94,9 @@ a:hover {
 }
 
 .button-1 {
-  background: #222;
+  background: none;
   padding: 0 3rem;
-  border: #222 solid 0.21rem;
+  border: #fff solid 0.21rem;
   border-radius: 2.85rem;
   line-height: 5.7rem;
   text-align: center;
@@ -105,7 +105,8 @@ a:hover {
 
 .button-1:hover {
   opacity: 1;
-  background: none;
+  color: #222;
+  background: #fff;
   border-color: #fff;
 }
 

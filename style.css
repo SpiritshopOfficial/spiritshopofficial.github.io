@@ -76,7 +76,7 @@ body {
 }
 
 .box > * {
-  margin-bottom: 2.1rem;
+  margin-bottom: 1.8rem;
 }
 
 .box > *:last-child {
@@ -94,20 +94,18 @@ a:hover {
 }
 
 .button-1 {
-  background: none;
+  background: #212121;
   padding: 0 3rem;
-  border: #fff solid 0.21rem;
   border-radius: 2.85rem;
-  line-height: 5.7rem;
+  line-height: 6rem;
   text-align: center;
   text-decoration: none;
 }
 
 .button-1:hover {
   opacity: 1;
-  color: #222;
-  background: #fff;
-  border-color: #fff;
+  color: #212121;
+  background: #ffffff;
 }
 
 h1, h2, h3 {

@@ -1,3 +1,41 @@
+.load {
+  animation: load 1.5s ease-in-out;
+}
+
+@keyframes load {
+  0% {
+    padding-right: 3em;
+    opacity: 0;
+  }
+  50% {
+    padding-right: 3em;
+    opacity: 0;
+  }
+  75% {
+    padding-right: 0em;
+    opacity: 1;
+  }
+}
+
+.butt-load {
+  animation: 1.5s butt-load ease-in-out;
+}
+
+@keyframes butt-load {
+  0% {
+    opacity: 0;
+    margin-top: 3rem;
+  }
+  75% {
+    opacity: 0;
+    margin-top: 3rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 @keyframes button-pulse {
   0% {
     background: #ffffff;
@@ -164,11 +202,15 @@
   }
   100% {
     transform: scale(1);
-  } 
+  }
 }
 
 .pulse {
-    animation: 1.2s pulse step-end infinite;
+  animation: 1.2s pulse step-end infinite;
+}
+
+.pulse-2 {
+  animation: 2.1s pulse-2 step-end infinite;
 }
 
 @keyframes pulse {
@@ -176,15 +218,33 @@
     background: #222;
   }
   15% {
-    background: #333;
+    background: #262626;
   }
   30% {
     background: #222;
   }
   45% {
-    background: #333;
+    background: #262626;
   }
   60% {
     background: #222;
+  }
+}
+
+@keyframes pulse-2 {
+  0% {
+    background: rgb(34, 34, 51);
+  }
+  8% {
+    background: rgb(51, 51, 77);
+  }
+  16% {
+    background: rgb(34, 34, 51);
+  }
+  24% {
+    background: rgb(51, 51, 77);
+  }
+  32% {
+    background: rgb(34, 34, 51);
   }
 }

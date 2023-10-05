@@ -285,5 +285,6 @@ path {
 
 iframe {
   height: 314px;
+  width: 100%;
   max-width: 96rem;
 }

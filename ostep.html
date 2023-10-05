@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
-
+  
   <meta charset="UTF-8">
   <title>O'Step</title>
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./style-ostep.css">
+  <link rel="stylesheet" href="./style-animations.css">
   <meta name="author" content="Spiritshop Official">
-  <meta name="description" content="We care about club culture, house music, community and dance. We make parties with atmosphere. Spend some time with great music in the moment. See you in person every full moon in Brno.">
+  <meta name="description" content="Dj, Maestro of Deep House, UKGZ, and Amapiano. Always serving high-quality music.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    var isInstagram = navigator.userAgent.match(/instagram/i);
-    if (isInstagram) {
-      document.querySelector('html').classList.add("html-insta");
-    }
+  var isInstagram = navigator.userAgent.match(/instagram/i);
+  if (isInstagram) {
+    document.querySelector('html').classList.add("html-insta");
+  }
   </script>
-
+  
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -25,58 +26,68 @@
   <meta name="msapplication-TileColor" content="#222222">
   <meta name="msapplication-config" content="/assets/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
-
+  
 </head>
-
 <body>
 
-  <div class="header">
-    <div class="container column">
-      <a href="#spiritshop" class="text" style="text-decoration: none;" class="shake-left">
-        <h1>O'Step</h1>
-      </a>
-      <div class="box text menu">
-        <a class="button-1" href="#biography">Bio</a>
-        <a class="button-1" href="#music">Music</a>
-        <a class="button-1" href="#contact">Contact</a>
-      </div>
-    </div>
-    <div class="spiritshop-photo" id="sp-3" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-1.jpg'); background-position: 55% 25%;"></div>
-    <div class="spiritshop-photo" id="sp-2" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-2.jpg'); background-position: 100% 50%;"></div>
-    <div class="spiritshop-photo" id="sp-1" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-6.jpg'); background-position: 75% 15%;"></div>
-    <div class="spiritshop-photo overlay"></div>
+<div class="header col umn-2 text banner">
+  <h1 class="right load">O'Step</h1>
+  <div class="box">
+    <a class="butt on-2 butt-load" href="#bio" alt="Bio">Bio</a>
+    <a class="butt on-2 butt-load" href="#music" alt="Music">Music</a>
+    <a class="butt on-2 butt-load" href="#contact" alt="Contact">Contact</a>
   </div>
+  <div class="spiritshop-photo sp-3" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-1.jpg'); background-position: 55% 25%;"></div>
+    <div class="spiritshop-photo sp-2" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-2.jpg'); background-position: 100% 50%;"></div>
+    <div class="spiritshop-photo sp-1" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-6.jpg'); background-position: 75% 15%;"></div>
+    <div class="spiritshop-photo overlay-2"></div>
+</div>
 
-  <div class="container column text gradient-1" id="biography">
-    <h3>Bio</h3>
-    <div class="box">
-      <h4>A Brno-based DJ, coming from dance community, shaped by house dance culture</h4>
-      <p>With over <span id="experience">16</span> years of music collecting expertise. O’Step crafts sets that ignite dancefloors with an infectious energy. Specializing in the dynamic fusion of deep house, UK garage, amapiano, and viby beats, mixes of O'Step transcend boundaries, captivating listeners in club settings, on the beach, or beneath the starlit sky of a park.</p>
-    </div>
-  </div>
-
-  <div class="container container-slideshow dark">
-    <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-7.jpg'); background-position: 45% 80%;"></div>
-    <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-5.jpg'); background-position: 50% 45%; filter: hue-rotate(340deg);"></div>
-    <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-8.jpg'); background-position: 45% 35%;"></div>
-  </div>
-
-  <div class="container column text gradient-2" id="slide-about">
-    <h3>Music</h3>
-    <div class="box">
-      <h4>Maestro of Deep House, UKG, Amapiano</h4>
-      <p>Prepare to be enchanted by the mesmerizing sounds. Always serving high-quality music.</p>
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1628316876&color=%23666699&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-    </div>
-  </div>
-
-  <div class="container column text color-1 pulse-1" id="contact">
-    <h3 style="flex:2;">Contact</h3>
-    <div class="box">
+<div class="container col middle gradient-1">
+  <svg class="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3108 405" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M150 0L96 27L54 48L0 75V99V228V252L54 225L96 204V333L54 354V258L0 285V381V405L54 378L96 357L150 330V306V177V153L96 180L54 201V72L96 51V150L150 123V24V0Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M500 0L446 27L404 48L350 75V99V288V312V405L404 378V285L446 264L500 237V213V24V0ZM446 240V51L404 72V261L446 240Z"></path>
+    <path d="M700 51L754 24V354L700 381V51Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1104 0L1050 27L1008 48L954 75V99V231V255V285V309V405L1008 378V282L1050 261V357L1104 330V234V210L1050 237L1008 258V228L1050 207L1104 180V156V24V0ZM1050 183V51L1008 72V204L1050 183Z"></path>
+    <path d="M1304 51L1358 24V354L1304 381V51Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1606 51L1558 75V99L1606 75V381L1660 354V48L1708 24V0L1660 24L1606 51Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2058 0L2004 27L1962 48L1908 75V99V228V252L1962 225L2004 204V333L1962 354V258L1908 285V381V405L1962 378L2004 357L2058 330V306V177V153L2004 180L1962 201V72L2004 51V150L2058 123V24V0Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2354 27L2408 0V153V177V330L2354 357V204L2312 225V378L2258 405V252V228V75L2312 48V201L2354 180V27Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2758 0L2704 27L2662 48L2608 75V100V380V405L2662 378L2704 357L2758 330V305V25V0ZM2704 52L2662 73V353L2704 332V52Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3108 0L3054 27L3012 48L2958 75V99V288V312V405L3012 378V285L3054 264L3108 237V213V24V0ZM3054 240V51L3012 72V261L3054 240Z"></path>
+  </svg>
+</div>
+  
+<div class="container col umn-3 text gradient-2" id="bio">
+  <h3>Bio</h3>
+  <h4>The seasoned party igniter, crafts sets that seamlessly blend deep house, UKGZ, and Amapiano</h4>
+  <p>O'Step, a Brno based DJ deeply steeped in the essence of house dance culture. With over <span id="experience">16</span> years of music collecting prowess, setting dance floors ablaze in clubs, serenading sandy beach shores, or orchestrating grooves beneath the dazzling starry canopy of a park.</p>
+</div>
+  
+<div class="container slideshow dark">
+  <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/sfm-photo-1.jpg'); background-position: 30% 60%;"></div>
+  <div class="slideshow-photo" style="background-image: url('https://spiritshopofficial.com/data/sfm-photo-3.jpg'); background-position: 45% 35%;"></div>
+</div>
+  
+<div class="container col umn-1 text gradient-3" id="music">
+  <h3>Music</h3>
+  <h4>O'Step's music isn't just heard; it's felt</h4>
+  <p>With a groove that moves the soul, he's a maestro of deep house, UK garage, and amapiano. But he's got no problem to serve you hip-hop and soul.</p>
+    <p>What sets him apart is his inventive spirit, constantly pushing musical boundaries, crafting unique techniques for mixing, and navigating between genres and BPMs with ease.
+  </p>
+</div>
+  
+<div class="container col umn-2 middle color-2">
+  <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1699903632&color=%23666699&auto_play=false&hide_related=true&show_comments=true&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+</div>
+  
+<div class="container col umn-2 text color-1 pulse-2" id="contact">
+  <h3 class="right">Contact</h3>
+  <div class="box">
       <h4>Bookings</h4>
       <a href="mailto:ostep@spiritshopofficial.com">ostep@spiritshopofficial.com</a>
     </div>
@@ -95,19 +106,33 @@
         soundcloud.com/spiritshop/
       </a>
     </div>
+</div>
+  
+<div class="container col middle banner" style="background-image: url('https://spiritshopofficial.com/data/ostep-web-9.jpg'); background-size: cover; background-position: 50% 50%;">
+  <svg class="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1804 405" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M754 0L700 27L658 48L604 75V99V228V252L658 225L700 204V333L658 354V258L604 285V381V405L658 378L700 357L754 330V306V177V153L700 180L658 201V72L700 51V150L754 123V24V0Z" fill="#222222"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1804 0L1750 27L1708 48L1654 75V99V288V312V405L1708 378V285L1750 264L1804 237V213V24V0ZM1750 240V51L1708 72V261L1750 240Z" fill="#222222"/>
+<path d="M350 51L404 24V147L350 174V51Z" fill="#222222"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1002 51L954 75V99L1002 75V381L1056 354V48L1104 24V0L1056 24L1002 51Z" fill="#222222"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1358 48L1304 75V99V381V405L1358 378L1454 330V306L1358 354V72L1454 24V0L1358 48Z" fill="#222222"/>
+<path d="M1304 228L1400 180V204L1304 252V228Z" fill="#222222"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M150 0L96 27L54 48L0 75V100V380V405L54 378L96 357L150 330V305V25V0ZM96 52L54 73V353L96 332V52Z" fill="#222222"/>
+</svg>
+</div>
+  
+  
+  
+<div class="footer column text center gradient-1">
+  <h3>Spiritshop Official</h3>
+  <p>Events, Music, Community, Dance. Spiritshop Full Moon in Brno, Czechia</p>
+  <div class="box">
+    <a href="#" class="butt on-1" alt="Back to top">Back to top ↑</a>
+    <a href="https://www.spiritshopofficial.com/" class="butt on-1" alt="Spiritshop Official">Go home</a>
   </div>
-
-  <div class="footer container column text gradient-3">
-    <h2>O'Step</h2>
-    <div class="box">
-      <a class="button-1" href="#">Back to Top</a>
-      <a class="button-1" href="https://www.spiritshopofficial.com/">Home</a>
-      <div class="copyright center">© <span id="year">2022</span> - Spiritshop Official</div>
-    </div>
-  </div>
-
+  <div class="copyright">© <span id="year">2022</span> - Spiritshop Official</div>
+</div>
+  
   <script src="./script.js"></script>
-
+  
 </body>
-
 </html>

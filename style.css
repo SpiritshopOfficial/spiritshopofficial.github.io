@@ -14,8 +14,12 @@ html {
 
 body {
   background: #222;
+}
+
+.wrapper {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  height: 100vh;
 }
 
 @media (max-width: 50vh) {
@@ -25,7 +29,7 @@ body {
 }
 
 @media (max-width: 75vh) {
-  body {
+  .wrapper {
     scroll-snap-type: none;
   }
 }

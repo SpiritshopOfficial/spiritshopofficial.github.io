@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Harmonic mixing by Spiritshop Official</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-home.css">
+  <link rel="stylesheet" href="./style-animations.css">
+  <meta name="author" content="Spiritshop Official">
+  <meta name="description" content="Harmonic mixing tool">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <style>
+html {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #222;
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  padding: 0 1.2rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  line-height: 2.4rem;
+  background: #111;
+}
+
+.active-link {
+  color: #222;
+  background: #fff;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.cell-1,
+.cell-2 {
+}
+
+.cell-1 {
+  font-weight: 700;
+  margin-right: 1.5rem;
+  width: 2.4rem;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+}
+
+.cell-2 {
+  flex: 1;
+  line-height: 1.2rem;
+}
+
+  </style>
+  
+</head>
+
+<body>
+
+  <h1>Harmonics</h1>
+
+  <div class="keys">
+    <a href="#" onclick="showHarmonicInfo('A')" id="A-link">A</a>
+    <a href="#" onclick="showHarmonicInfo('Ab')" id="Ab-link">Ab</a>
+    <a href="#" onclick="showHarmonicInfo('Abm')" id="Abm-link">Abm</a>
+    <a href="#" onclick="showHarmonicInfo('Am')" id="Am-link">Am</a>
+    <a href="#" onclick="showHarmonicInfo('B')" id="B-link">B</a>
+    <a href="#" onclick="showHarmonicInfo('Bb')" id="Bb-link">Bb</a>
+    <a href="#" onclick="showHarmonicInfo('Bbm')" id="Bbm-link">Bbm</a>
+    <a href="#" onclick="showHarmonicInfo('Bm')" id="Bm-link">Bm</a>
+    <a href="#" onclick="showHarmonicInfo('C')" id="C-link">C</a>
+    <a href="#" onclick="showHarmonicInfo('Cm')" id="Cm-link">Cm</a>
+    <a href="#" onclick="showHarmonicInfo('D')" id="D-link">D</a>
+    <a href="#" onclick="showHarmonicInfo('Db')" id="Db-link">Db</a>
+    <a href="#" onclick="showHarmonicInfo('Dbm')" id="Dbm-link">Dbm</a>
+    <a href="#" onclick="showHarmonicInfo('Dm')" id="Dm-link">Dm</a>
+    <a href="#" onclick="showHarmonicInfo('E')" id="E-link">E</a>
+    <a href="#" onclick="showHarmonicInfo('Eb')" id="Eb-link">Eb</a>
+    <a href="#" onclick="showHarmonicInfo('Ebm')" id="Ebm-link">Ebm</a>
+    <a href="#" onclick="showHarmonicInfo('Em')" id="Em-link">Em</a>
+    <a href="#" onclick="showHarmonicInfo('F')" id="F-link">F</a>
+    <a href="#" onclick="showHarmonicInfo('Fs')" id="Fs-link">F#</a>
+    <a href="#" onclick="showHarmonicInfo('Fsm')" id="Fsm-link">F#m</a>
+    <a href="#" onclick="showHarmonicInfo('Fm')" id="Fm-link">Fm</a>
+    <a href="#" onclick="showHarmonicInfo('G')" id="G-link">G</a>
+    <a href="#" onclick="showHarmonicInfo('Gm')" id="Gm-link">Gm</a>
+  </div>
+   <div class="result" id="result"></div>
+    </div>
+
+    <h2 id="chordName">Press the key</h2>
+    <div class="table" id="table"></div>
+  
+  <script>
+function showHarmonicInfo(chord) {
+  const harmonics = {
+    A: [
+      "D - Fourth",
+      "F#m - Relative minor",
+      "A - <strong>Same key</strong>",
+      "E - Fifth",
+      "Bb - Low energy boost",
+      "B - High energy boost",
+      "Ab - Low energy drain",
+      "G - High energy drain",
+      "Dbm - Experimental"
+    ],
+    Ab: [
+      "Db - Fourth",
+      "Fm - Relative minor",
+      "Ab - <strong>Same key</strong>",
+      "Eb - Fifth",
+      "A - Low energy boost",
+      "Bb - High energy boost",
+      "G - Low energy drain",
+      "F# - High energy drain",
+      "Cm - Experimental"
+    ],
+    Abm: [
+      "Dbm - Fourth",
+      "B - Relative major",
+      "Abm - <strong>Same key</strong>",
+      "Ebm - Fifth",
+      "Am - Low energy boost",
+      "Bbm - High energy boost",
+      "Gm - Low energy drain",
+      "F#m - High energy drain",
+      "E - Experimental"
+    ],
+    Am: [
+      "Dm - Fourth",
+      "C - Relative major",
+      "Am - <strong>Same key</strong>",
+      "Em - Fifth",
+      "Bbm - Low energy boost",
+      "Bm - High energy boost",
+      "Ebm - Low energy drain",
+      "Dm - High energy drain",
+      "F - Experimental"
+    ],
+    B: [
+      "E - Fourth",
+      "Abm - Relative minor",
+      "B - <strong>Same key</strong>",
+      "F# - Fifth",
+      "C - Low energy boost",
+      "Db - High energy boost",
+      "Bb - Low energy drain",
+      "A - High energy drain",
+      "Ebm - Experimental"
+    ],
+    Bb: [
+      "Eb - Fourth",
+      "Gm - Relative minor",
+      "Bb - <strong>Same key</strong>",
+      "F - Fifth",
+      "B - Low energy boost",
+      "C - High energy boost",
+      "A - Low energy drain",
+      "Ab - High energy drain",
+      "Dm - Experimental"
+    ],
+    Bbm: [
+      "Ebm - Fourth",
+      "Db - Relative major",
+      "Bbm - <strong>Same key</strong>",
+      "Fm - Fifth",
+      "Bm - Low energy boost",
+      "Cm - High energy boost",
+      "Am - Low energy drain",
+      "Abm - High energy drain",
+      "F# - Experimental"
+    ],
+    Bm: [
+      "Em - Fourth",
+      "D - Relative major",
+      "Bm - <strong>Same key</strong>",
+      "F#m - Fifth",
+      "Cm - Low energy boost",
+      "Dbm - High energy boost",
+      "Bbm - Low energy drain",
+      "Am - High energy drain",
+      "G - Experimental"
+    ],
+    C: [
+      "F - Fourth",
+      "Am - Relative minor",
+      "C - <strong>Same key</strong>",
+      "G - Fifth",
+      "Db - Low energy boost",
+      "D - High energy boost",
+      "B - Low energy drain",
+      "Bb - High energy drain",
+      "Em - Experimental"
+    ],
+    Cm: [
+      "Fm - Fourth",
+      "Eb - Relative major",
+      "Cm - <strong>Same key</strong>",
+      "Gm - Fifth",
+      "Dbm - Low energy boost",
+      "Dm - High energy boost",
+      "Bm - Low energy drain",
+      "Bbm - High energy drain",
+      "Ab - Experimental"
+    ],
+    D: [
+      "G - Fourth",
+      "Bm - Relative minor",
+      "D - <strong>Same key</strong>",
+      "A - Fifth",
+      "Eb - Low energy boost",
+      "E - High energy boost",
+      "Db - Low energy drain",
+      "C - High energy drain",
+      "F#m - Experimental"
+    ],
+    Db: [
+      "F# - Fourth",
+      "Bbm - Relative minor",
+      "Db - <strong>Same key</strong>",
+      "Ab - Fifth",
+      "D - Low energy boost",
+      "Eb - High energy boost",
+      "C - Low energy drain",
+      "B - High energy drain",
+      "Fm - Experimental"
+    ],
+    Dbm: [
+      "F#m - Fourth",
+      "E - Relative major",
+      "Dbm - <strong>Same key</strong>",
+      "Abm - Fifth",
+      "Dm - Low energy boost",
+      "Ebm - High energy boost",
+      "Cm - Low energy drain",
+      "Bm - High energy drain",
+      "A - Experimental"
+    ],
+    Dm: [
+      "Gm - Fourth",
+      "F - Relative major",
+      "Dm - <strong>Same key</strong>",
+      "Am - Fifth",
+      "Ebm - Low energy boost",
+      "Em - High energy boost",
+      "Dbm - Low energy drain",
+      "Cm - High energy drain",
+      "Bb - Experimental"
+    ],
+    E: [
+      "A - Fourth",
+      "Dbm - Relative minor",
+      "E - <strong>Same key</strong>",
+      "B - Fifth",
+      "F - Low energy boost",
+      "F# - High energy boost",
+      "Eb - Low energy drain",
+      "D - High energy drain",
+      "Abm - Experimental"
+    ],
+    Eb: [
+      "Ab - Fourth",
+      "Cm - Relative minor",
+      "Eb - <strong>Same key</strong>",
+      "Bb - Fifth",
+      "E - Low energy boost",
+      "F - High energy boost",
+      "D - Low energy drain",
+      "Db - High energy drain",
+      "Gm - Experimental"
+    ],
+    Ebm: [
+      "Abm - Fourth",
+      "F# - Relative major",
+      "Ebm - <strong>Same key</strong>",
+      "Bbm - Fifth",
+      "Em - Low energy boost",
+      "Fm - High energy boost",
+      "Dm - Low energy drain",
+      "Dbm - High energy drain",
+      "B - Experimental"
+    ],
+    Em: [
+      "Am - Fourth",
+      "G - Relative major",
+      "Em - <strong>Same key</strong>",
+      "Bm - Fifth",
+      "Fm - Low energy boost",
+      "F#m - High energy boost",
+      "Ebm - Low energy drain",
+      "Dm - High energy drain",
+      "C - Experimental"
+    ],
+    F: [
+      "Bb - Fourth",
+      "Dm - Relative minor",
+      "F - <strong>Same key</strong>",
+      "C - Fifth",
+      "F# - Low energy boost",
+      "G - High energy boost",
+      "E - Low energy drain",
+      "Eb - High energy drain",
+      "Am - Experimental"
+    ],
+    Fs: [
+      "B - Fourth",
+      "Ebm - Relative minor",
+      "F# - <strong>Same key</strong>",
+      "Db - Fifth",
+      "G - Low energy boost",
+      "Ab - High energy boost",
+      "F - Low energy drain",
+      "E - High energy drain",
+      "Bbm - Experimental"
+    ],
+    Fsm: [
+      "Bm - Fourth",
+      "A - Relative major",
+      "F#m - <strong>Same key</strong>",
+      "Dbm - Fifth",
+      "Gm - Low energy boost",
+      "Abm - High energy boost",
+      "Fm - Low energy drain",
+      "Em - High energy drain",
+      "D - Experimental"
+    ],
+    Fm: [
+      "Bbm - Fourth",
+      "Ab - Relative major",
+      "Fm - <strong>Same key</strong>",
+      "Cm - Fifth",
+      "F#m - Low energy boost",
+      "Gm - High energy boost",
+      "Em - Low energy drain",
+      "Ebm - High energy drain",
+      "Db - Experimental"
+    ],
+    G: [
+      "C - Fourth",
+      "Em - Relative minor",
+      "G - <strong>Same key</strong>",
+      "D - Fifth",
+      "Ab - Low energy boost",
+      "A - High energy boost",
+      "F# - Low energy drain",
+      "F - High energy drain",
+      "Bm - Experimental"
+    ],
+    Gm: [
+      "Cm - Fourth",
+      "Bb - Relative major",
+      "Gm - <strong>Same key</strong>",
+      "Dm - Fifth",
+      "Abm - Low energy boost",
+      "Am - High energy boost",
+      "F#m - Low energy drain",
+      "Fm - High energy drain",
+      "Eb - Experimental"
+    ]
+  };
+
+  const tableDiv = document.getElementById("table");
+  const chordNameDiv = document.getElementById("chordName");
+  const info = harmonics[chord];
+
+  if (info) {
+    // Remove active class from all links
+    const links = document.querySelectorAll(".active-link");
+    links.forEach((link) => link.classList.remove("active-link"));
+
+    // Add active class to the recently pressed link
+    document.getElementById(`${chord}-link`).classList.add("active-link");
+
+    tableDiv.innerHTML = "";
+    chordNameDiv.textContent = getChordName(chord);
+
+    info.forEach((item) => {
+      const [key, description] = item.split(" - ");
+
+      const row = document.createElement("div");
+      row.classList.add("row");
+
+      const cell1 = document.createElement("div");
+      cell1.classList.add("cell-1");
+      cell1.textContent = key;
+
+      const cell2 = document.createElement("div");
+      cell2.classList.add("cell-2");
+      cell2.innerHTML = `${description}`;
+
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+
+      tableDiv.appendChild(row);
+    });
+  } else {
+    tableDiv.innerHTML = "";
+    chordNameDiv.textContent = "";
+  }
+}
+
+function getChordName(chord) {
+  const chordNames = {
+    A: "A major",
+    Ab: "A flat/b major",
+    Abm: "A flat/b minor",
+    Am: "A minor",
+    B: "B major",
+    Bb: "B flat/b major",
+    Bbm: "B flat/b minor",
+    Bm: "B minor",
+    C: "C major",
+    Cm: "C minor",
+    D: "D major",
+    Db: "D flat/b major",
+    Dbm: "D flat/b minor",
+    Dm: "D minor",
+    E: "E major",
+    Eb: "E flat/b major",
+    Ebm: "E flat/b minor",
+    Em: "E minor",
+    F: "F major",
+    Fs: "F sharp/# major",
+    Fsm: "F sharp/# minor",
+    Fm: "F minor",
+    G: "G major",
+    Gm: "G minor"
+  };
+
+  return chordNames[chord] || "";
+}
+</script>
+  
+</body>

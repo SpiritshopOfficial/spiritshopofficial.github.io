@@ -204,15 +204,19 @@ function handleInput() {
 function handleBlur() {
   if (isTyping) {
     isTyping = false;
-    let inputBpm = parseFloat(document.getElementById('bpmInput').value);
+    let inputBpm = document.getElementById('bpmInput').value.replace(',', '.');
+    inputBpm = parseFloat(inputBpm);
+    
     if (isNaN(inputBpm)) {
       inputBpm = currentBpm; // Use currentBpm if the input is not a valid number
     }
+
     currentBpm = inputBpm;
     document.getElementById('bpmInput').value = currentBpm.toFixed(2);
     updateResults();
   }
 }
+
 
 function handleKeyPress(event) {
   if (event.key === 'Enter') {

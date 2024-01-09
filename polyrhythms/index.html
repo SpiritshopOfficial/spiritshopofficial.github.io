@@ -199,6 +199,7 @@ function updateResults() {
 
 function handleInput() {
   isTyping = true;
+  document.getElementById('bpmInput').select();
 }
 
 function handleBlur() {
@@ -216,7 +217,6 @@ function handleBlur() {
     updateResults();
   }
 }
-
 
 function handleKeyPress(event) {
   if (event.key === 'Enter') {

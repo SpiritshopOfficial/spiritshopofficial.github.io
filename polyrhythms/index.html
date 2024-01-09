@@ -162,7 +162,7 @@ h2 {
       <div class="cell-2" id="result6">240 bpm</div>
     </div>
   </div>
-
+  
 <script>
   let currentBpm = 120;
   let isTyping = false;
@@ -204,7 +204,7 @@ h2 {
   function handleBlur() {
     if (isTyping) {
       isTyping = false;
-      let inputBpm = parseFloat(document.getElementById('bpmInput').value);
+      let inputBpm = parseFloat(document.getElementById('bpmInput').value.replace(',', '.'));
       if (isNaN(inputBpm)) {
         inputBpm = currentBpm; // Use currentBpm if the input is not a valid number
       }

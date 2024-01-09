@@ -164,7 +164,7 @@ h2 {
   </div>
 
 <script>
-  let currentBpm = 120.00;
+  let currentBpm = 120;
   let isTyping = false;
 
   function changeBpm(value) {
@@ -228,14 +228,14 @@ h2 {
 
   // Add event listeners to the input field for input, blur, and keypress events
   const inputField = document.getElementById('bpmInput');
-
-  inputField.addEventListener('click', function() {
-    this.select();
-  });
-
   inputField.addEventListener('input', handleInput);
   inputField.addEventListener('blur', handleBlur);
   inputField.addEventListener('keypress', handleKeyPress);
+
+  // Add click event listener to clear the input field when tapped on mobile devices
+  inputField.addEventListener('click', () => {
+    inputField.value = '';
+  });
 
   updateResults(); // Initial update
 </script>

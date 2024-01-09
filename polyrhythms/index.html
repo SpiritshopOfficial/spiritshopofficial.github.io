@@ -164,79 +164,82 @@ h2 {
   </div>
 
 <script>
-  let currentBpm = 120;
-let isTyping = false;
+  let currentBpm = 120.00;
+  let isTyping = false;
 
-function changeBpm(value) {
-  currentBpm += value;
-  document.getElementById('bpmInput').value = currentBpm.toFixed(2);
-  updateResults();
-}
-
-function updateResults() {
-  const bpm1 = (currentBpm / 2).toFixed(2);
-  const bpm2 = (currentBpm * 2 / 3).toFixed(2);
-  const bpm3 = (currentBpm * 3 / 4).toFixed(2);
-  const bpm4 = (currentBpm * 4 / 3).toFixed(2);
-  const bpm5 = (currentBpm * 3 / 2).toFixed(2);
-  const bpm6 = (currentBpm * 2).toFixed(2);
-
-  document.getElementById('result1').innerText = bpm1 + " bpm";
-  document.getElementById('result2').innerText = bpm2 + " bpm";
-  document.getElementById('result3').innerText = bpm3 + " bpm";
-  document.getElementById('result4').innerText = bpm4 + " bpm";
-  document.getElementById('result5').innerText = bpm5 + " bpm";
-  document.getElementById('result6').innerText = bpm6 + " bpm";
-
-  // Add event listeners to results for inserting into input
-  document.getElementById('result1').onclick = () => insertBpm(bpm1);
-  document.getElementById('result2').onclick = () => insertBpm(bpm2);
-  document.getElementById('result3').onclick = () => insertBpm(bpm3);
-  document.getElementById('result4').onclick = () => insertBpm(bpm4);
-  document.getElementById('result5').onclick = () => insertBpm(bpm5);
-  document.getElementById('result6').onclick = () => insertBpm(bpm6);
-}
-
-function handleInput() {
-  isTyping = true;
-}
-
-function handleBlur() {
-  if (isTyping) {
-    isTyping = false;
-    let inputBpm = document.getElementById('bpmInput').value.replace(',', '.');
-    inputBpm = parseFloat(inputBpm);
-    
-    if (isNaN(inputBpm)) {
-      inputBpm = currentBpm; // Use currentBpm if the input is not a valid number
-    }
-
-    currentBpm = inputBpm;
+  function changeBpm(value) {
+    currentBpm += value;
     document.getElementById('bpmInput').value = currentBpm.toFixed(2);
     updateResults();
   }
-}
 
-function handleKeyPress(event) {
-  if (event.key === 'Enter') {
-    inputField.blur();
+  function updateResults() {
+    const bpm1 = (currentBpm / 2).toFixed(2);
+    const bpm2 = (currentBpm * 2 / 3).toFixed(2);
+    const bpm3 = (currentBpm * 3 / 4).toFixed(2);
+    const bpm4 = (currentBpm * 4 / 3).toFixed(2);
+    const bpm5 = (currentBpm * 3 / 2).toFixed(2);
+    const bpm6 = (currentBpm * 2).toFixed(2);
+
+    document.getElementById('result1').innerText = bpm1 + " bpm";
+    document.getElementById('result2').innerText = bpm2 + " bpm";
+    document.getElementById('result3').innerText = bpm3 + " bpm";
+    document.getElementById('result4').innerText = bpm4 + " bpm";
+    document.getElementById('result5').innerText = bpm5 + " bpm";
+    document.getElementById('result6').innerText = bpm6 + " bpm";
+
+    // Add event listeners to results for inserting into input
+    document.getElementById('result1').onclick = () => insertBpm(bpm1);
+    document.getElementById('result2').onclick = () => insertBpm(bpm2);
+    document.getElementById('result3').onclick = () => insertBpm(bpm3);
+    document.getElementById('result4').onclick = () => insertBpm(bpm4);
+    document.getElementById('result5').onclick = () => insertBpm(bpm5);
+    document.getElementById('result6').onclick = () => insertBpm(bpm6);
   }
-}
 
-function insertBpm(value) {
-  document.getElementById('bpmInput').value = value;
-  currentBpm = parseFloat(value);
-  updateResults(); // Update calculations when a result is clicked
-}
+  function handleInput() {
+    isTyping = true;
+  }
 
-// Add event listeners to the input field for input, blur, and keypress events
-const inputField = document.getElementById('bpmInput');
-inputField.addEventListener('input', handleInput);
-inputField.addEventListener('blur', handleBlur);
-inputField.addEventListener('keypress', handleKeyPress);
+  function handleBlur() {
+    if (isTyping) {
+      isTyping = false;
+      let inputBpm = parseFloat(document.getElementById('bpmInput').value);
+      if (isNaN(inputBpm)) {
+        inputBpm = currentBpm; // Use currentBpm if the input is not a valid number
+      }
+      currentBpm = inputBpm;
+      document.getElementById('bpmInput').value = currentBpm.toFixed(2);
+      updateResults();
+    }
+  }
 
-updateResults(); // Initial update
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      inputField.blur();
+    }
+  }
+
+  function insertBpm(value) {
+    document.getElementById('bpmInput').value = value;
+    currentBpm = parseFloat(value);
+    updateResults(); // Update calculations when a result is clicked
+  }
+
+  // Add event listeners to the input field for input, blur, and keypress events
+  const inputField = document.getElementById('bpmInput');
+
+  inputField.addEventListener('click', function() {
+    this.select();
+  });
+
+  inputField.addEventListener('input', handleInput);
+  inputField.addEventListener('blur', handleBlur);
+  inputField.addEventListener('keypress', handleKeyPress);
+
+  updateResults(); // Initial update
 </script>
+
   
 </body>
 </html>

@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
   <style>
+    
 html {
   color: #fff;
   font-family: "Inter", sans-serif;
@@ -31,36 +32,46 @@ body {
   max-width: 36rem;
 }
 
-a {
-  display: inline-block;
-  color: #fff;
-  padding: 0 1.2rem;
-  font-size: 1rem;
-  margin-top: 0.3rem;
-  margin-right: 0.09rem;
-  line-height: 2.1rem;
-  background: #111;
-  border-radius: .45rem;
-  text-decoration: none;
+.key-wheel {
+  box-sizing: border-box;
+  margin: 1.5rem 0 1.5rem;
+  display: block;
+  width: calc(100vw - 1.2rem);
+  max-width: 24rem;
 }
 
-.active-link {
-  color: #222;
-  background: #fff;
+.key {
+  cursor: pointer;
+}
+
+.key > .bg  {
+  fill: #222222;
+}
+
+.key > .sign {
+  font-size: 48px;
+  fill: #ffffff;
+  text-anchor: middle;
+  alignment-baseline: middle;
 }
 
 h2 {
   margin: 1.8rem 0 1.5rem;
 }
 
-.table {
+#table {
   display: flex;
   flex-direction: column;
+  margin: 1.5rem 0 1.8rem;
 }
 
 .row {
   display: flex;
   margin-bottom: 10px;
+}
+
+.strong {
+  font-weight: 700;
 }
 
 .cell-1,
@@ -79,6 +90,64 @@ h2 {
   flex: 1;
 }
 
+.active > .bg {
+  fill: #fff;
+}
+
+.active > .sign {
+  fill: #222;
+}
+
+.relative > .bg {
+  fill: #393939;
+}
+
+#fourth,
+#fifth,
+#relative {
+  color: #aaa;
+}
+
+#leboost {
+  color: rgba(51, 102, 255, 0.65);
+}
+
+.leboost > .bg {
+  fill: rgba(51, 102, 255, 0.2);
+}
+
+#heboost {
+  color: rgba(51, 102, 255, 0.9);
+}
+
+.heboost > .bg {
+  fill: rgba(51, 102, 255, 0.4);
+}
+
+#ledrain {
+  color: rgba(255, 102, 153, 0.6);
+}
+
+.ledrain > .bg {
+  fill: rgba(255, 102, 153, 0.2);
+}
+
+#hedrain {
+  color: rgba(255, 102, 153, 0.9);
+}
+
+.hedrain > .bg {
+  fill: rgba(255, 102, 153, 0.4);
+}
+
+#experimental {
+  color: rgba(255, 153, 102, 0.7);
+}
+
+.experimental > .sign {
+  fill: rgba(255, 153, 102, 0.8);
+}
+
   </style>
   
 </head>
@@ -87,377 +156,830 @@ h2 {
 
   <h1>Harmonics</h1>
 
-  <div class="keys">
-    <a href="#" onclick="showHarmonicInfo('A')" id="A-link">A</a>
-    <a href="#" onclick="showHarmonicInfo('Ab')" id="Ab-link">Ab</a>
-    <a href="#" onclick="showHarmonicInfo('Abm')" id="Abm-link">Abm</a>
-    <a href="#" onclick="showHarmonicInfo('Am')" id="Am-link">Am</a>
-    <a href="#" onclick="showHarmonicInfo('B')" id="B-link">B</a>
-    <a href="#" onclick="showHarmonicInfo('Bb')" id="Bb-link">Bb</a>
-    <a href="#" onclick="showHarmonicInfo('Bbm')" id="Bbm-link">Bbm</a>
-    <a href="#" onclick="showHarmonicInfo('Bm')" id="Bm-link">Bm</a>
-    <a href="#" onclick="showHarmonicInfo('C')" id="C-link">C</a>
-    <a href="#" onclick="showHarmonicInfo('Cm')" id="Cm-link">Cm</a>
-    <a href="#" onclick="showHarmonicInfo('D')" id="D-link">D</a>
-    <a href="#" onclick="showHarmonicInfo('Db')" id="Db-link">Db</a>
-    <a href="#" onclick="showHarmonicInfo('Dbm')" id="Dbm-link">Dbm</a>
-    <a href="#" onclick="showHarmonicInfo('Dm')" id="Dm-link">Dm</a>
-    <a href="#" onclick="showHarmonicInfo('E')" id="E-link">E</a>
-    <a href="#" onclick="showHarmonicInfo('Eb')" id="Eb-link">Eb</a>
-    <a href="#" onclick="showHarmonicInfo('Ebm')" id="Ebm-link">Ebm</a>
-    <a href="#" onclick="showHarmonicInfo('Em')" id="Em-link">Em</a>
-    <a href="#" onclick="showHarmonicInfo('F')" id="F-link">F</a>
-    <a href="#" onclick="showHarmonicInfo('Fs')" id="Fs-link">F#</a>
-    <a href="#" onclick="showHarmonicInfo('Fsm')" id="Fsm-link">F#m</a>
-    <a href="#" onclick="showHarmonicInfo('Fm')" id="Fm-link">Fm</a>
-    <a href="#" onclick="showHarmonicInfo('G')" id="G-link">G</a>
-    <a href="#" onclick="showHarmonicInfo('Gm')" id="Gm-link">Gm</a>
-  </div>
-   <div class="result" id="result"></div>
-    </div>
+  <svg xmlns="http://www.w3.org/2000/svg" class="key-wheel" viewBox="0 0 960 960">
+    <g class="key" id="gm" onclick="keyGm()">
+      <path class="bg" d="M359.605 944.776C398.079 954.714 438.422 960 480 960C521.578 960 561.922 954.714 600.395 944.776L559.987 793.971C505.622 807.835 450.882 807.039 399.999 794.026L359.605 944.776Z" />
+      <text class="sign" x="480" y="884">Gm</text>
+    </g>
+    <g class="key" id="g" onclick="keyG()">
+      <path class="bg" d="M324.43 517.546C321.534 505.503 320 492.931 320 480C320 470.423 320.842 461.043 322.454 451.929L171.453 411.468C161 458.348 161.116 508.293 173.756 557.918L324.43 517.546Z" />
+      <text class="sign" x="240" y="484">G</text>
+    </g>
+    <g class="key" id="fm" onclick="keyFm()">
+      <path class="bg" d="M822.227 816.572C876.399 761.495 917.378 693.401 940.043 617.411L789.184 576.988C773.931 625.453 747.442 669.841 711.947 706.292L822.227 816.572Z" />
+      <text class="sign" x="826" y="684">Fm</text>
+    </g>
+    <g class="key" id="fsm" onclick="keyFsm()">
+      <path class="bg" d="M351.876 17.29L392.284 168.098C338.27 183.273 291.261 211.334 253.7 248.046L143.428 137.773C200.739 81.4032 272.145 39.3189 351.876 17.29Z" />
+      <text class="sign" x="280" y="138">F#m</text>
+    </g>
+    <g class="key" id="fs" onclick="keyFs()">
+      <path class="bg" d="M633.506 434.729L784.173 394.358C769.376 341.751 742.047 295.961 706.297 259.362L595.932 369.728C613.194 387.87 626.242 410.061 633.506 434.729Z" />
+      <text class="sign" x="688" y="364">F#</text>
+    </g>
+    <g class="key" id="f" onclick="keyF()">
+      <path class="bg" d="M369.728 595.931L259.367 706.292C297.135 743.045 343.631 769.889 394.344 784.219L434.728 633.505C410.06 626.242 387.87 613.194 369.728 595.931Z" />
+      <text class="sign" x="360" y="692">F</text>
+    </g>
+    <g class="key" id="em" onclick="keyEm()">
+      <path class="bg" d="M12.9025 368.984C4.46527 404.618 0 441.787 0 480C0 521.579 5.28665 561.923 15.2244 600.397L166.028 559.989C153.013 508.955 152.916 457.59 163.718 409.395L12.9025 368.984Z" />
+      <text class="sign" x="80" y="484">Em</text>
+    </g>
+    <g class="key" id="ebm" onclick="keyEbm()">
+      <path class="bg" d="M942.711 351.878C920.682 272.147 878.599 200.741 822.229 143.43L711.956 253.704C748.667 291.264 776.726 338.273 791.901 392.287L942.711 351.878Z" />
+      <text class="sign" x="826" y="284">Ebm</text>
+    </g>
+    <g class="key" id="eb" onclick="keyEb()">
+      <path class="bg" d="M525.272 633.505L565.643 784.172C618.249 769.375 664.038 742.045 700.637 706.296L590.272 595.932C572.13 613.194 549.94 626.242 525.272 633.505Z" />
+      <text class="sign" x="600" y="692">Eb</text>
+    </g>
+    <g class="key" id="e" onclick="keyE()">
+      <path class="bg" d="M517.544 324.429L557.932 173.702C508.361 161.041 455.04 160.267 402.082 173.755L442.456 324.43C454.497 321.534 467.07 320 480 320C492.93 320 505.503 321.534 517.544 324.429Z" />
+      <text class="sign" x="480" y="244">E</text>
+    </g>
+    <g class="key" id="dm" onclick="keyDm()">
+      <path class="bg" d="M143.43 822.229C200.741 878.598 272.146 920.682 351.877 942.71L392.273 791.949C340.206 777.253 292.47 749.693 253.709 711.95L143.43 822.229Z" />
+      <text class="sign" x="280" y="830">Dm</text>
+    </g>
+    <g class="key" id="dbm" onclick="keyDbm()">
+      <path class="bg" d="M359.604 15.2241L400.012 166.027C454.377 152.163 509.118 152.959 560.003 165.972L600.396 15.2241C561.922 5.28655 521.578 0 480 0C438.422 0 398.078 5.28655 359.604 15.2241Z" />
+      <text class="sign" x="480" y="84">Dbm</text>
+    </g>
+    <g class="key" id="db" onclick="keyDb()">
+      <path class="bg" d="M786.244 402.085C800.581 458.377 798.803 515.08 783.763 567.254L633.027 526.864C637.561 512.042 640 496.306 640 480C640 467.07 638.466 454.499 635.571 442.458L786.244 402.085Z" />
+      <text class="sign" x="720" y="484">Db</text>
+    </g>
+    <g class="key" id="d" onclick="keyD()">
+      <path class="bg" d="M364.069 369.728L253.707 259.366C214.71 299.44 186.868 349.341 173.294 403.679L324.049 444.074C330.568 415.66 344.652 390.134 364.069 369.728Z" />
+      <text class="sign" x="272" y="364">D</text>
+    </g>
+    <g class="key" id="cm" onclick="keyCm()">
+      <path class="bg" d="M608.123 942.71C687.854 920.682 759.259 878.598 816.57 822.229L706.295 711.954C668.735 748.666 621.727 776.725 567.714 791.9L608.123 942.71Z" />
+      <text class="sign" x="680" y="830">Cm</text>
+    </g>
+    <g class="key" id="c" onclick="keyC()">
+      <path class="bg" d="M326.496 525.274L175.827 565.646C190.625 618.252 217.955 664.041 253.705 700.64L364.071 590.275C346.808 572.132 333.76 549.942 326.496 525.274Z" />
+      <text class="sign" x="272" y="604">C</text>
+    </g>
+    <g class="key" id="bm" onclick="keyBm()">
+      <path class="bg" d="M137.771 143.43C79.21 202.969 36.0673 277.72 14.8114 361.214L165.564 401.608C179.503 345.915 208.06 294.774 248.049 253.708L137.771 143.43Z" />
+      <text class="sign" x="134" y="284">Bm</text>
+    </g>
+    <g class="key" id="bbm" onclick="keyBbm()">
+      <path class="bg" d="M942.265 609.724C953.821 568.461 960 524.952 960 480C960 438.422 954.714 398.079 944.776 359.606L793.972 400.014C808.686 457.715 806.886 515.838 791.493 569.325L942.265 609.724Z" />
+      <text class="sign" x="880" y="484">Bbm</text>
+    </g>
+    <g class="key" id="bb" onclick="keyBb()">
+      <path class="bg" d="M442.457 635.571L402.07 786.297C451.64 798.957 504.96 799.731 557.916 786.243L517.543 635.571C505.502 638.466 492.93 640 480 640C467.07 640 454.498 638.466 442.457 635.571Z" />
+      <text class="sign" x="480" y="724">Bb</text>
+    </g>
+    <g class="key" id="b" onclick="keyB()">
+      <path class="bg" d="M590.275 364.071L700.635 253.71C662.868 216.956 616.371 190.11 565.657 175.779L525.273 326.495C549.942 333.759 572.132 346.807 590.275 364.071Z" />
+      <text class="sign" x="600" y="276">B</text>
+    </g>
+    <g class="key" id="am" onclick="keyAm()">
+      <path class="bg" d="M17.2901 608.126C39.3191 687.856 81.4033 759.261 137.773 816.572L248.047 706.299C211.335 668.738 183.275 621.73 168.099 567.717L17.2901 608.126Z" />
+      <text class="sign" x="134" y="684">Am</text>
+    </g>
+    <g class="key" id="abm" onclick="keyAbm()">
+      <path class="bg" d="M816.572 137.773C759.261 81.4032 687.855 39.3189 608.124 17.29L567.728 168.05C619.796 182.746 667.533 210.307 706.293 248.052L816.572 137.773Z" />
+      <text class="sign" x="680" y="138">Abm</text>
+    </g>
+    <g class="key" id="ab" onclick="keyAb()">
+      <path class="bg" d="M595.929 590.275L706.289 700.634C740.794 665.177 766.566 622.026 781.449 574.916L630.49 534.466C622.89 555.463 611.02 574.415 595.929 590.275Z" />
+      <text class="sign" x="688" y="604">Ab</text>
+    </g>
+    <g class="key" id="a" onclick="keyA()">
+      <path class="bg" d="M434.727 326.495L394.355 175.826C341.748 190.623 295.958 217.954 259.359 253.704L369.725 364.071C387.868 346.808 410.059 333.759 434.727 326.495Z" />
+      <text class="sign" x="360" y="276">A</text>
+    </g>
+  </svg>
 
-    <h2 id="chordName">Press the key</h2>
-    <div class="table" id="table"></div>
+  <h2 id="chordName">Press a key</h2>
+  <div id="table">
+    <div class="row" id="fourth">
+      <div class="cell-1">-</div>
+      <div class="cell-2">Fourth</div>
+    </div>
+    <div class="row" id="relative">
+      <div class="cell-1">-</div>
+      <div class="cell-2">Relative minor</div>
+    </div>
+    <div class="row" id="same">
+      <div class="cell-1">-</div>
+      <div class="cell-2 strong">Same key</div>
+    </div>
+    <div class="row" id="fifth">
+      <div class="cell-1">-</div>
+      <div class="cell-2">Fifth</div>
+    </div>
+    <div class="row" id="leboost">
+      <div class="cell-1">-</div>
+      <div class="cell-2">Low energy boost</div>
+    </div>
+    <div class="row" id="heboost">
+      <div class="cell-1">-</div>
+      <div class="cell-2">High energy boost</div>
+    </div>
+    <div class="row" id="ledrain">
+      <div class="cell-1">-</div>
+      <div class="cell-2">Low energy drain</div>
+    </div>
+    <div class="row" id="hedrain">
+      <div class="cell-1">-</div>
+      <div class="cell-2">High energy drain</div>
+    </div>
+    <div class="row" id="experimental">
+      <div class="cell-1">-</div>
+      <div class="cell-2">Experimental</div>
+    </div>
+  </div>
   
   <script>
-function showHarmonicInfo(chord) {
-  const harmonics = {
-    A: [
-      "D - Fourth",
-      "F#m - Relative minor",
-      "A - <strong>Same key</strong>",
-      "E - Fifth",
-      "Bb - Low energy boost",
-      "B - High energy boost",
-      "Ab - Low energy drain",
-      "G - High energy drain",
-      "Dbm - Experimental"
-    ],
-    Ab: [
-      "Db - Fourth",
-      "Fm - Relative minor",
-      "Ab - <strong>Same key</strong>",
-      "Eb - Fifth",
-      "A - Low energy boost",
-      "Bb - High energy boost",
-      "G - Low energy drain",
-      "F# - High energy drain",
-      "Cm - Experimental"
-    ],
-    Abm: [
-      "Dbm - Fourth",
-      "B - Relative major",
-      "Abm - <strong>Same key</strong>",
-      "Ebm - Fifth",
-      "Am - Low energy boost",
-      "Bbm - High energy boost",
-      "Gm - Low energy drain",
-      "F#m - High energy drain",
-      "E - Experimental"
-    ],
-    Am: [
-      "Dm - Fourth",
-      "C - Relative major",
-      "Am - <strong>Same key</strong>",
-      "Em - Fifth",
-      "Bbm - Low energy boost",
-      "Bm - High energy boost",
-      "Ebm - Low energy drain",
-      "Dm - High energy drain",
-      "F - Experimental"
-    ],
-    B: [
-      "E - Fourth",
-      "Abm - Relative minor",
-      "B - <strong>Same key</strong>",
-      "F# - Fifth",
-      "C - Low energy boost",
-      "Db - High energy boost",
-      "Bb - Low energy drain",
-      "A - High energy drain",
-      "Ebm - Experimental"
-    ],
-    Bb: [
-      "Eb - Fourth",
-      "Gm - Relative minor",
-      "Bb - <strong>Same key</strong>",
-      "F - Fifth",
-      "B - Low energy boost",
-      "C - High energy boost",
-      "A - Low energy drain",
-      "Ab - High energy drain",
-      "Dm - Experimental"
-    ],
-    Bbm: [
-      "Ebm - Fourth",
-      "Db - Relative major",
-      "Bbm - <strong>Same key</strong>",
-      "Fm - Fifth",
-      "Bm - Low energy boost",
-      "Cm - High energy boost",
-      "Am - Low energy drain",
-      "Abm - High energy drain",
-      "F# - Experimental"
-    ],
-    Bm: [
-      "Em - Fourth",
-      "D - Relative major",
-      "Bm - <strong>Same key</strong>",
-      "F#m - Fifth",
-      "Cm - Low energy boost",
-      "Dbm - High energy boost",
-      "Bbm - Low energy drain",
-      "Am - High energy drain",
-      "G - Experimental"
-    ],
-    C: [
-      "F - Fourth",
-      "Am - Relative minor",
-      "C - <strong>Same key</strong>",
-      "G - Fifth",
-      "Db - Low energy boost",
-      "D - High energy boost",
-      "B - Low energy drain",
-      "Bb - High energy drain",
-      "Em - Experimental"
-    ],
-    Cm: [
-      "Fm - Fourth",
-      "Eb - Relative major",
-      "Cm - <strong>Same key</strong>",
-      "Gm - Fifth",
-      "Dbm - Low energy boost",
-      "Dm - High energy boost",
-      "Bm - Low energy drain",
-      "Bbm - High energy drain",
-      "Ab - Experimental"
-    ],
-    D: [
-      "G - Fourth",
-      "Bm - Relative minor",
-      "D - <strong>Same key</strong>",
-      "A - Fifth",
-      "Eb - Low energy boost",
-      "E - High energy boost",
-      "Db - Low energy drain",
-      "C - High energy drain",
-      "F#m - Experimental"
-    ],
-    Db: [
-      "F# - Fourth",
-      "Bbm - Relative minor",
-      "Db - <strong>Same key</strong>",
-      "Ab - Fifth",
-      "D - Low energy boost",
-      "Eb - High energy boost",
-      "C - Low energy drain",
-      "B - High energy drain",
-      "Fm - Experimental"
-    ],
-    Dbm: [
-      "F#m - Fourth",
-      "E - Relative major",
-      "Dbm - <strong>Same key</strong>",
-      "Abm - Fifth",
-      "Dm - Low energy boost",
-      "Ebm - High energy boost",
-      "Cm - Low energy drain",
-      "Bm - High energy drain",
-      "A - Experimental"
-    ],
-    Dm: [
-      "Gm - Fourth",
-      "F - Relative major",
-      "Dm - <strong>Same key</strong>",
-      "Am - Fifth",
-      "Ebm - Low energy boost",
-      "Em - High energy boost",
-      "Dbm - Low energy drain",
-      "Cm - High energy drain",
-      "Bb - Experimental"
-    ],
-    E: [
-      "A - Fourth",
-      "Dbm - Relative minor",
-      "E - <strong>Same key</strong>",
-      "B - Fifth",
-      "F - Low energy boost",
-      "F# - High energy boost",
-      "Eb - Low energy drain",
-      "D - High energy drain",
-      "Abm - Experimental"
-    ],
-    Eb: [
-      "Ab - Fourth",
-      "Cm - Relative minor",
-      "Eb - <strong>Same key</strong>",
-      "Bb - Fifth",
-      "E - Low energy boost",
-      "F - High energy boost",
-      "D - Low energy drain",
-      "Db - High energy drain",
-      "Gm - Experimental"
-    ],
-    Ebm: [
-      "Abm - Fourth",
-      "F# - Relative major",
-      "Ebm - <strong>Same key</strong>",
-      "Bbm - Fifth",
-      "Em - Low energy boost",
-      "Fm - High energy boost",
-      "Dm - Low energy drain",
-      "Dbm - High energy drain",
-      "B - Experimental"
-    ],
-    Em: [
-      "Am - Fourth",
-      "G - Relative major",
-      "Em - <strong>Same key</strong>",
-      "Bm - Fifth",
-      "Fm - Low energy boost",
-      "F#m - High energy boost",
-      "Ebm - Low energy drain",
-      "Dm - High energy drain",
-      "C - Experimental"
-    ],
-    F: [
-      "Bb - Fourth",
-      "Dm - Relative minor",
-      "F - <strong>Same key</strong>",
-      "C - Fifth",
-      "F# - Low energy boost",
-      "G - High energy boost",
-      "E - Low energy drain",
-      "Eb - High energy drain",
-      "Am - Experimental"
-    ],
-    Fs: [
-      "B - Fourth",
-      "Ebm - Relative minor",
-      "F# - <strong>Same key</strong>",
-      "Db - Fifth",
-      "G - Low energy boost",
-      "Ab - High energy boost",
-      "F - Low energy drain",
-      "E - High energy drain",
-      "Bbm - Experimental"
-    ],
-    Fsm: [
-      "Bm - Fourth",
-      "A - Relative major",
-      "F#m - <strong>Same key</strong>",
-      "Dbm - Fifth",
-      "Gm - Low energy boost",
-      "Abm - High energy boost",
-      "Fm - Low energy drain",
-      "Em - High energy drain",
-      "D - Experimental"
-    ],
-    Fm: [
-      "Bbm - Fourth",
-      "Ab - Relative major",
-      "Fm - <strong>Same key</strong>",
-      "Cm - Fifth",
-      "F#m - Low energy boost",
-      "Gm - High energy boost",
-      "Em - Low energy drain",
-      "Ebm - High energy drain",
-      "Db - Experimental"
-    ],
-    G: [
-      "C - Fourth",
-      "Em - Relative minor",
-      "G - <strong>Same key</strong>",
-      "D - Fifth",
-      "Ab - Low energy boost",
-      "A - High energy boost",
-      "F# - Low energy drain",
-      "F - High energy drain",
-      "Bm - Experimental"
-    ],
-    Gm: [
-      "Cm - Fourth",
-      "Bb - Relative major",
-      "Gm - <strong>Same key</strong>",
-      "Dm - Fifth",
-      "Abm - Low energy boost",
-      "Am - High energy boost",
-      "F#m - Low energy drain",
-      "Fm - High energy drain",
-      "Eb - Experimental"
-    ]
-  };
+    
+const a = document.getElementById('a');
+const ab = document.getElementById('ab');
+const abm = document.getElementById('abm');
+const am = document.getElementById('am');
+const b = document.getElementById('b');
+const bb = document.getElementById('bb');
+const bbm = document.getElementById('bbm');
+const bm = document.getElementById('bm');
+const c = document.getElementById('c');
+const cm = document.getElementById('cm');
+const d = document.getElementById('d');
+const db = document.getElementById('db');
+const dbm = document.getElementById('dbm');
+const dm = document.getElementById('dm');
+const e = document.getElementById('e');
+const eb = document.getElementById('eb');
+const ebm = document.getElementById('ebm');
+const em = document.getElementById('em');
+const f = document.getElementById('f');
+const fs = document.getElementById('fs');
+const fsm = document.getElementById('fsm');
+const fm = document.getElementById('fm');
+const g = document.getElementById('g');
+const gm = document.getElementById('gm');
 
-  const tableDiv = document.getElementById("table");
-  const chordNameDiv = document.getElementById("chordName");
-  const info = harmonics[chord];
+const cn = document.getElementById("chordName");
 
-  if (info) {
-    // Remove active class from all links
-    const links = document.querySelectorAll(".active-link");
-    links.forEach((link) => link.classList.remove("active-link"));
+const r1 = document.getElementById('fourth').querySelector('.cell-1');
+const r2 = document.getElementById('relative').querySelector('.cell-1');
+const r2b = document.getElementById('relative').querySelector('.cell-2');
+const r3 = document.getElementById('same').querySelector('.cell-1');
+const r4 = document.getElementById('fifth').querySelector('.cell-1');
+const r5 = document.getElementById('leboost').querySelector('.cell-1');
+const r6 = document.getElementById('heboost').querySelector('.cell-1');
+const r7 = document.getElementById('ledrain').querySelector('.cell-1');
+const r8 = document.getElementById('hedrain').querySelector('.cell-1');
+const r9 = document.getElementById('experimental').querySelector('.cell-1');
 
-    // Add active class to the recently pressed link
-    document.getElementById(`${chord}-link`).classList.add("active-link");
-
-    tableDiv.innerHTML = "";
-    chordNameDiv.textContent = getChordName(chord);
-
-    info.forEach((item) => {
-      const [key, description] = item.split(" - ");
-
-      const row = document.createElement("div");
-      row.classList.add("row");
-
-      const cell1 = document.createElement("div");
-      cell1.classList.add("cell-1");
-      cell1.textContent = key;
-
-      const cell2 = document.createElement("div");
-      cell2.classList.add("cell-2");
-      cell2.innerHTML = `${description}`;
-
-      row.appendChild(cell1);
-      row.appendChild(cell2);
-
-      tableDiv.appendChild(row);
-    });
-  } else {
-    tableDiv.innerHTML = "";
-    chordNameDiv.textContent = "";
-  }
+function removeAllClasses() {
+  const keyDivs = document.querySelectorAll('.key');
+  
+  keyDivs.forEach((div) => {
+    // Remove all classes from each div
+    div.classList.remove(
+      "active",
+      "relative",
+      "leboost",
+      "heboost",
+      "ledrain",
+      "hedrain",
+      "experimental"
+    );
+  });
 }
 
-function getChordName(chord) {
-  const chordNames = {
-    A: "A major",
-    Ab: "A flat/b major",
-    Abm: "A flat/b minor",
-    Am: "A minor",
-    B: "B major",
-    Bb: "B flat/b major",
-    Bbm: "B flat/b minor",
-    Bm: "B minor",
-    C: "C major",
-    Cm: "C minor",
-    D: "D major",
-    Db: "D flat/b major",
-    Dbm: "D flat/b minor",
-    Dm: "D minor",
-    E: "E major",
-    Eb: "E flat/b major",
-    Ebm: "E flat/b minor",
-    Em: "E minor",
-    F: "F major",
-    Fs: "F sharp/# major",
-    Fsm: "F sharp/# minor",
-    Fm: "F minor",
-    G: "G major",
-    Gm: "G minor"
-  };
+function keyA() {
+  removeAllClasses();
+  
+  d.classList.add("relative");
+  fsm.classList.add("relative");
+  a.classList.add("active");
+  e.classList.add("relative");
+  bb.classList.add("leboost");
+  b.classList.add("heboost");
+  ab.classList.add("ledrain");
+  g.classList.add("hedrain");
+  dbm.classList.add("experimental");
 
-  return chordNames[chord] || "";
+  cn.innerHTML = "A major";
+  
+  r1.innerHTML = "D";
+  r2.innerHTML = "F#m";
+  r2b.innerHTML = "Relative minor";
+  r3.innerHTML = "A";
+  r4.innerHTML = "E";
+  r5.innerHTML = "Bb";
+  r6.innerHTML = "B";
+  r7.innerHTML = "Ab";
+  r8.innerHTML = "G";
+  r9.innerHTML = "Dbm";
 }
+
+function keyAb() {
+  removeAllClasses();
+  
+  db.classList.add("relative");
+  fm.classList.add("relative");
+  ab.classList.add("active");
+  eb.classList.add("relative");
+  a.classList.add("leboost");
+  bb.classList.add("heboost");
+  g.classList.add("ledrain");
+  fs.classList.add("hedrain");
+  cm.classList.add("experimental");
+  
+  cn.innerHTML = "A flat/b major";
+  
+  r1.innerHTML = "Db";
+  r2.innerHTML = "Fm";
+  r2b.innerHTML = "Relative minor";
+  r3.innerHTML = "Ab";
+  r4.innerHTML = "Eb";
+  r5.innerHTML = "A";
+  r6.innerHTML = "Bb";
+  r7.innerHTML = "G";
+  r8.innerHTML = "F#";
+  r9.innerHTML = "Cm";
+}
+
+function keyAbm() {
+  removeAllClasses();
+  
+  dbm.classList.add("relative");
+  b.classList.add("relative");
+  abm.classList.add("active");
+  ebm.classList.add("relative");
+  am.classList.add("leboost");
+  bbm.classList.add("heboost");
+  gm.classList.add("ledrain");
+  fsm.classList.add("hedrain");
+  e.classList.add("experimental");
+  
+  cn.innerHTML = "A flat/b minor";
+  
+  r1.innerHTML = "Dbm";
+  r2.innerHTML = "B";
+  r2b.innerHTML = "Relative major";
+  r3.innerHTML = "Abm";
+  r4.innerHTML = "Ebm";
+  r5.innerHTML = "Am";
+  r6.innerHTML = "Bbm";
+  r7.innerHTML = "Gm";
+  r8.innerHTML = "F#m";
+  r9.innerHTML = "E";
+}
+
+function keyAm() {
+  removeAllClasses();
+  
+  dm.classList.add("relative");
+  c.classList.add("relative");
+  am.classList.add("active");
+  em.classList.add("relative");
+  bbm.classList.add("leboost");
+  bm.classList.add("heboost");
+  abm.classList.add("ledrain");
+  gm.classList.add("hedrain");
+  f.classList.add("experimental");
+  
+  cn.innerHTML = "A minor";
+  
+  r1.innerHTML = "Dm";
+  r2.innerHTML = "C";
+  r2b.innerHTML = "Relative major";
+  r3.innerHTML = "Am";
+  r4.innerHTML = "Em";
+  r5.innerHTML = "Bbm";
+  r6.innerHTML = "Bm";
+  r7.innerHTML = "Abm";
+  r8.innerHTML = "Gm";
+  r9.innerHTML = "F";
+}
+
+function keyB() {
+  removeAllClasses();
+  e.classList.add('relative');
+  abm.classList.add('relative');
+  b.classList.add('active');
+  fs.classList.add('relative');
+  c.classList.add('leboost');
+  db.classList.add('heboost');
+  bb.classList.add('ledrain');
+  a.classList.add('hedrain');
+  ebm.classList.add('experimental');
+  
+  cn.innerHTML = 'B major';
+  
+  r1.innerHTML = 'E';
+  r2.innerHTML = 'Abm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'B';
+  r4.innerHTML = 'F#';
+  r5.innerHTML = 'C';
+  r6.innerHTML = 'Db';
+  r7.innerHTML = 'Bb';
+  r8.innerHTML = 'A';
+  r9.innerHTML = 'Ebm';
+}
+
+function keyBb() {
+  removeAllClasses();
+  eb.classList.add('relative');
+  gm.classList.add('relative');
+  bb.classList.add('active');
+  f.classList.add('relative');
+  b.classList.add('leboost');
+  c.classList.add('heboost');
+  a.classList.add('ledrain');
+  ab.classList.add('hedrain');
+  dm.classList.add('experimental');
+
+  cn.innerHTML = 'B flat/b major';
+
+  r1.innerHTML = 'Eb';
+  r2.innerHTML = 'Gm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'Bb';
+  r4.innerHTML = 'F';
+  r5.innerHTML = 'B';
+  r6.innerHTML = 'C';
+  r7.innerHTML = 'A';
+  r8.innerHTML = 'Ab';
+  r9.innerHTML = 'Dm';
+}
+
+function keyBbm() {
+  removeAllClasses();
+  ebm.classList.add('relative');
+  db.classList.add('relative');
+  bbm.classList.add('active');
+  fm.classList.add('relative');
+  bm.classList.add('leboost');
+  cm.classList.add('heboost');
+  am.classList.add('ledrain');
+  abm.classList.add('hedrain');
+  fs.classList.add('experimental');
+
+  cn.innerHTML = 'B flat/b minor';
+
+  r1.innerHTML = 'Ebm';
+  r2.innerHTML = 'Db';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Bbm';
+  r4.innerHTML = 'Fm';
+  r5.innerHTML = 'Bm';
+  r6.innerHTML = 'Cm';
+  r7.innerHTML = 'Am';
+  r8.innerHTML = 'Abm';
+  r9.innerHTML = 'F#';
+}
+
+function keyBm() {
+  removeAllClasses();
+  em.classList.add('relative');
+  d.classList.add('relative');
+  bm.classList.add('active');
+  fsm.classList.add('relative');
+  cm.classList.add('leboost');
+  dbm.classList.add('heboost');
+  bbm.classList.add('ledrain');
+  am.classList.add('hedrain');
+  g.classList.add('experimental');
+
+  cn.innerHTML = 'B minor';
+
+  r1.innerHTML = 'Em';
+  r2.innerHTML = 'D';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Bm';
+  r4.innerHTML = 'F#m';
+  r5.innerHTML = 'Cm';
+  r6.innerHTML = 'Dbm';
+  r7.innerHTML = 'Bbm';
+  r8.innerHTML = 'Am';
+  r9.innerHTML = 'G';
+}
+
+function keyC() {
+  removeAllClasses();
+  f.classList.add('relative');
+  am.classList.add('relative');
+  c.classList.add('active');
+  g.classList.add('relative');
+  db.classList.add('leboost');
+  d.classList.add('heboost');
+  b.classList.add('ledrain');
+  bb.classList.add('hedrain');
+  em.classList.add('experimental');
+
+  cn.innerHTML = 'C major';
+
+  r1.innerHTML = 'F';
+  r2.innerHTML = 'Am';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'C';
+  r4.innerHTML = 'G';
+  r5.innerHTML = 'Db';
+  r6.innerHTML = 'D';
+  r7.innerHTML = 'B';
+  r8.innerHTML = 'Bb';
+  r9.innerHTML = 'Em';
+}
+
+function keyCm() {
+  removeAllClasses();
+  fm.classList.add('relative');
+  eb.classList.add('relative');
+  cm.classList.add('active');
+  gm.classList.add('relative');
+  dbm.classList.add('leboost');
+  dm.classList.add('heboost');
+  bm.classList.add('ledrain');
+  bbm.classList.add('hedrain');
+  ab.classList.add('experimental');
+
+  cn.innerHTML = 'C minor';
+
+  r1.innerHTML = 'Fm';
+  r2.innerHTML = 'Eb';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Cm';
+  r4.innerHTML = 'Gm';
+  r5.innerHTML = 'Dbm';
+  r6.innerHTML = 'Dm';
+  r7.innerHTML = 'Bm';
+  r8.innerHTML = 'Bbm';
+  r9.innerHTML = 'Ab';
+}
+
+function keyD() {
+  removeAllClasses();
+  g.classList.add('relative');
+  bm.classList.add('relative');
+  d.classList.add('active');
+  a.classList.add('relative');
+  eb.classList.add('leboost');
+  e.classList.add('heboost');
+  db.classList.add('ledrain');
+  c.classList.add('hedrain');
+  fsm.classList.add('experimental');
+
+  cn.innerHTML = 'D major';
+
+  r1.innerHTML = 'G';
+  r2.innerHTML = 'Bm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'D';
+  r4.innerHTML = 'A';
+  r5.innerHTML = 'Eb';
+  r6.innerHTML = 'E';
+  r7.innerHTML = 'Db';
+  r8.innerHTML = 'C';
+  r9.innerHTML = 'F#m';
+}
+
+function keyDb() {
+  removeAllClasses();
+  fs.classList.add('relative');
+  bbm.classList.add('relative');
+  db.classList.add('active');
+  ab.classList.add('relative');
+  d.classList.add('leboost');
+  eb.classList.add('heboost');
+  c.classList.add('ledrain');
+  b.classList.add('hedrain');
+  fm.classList.add('experimental');
+
+  cn.innerHTML = 'D flat/b major';
+
+  r1.innerHTML = 'F#';
+  r2.innerHTML = 'Bbm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'Db';
+  r4.innerHTML = 'Ab';
+  r5.innerHTML = 'D';
+  r6.innerHTML = 'Eb';
+  r7.innerHTML = 'C';
+  r8.innerHTML = 'B';
+  r9.innerHTML = 'Fm';
+}
+
+function keyDbm() {
+  removeAllClasses();
+  fsm.classList.add('relative');
+  e.classList.add('relative');
+  dbm.classList.add('active');
+  abm.classList.add('relative');
+  dm.classList.add('leboost');
+  ebm.classList.add('heboost');
+  cm.classList.add('ledrain');
+  bm.classList.add('hedrain');
+  a.classList.add('experimental');
+
+  cn.innerHTML = 'D flat/b minor';
+
+  r1.innerHTML = 'F#m';
+  r2.innerHTML = 'E';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Dbm';
+  r4.innerHTML = 'Abm';
+  r5.innerHTML = 'Dm';
+  r6.innerHTML = 'Ebm';
+  r7.innerHTML = 'Cm';
+  r8.innerHTML = 'Bm';
+  r9.innerHTML = 'A';
+}
+
+function keyDm() {
+  removeAllClasses();
+  gm.classList.add('relative');
+  f.classList.add('relative');
+  dm.classList.add('active');
+  am.classList.add('relative');
+  ebm.classList.add('leboost');
+  em.classList.add('heboost');
+  dbm.classList.add('ledrain');
+  cm.classList.add('hedrain');
+  bb.classList.add('experimental');
+
+  cn.innerHTML = 'D minor';
+
+  r1.innerHTML = 'Gm';
+  r2.innerHTML = 'F';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Dm';
+  r4.innerHTML = 'Am';
+  r5.innerHTML = 'Ebm';
+  r6.innerHTML = 'Em';
+  r7.innerHTML = 'Dbm';
+  r8.innerHTML = 'Cm';
+  r9.innerHTML = 'Bb';
+}
+
+function keyE() {
+  removeAllClasses();
+  a.classList.add('relative');
+  dbm.classList.add('relative');
+  e.classList.add('active');
+  b.classList.add('relative');
+  f.classList.add('leboost');
+  fs.classList.add('heboost');
+  eb.classList.add('ledrain');
+  d.classList.add('hedrain');
+  abm.classList.add('experimental');
+
+  cn.innerHTML = 'E major';
+
+  r1.innerHTML = 'A';
+  r2.innerHTML = 'Dbm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'E';
+  r4.innerHTML = 'B';
+  r5.innerHTML = 'F';
+  r6.innerHTML = 'F#';
+  r7.innerHTML = 'Eb';
+  r8.innerHTML = 'D';
+  r9.innerHTML = 'Abm';
+}
+
+function keyEb() {
+  removeAllClasses();
+  ab.classList.add('relative');
+  cm.classList.add('relative');
+  eb.classList.add('active');
+  bb.classList.add('relative');
+  e.classList.add('leboost');
+  f.classList.add('heboost');
+  d.classList.add('ledrain');
+  db.classList.add('hedrain');
+  gm.classList.add('experimental');
+
+  cn.innerHTML = 'E flat/b major';
+
+  r1.innerHTML = 'Ab';
+  r2.innerHTML = 'Cm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'Eb';
+  r4.innerHTML = 'Bb';
+  r5.innerHTML = 'E';
+  r6.innerHTML = 'F';
+  r7.innerHTML = 'D';
+  r8.innerHTML = 'Db';
+  r9.innerHTML = 'Gm';
+}
+
+function keyEbm() {
+  removeAllClasses();
+  abm.classList.add('relative');
+  fs.classList.add('relative');
+  ebm.classList.add('active');
+  bbm.classList.add('relative');
+  em.classList.add('leboost');
+  fm.classList.add('heboost');
+  dm.classList.add('ledrain');
+  dbm.classList.add('hedrain');
+  b.classList.add('experimental');
+
+  cn.innerHTML = 'E flat/b minor';
+
+  r1.innerHTML = 'Abm';
+  r2.innerHTML = 'F#';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Ebm';
+  r4.innerHTML = 'Bbm';
+  r5.innerHTML = 'Em';
+  r6.innerHTML = 'Fm';
+  r7.innerHTML = 'Dm';
+  r8.innerHTML = 'Dbm';
+  r9.innerHTML = 'B';
+}
+
+function keyEm() {
+  removeAllClasses();
+  am.classList.add('relative');
+  g.classList.add('relative');
+  em.classList.add('active');
+  bm.classList.add('relative');
+  fm.classList.add('leboost');
+  fsm.classList.add('heboost');
+  ebm.classList.add('ledrain');
+  dm.classList.add('hedrain');
+  c.classList.add('experimental');
+
+  cn.innerHTML = 'E minor';
+
+  r1.innerHTML = 'Am';
+  r2.innerHTML = 'G';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Em';
+  r4.innerHTML = 'Bm';
+  r5.innerHTML = 'Fm';
+  r6.innerHTML = 'F#m';
+  r7.innerHTML = 'Ebm';
+  r8.innerHTML = 'Dm';
+  r9.innerHTML = 'C';
+}
+
+function keyF() {
+  removeAllClasses();
+  bb.classList.add('relative');
+  dm.classList.add('relative');
+  f.classList.add('active');
+  c.classList.add('relative');
+  fs.classList.add('leboost');
+  g.classList.add('heboost');
+  e.classList.add('ledrain');
+  eb.classList.add('hedrain');
+  am.classList.add('experimental');
+
+  cn.innerHTML = 'F major';
+
+  r1.innerHTML = 'Bb';
+  r2.innerHTML = 'Dm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'F';
+  r4.innerHTML = 'C';
+  r5.innerHTML = 'F#';
+  r6.innerHTML = 'G';
+  r7.innerHTML = 'E';
+  r8.innerHTML = 'Eb';
+  r9.innerHTML = 'Am';
+}
+
+function keyFs() {
+  removeAllClasses();
+  b.classList.add('relative');
+  ebm.classList.add('relative');
+  fs.classList.add('active');
+  db.classList.add('relative');
+  g.classList.add('leboost');
+  ab.classList.add('heboost');
+  f.classList.add('ledrain');
+  e.classList.add('hedrain');
+  bbm.classList.add('experimental');
+
+  cn.innerHTML = 'F sharp/# major';
+
+  r1.innerHTML = 'B';
+  r2.innerHTML = 'Ebm';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'F#';
+  r4.innerHTML = 'Db';
+  r5.innerHTML = 'G';
+  r6.innerHTML = 'Ab';
+  r7.innerHTML = 'F';
+  r8.innerHTML = 'E';
+  r9.innerHTML = 'Bbm';
+}
+
+function keyFsm() {
+  removeAllClasses();
+  bm.classList.add('relative');
+  a.classList.add('relative');
+  fsm.classList.add('active');
+  dbm.classList.add('relative');
+  gm.classList.add('leboost');
+  abm.classList.add('heboost');
+  fm.classList.add('ledrain');
+  em.classList.add('hedrain');
+  d.classList.add('experimental');
+
+  cn.innerHTML = 'F sharp/# minor';
+
+  r1.innerHTML = 'Bm';
+  r2.innerHTML = 'A';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'F#m';
+  r4.innerHTML = 'Dbm';
+  r5.innerHTML = 'Gm';
+  r6.innerHTML = 'Abm';
+  r7.innerHTML = 'Fm';
+  r8.innerHTML = 'Em';
+  r9.innerHTML = 'D';
+}
+
+function keyFm() {
+  removeAllClasses();
+  bbm.classList.add('relative');
+  ab.classList.add('relative');
+  fm.classList.add('active');
+  cm.classList.add('relative');
+  fsm.classList.add('leboost');
+  gm.classList.add('heboost');
+  em.classList.add('ledrain');
+  ebm.classList.add('hedrain');
+  db.classList.add('experimental');
+
+  cn.innerHTML = 'F minor';
+
+  r1.innerHTML = 'Bbm';
+  r2.innerHTML = 'Ab';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Fm';
+  r4.innerHTML = 'Cm';
+  r5.innerHTML = 'F#m';
+  r6.innerHTML = 'Gm';
+  r7.innerHTML = 'Em';
+  r8.innerHTML = 'Ebm';
+  r9.innerHTML = 'Db';
+}
+
+function keyG() {
+  removeAllClasses();
+  c.classList.add('relative');
+  em.classList.add('relative');
+  g.classList.add('active');
+  d.classList.add('relative');
+  ab.classList.add('leboost');
+  a.classList.add('heboost');
+  fs.classList.add('ledrain');
+  f.classList.add('hedrain');
+  bm.classList.add('experimental');
+
+  cn.innerHTML = 'G major';
+
+  r1.innerHTML = 'C';
+  r2.innerHTML = 'Em';
+  r2b.innerHTML = 'Relative minor';
+  r3.innerHTML = 'G';
+  r4.innerHTML = 'D';
+  r5.innerHTML = 'Ab';
+  r6.innerHTML = 'A';
+  r7.innerHTML = 'F#';
+  r8.innerHTML = 'F';
+  r9.innerHTML = 'Bm';
+}
+
+function keyGm() {
+  removeAllClasses();
+  cm.classList.add('relative');
+  bb.classList.add('relative');
+  gm.classList.add('active');
+  dm.classList.add('relative');
+  abm.classList.add('leboost');
+  am.classList.add('heboost');
+  fsm.classList.add('ledrain');
+  fm.classList.add('hedrain');
+  eb.classList.add('experimental');
+
+  cn.innerHTML = 'G minor';
+
+  r1.innerHTML = 'Cm';
+  r2.innerHTML = 'Bb';
+  r2b.innerHTML = 'Relative major';
+  r3.innerHTML = 'Gm';
+  r4.innerHTML = 'Dm';
+  r5.innerHTML = 'Abm';
+  r6.innerHTML = 'Am';
+  r7.innerHTML = 'F#m';
+  r8.innerHTML = 'Fm';
+  r9.innerHTML = 'Eb';
+}
+    
 </script>
   
 </body>

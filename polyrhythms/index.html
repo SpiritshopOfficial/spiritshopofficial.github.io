@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
   <style>
+
 html {
   color: #fff;
   font-family: "Inter", sans-serif;
@@ -30,6 +31,14 @@ body {
   max-width: 24rem;
 }
 
+h1 {
+  margin: 1.2rem 0 1.5rem;
+}
+
+h2 {
+  margin: 1.8rem 0 1.5rem;
+}
+
 .form-group {
   position: relative;
 }
@@ -42,7 +51,7 @@ input {
   text-align: center;
   line-height: 2.4rem;
   padding-right: 3.3rem;
-  border: 2px solid #333;
+  border: 2px solid #444;
   border-radius: .45rem;
   background: #111;
   color: #fff;
@@ -58,7 +67,8 @@ label {
 }
 
 .change-buttons {
- display: flex; 
+ display: flex;
+  margin: .3rem 0 1.5rem;
 }
 
 a {
@@ -66,12 +76,16 @@ a {
   color: #fff;
   text-align: center;
   font-size: 1rem;
-  margin-top: 0.3rem;
-  margin-right: 0.09rem;
+  margin-right: .3rem;
   line-height: 2.4rem;
   background: #111;
   border-radius: .45rem;
   text-decoration: none;
+  font-weight: 700;
+}
+
+a:last-child {
+  margin-right: 0;
 }
 
 .button-3 {
@@ -86,23 +100,19 @@ a {
   flex: 2;
 }
 
-a:hover {
-  color: #222;
-  background: #fff;
-}
-
 h2 {
   margin: 1.8rem 0 1.5rem;
 }
 
-.table {
+#table {
   display: flex;
   flex-direction: column;
+  margin: 1.5rem 0 1.2rem;
 }
 
 .row {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: .6rem;
 }
 
 .cell-1,
@@ -116,6 +126,11 @@ h2 {
   width: 2.7rem;
   font-size: 1.05rem;
 }
+
+.cell-2 {
+  cursor: pointer;
+}
+    
   </style>
   
 </head>
@@ -136,7 +151,7 @@ h2 {
   </div>
 
   <h2>Calculations</h2>
-  <div class="table" id="table">
+  <div id="table">
     <div class="row">
       <div class="cell-1">1/2</div>
       <div class="cell-2" id="result1">60 bpm</div>
@@ -150,21 +165,30 @@ h2 {
       <div class="cell-2" id="result3">90 bpm</div>
     </div>
     <div class="row">
+      <div class="cell-1">4/5</div>
+      <div class="cell-2" id="result4">90 bpm</div>
+    </div>
+    <div class="row">
+      <div class="cell-1">5/4</div>
+      <div class="cell-2" id="result5">90 bpm</div>
+    </div>
+    <div class="row">
       <div class="cell-1">4/3</div>
-      <div class="cell-2" id="result4">96 bpm</div>
+      <div class="cell-2" id="result6">96 bpm</div>
     </div>
     <div class="row">
       <div class="cell-1">3/2</div>
-      <div class="cell-2" id="result5">180 bpm</div>
+      <div class="cell-2" id="result7">180 bpm</div>
     </div>
     <div class="row">
       <div class="cell-1">2</div>
-      <div class="cell-2" id="result6">240 bpm</div>
+      <div class="cell-2" id="result8">240 bpm</div>
     </div>
   </div>
   
 <script>
-  let currentBpm = 120;
+
+  let currentBpm = 120.00;
   let isTyping = false;
 
   function changeBpm(value) {
@@ -177,9 +201,11 @@ h2 {
     const bpm1 = (currentBpm / 2).toFixed(2);
     const bpm2 = (currentBpm * 2 / 3).toFixed(2);
     const bpm3 = (currentBpm * 3 / 4).toFixed(2);
-    const bpm4 = (currentBpm * 4 / 3).toFixed(2);
-    const bpm5 = (currentBpm * 3 / 2).toFixed(2);
-    const bpm6 = (currentBpm * 2).toFixed(2);
+    const bpm4 = (currentBpm * 4 / 5).toFixed(2);
+    const bpm5 = (currentBpm * 5 / 4).toFixed(2);
+    const bpm6 = (currentBpm * 4 / 3).toFixed(2);
+    const bpm7 = (currentBpm * 3 / 2).toFixed(2);
+    const bpm8 = (currentBpm * 2).toFixed(2);
 
     document.getElementById('result1').innerText = bpm1 + " bpm";
     document.getElementById('result2').innerText = bpm2 + " bpm";
@@ -187,6 +213,8 @@ h2 {
     document.getElementById('result4').innerText = bpm4 + " bpm";
     document.getElementById('result5').innerText = bpm5 + " bpm";
     document.getElementById('result6').innerText = bpm6 + " bpm";
+    document.getElementById('result7').innerText = bpm7 + " bpm";
+    document.getElementById('result8').innerText = bpm8 + " bpm";
 
     // Add event listeners to results for inserting into input
     document.getElementById('result1').onclick = () => insertBpm(bpm1);
@@ -195,6 +223,8 @@ h2 {
     document.getElementById('result4').onclick = () => insertBpm(bpm4);
     document.getElementById('result5').onclick = () => insertBpm(bpm5);
     document.getElementById('result6').onclick = () => insertBpm(bpm6);
+    document.getElementById('result7').onclick = () => insertBpm(bpm7);
+    document.getElementById('result8').onclick = () => insertBpm(bpm8);
   }
 
   function handleInput() {
@@ -238,6 +268,7 @@ h2 {
   });
 
   updateResults(); // Initial update
+
 </script>
   
 </body>

@@ -50,6 +50,10 @@ h2 {
   margin: 1.8rem 0 1.5rem;
 }
 
+h3 {
+  margin: 0.9rem 0 1.5rem;
+}
+
 .form-group {
   position: relative;
 }
@@ -115,6 +119,10 @@ h2 {
   margin: 1.8rem 0 1.5rem;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 #table {
   display: flex;
   flex-direction: column;
@@ -123,7 +131,7 @@ h2 {
 
 .row {
   display: flex;
-  margin-bottom: .6rem;
+  margin-bottom: 0.75rem;
 }
 
 .cell-1,
@@ -165,40 +173,57 @@ h2 {
   <div id="table">
     <div class="row">
       <div class="cell-1">1/2</div>
-      <div class="cell-2" id="result1">60 bpm</div>
+      <div class="cell-2" id="result12">60.00 bpm</div>
     </div>
     <div class="row">
       <div class="cell-1">2/3</div>
-      <div class="cell-2" id="result2">80 bpm</div>
+      <div class="cell-2" id="result23">80.00 bpm</div>
     </div>
     <div class="row">
       <div class="cell-1">3/4</div>
-      <div class="cell-2" id="result3">90 bpm</div>
+      <div class="cell-2" id="result34">90.00 bpm</div>
     </div>
+    
     <div class="row">
-      <div class="cell-1">4/5</div>
-      <div class="cell-2" id="result4">90 bpm</div>
     </div>
-    <div class="row">
-      <div class="cell-1">5/4</div>
-      <div class="cell-2" id="result5">90 bpm</div>
-    </div>
+    
     <div class="row">
       <div class="cell-1">4/3</div>
-      <div class="cell-2" id="result6">96 bpm</div>
+      <div class="cell-2" id="result43">160.00 bpm</div>
     </div>
     <div class="row">
       <div class="cell-1">3/2</div>
-      <div class="cell-2" id="result7">180 bpm</div>
+      <div class="cell-2" id="result32">180.00 bpm</div>
     </div>
     <div class="row">
-      <div class="cell-1">2</div>
-      <div class="cell-2" id="result8">240 bpm</div>
+      <div class="cell-1">2/1</div>
+      <div class="cell-2" id="result21">240.00 bpm</div>
+    </div>
+    
+    <h3>Advanced</h3>
+    
+    <div class="row">
+      <div class="cell-1">3/5</div>
+      <div class="cell-2" id="result35">72.00 bpm</div>
+    </div>
+    <div class="row">
+      <div class="cell-1">4/5</div>
+      <div class="cell-2" id="result45">96.00 bpm</div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="cell-1">5/4</div>
+      <div class="cell-2" id="result54">150.00 bpm</div>
+    </div>
+    <div class="row">
+      <div class="cell-1">5/3</div>
+      <div class="cell-2" id="result53">200.00 bpm</div>
     </div>
   </div>
   
 <script>
-
+ 
   let currentBpm = 120.00;
   let isTyping = false;
 
@@ -209,33 +234,42 @@ h2 {
   }
 
   function updateResults() {
-    const bpm1 = (currentBpm / 2).toFixed(2);
-    const bpm2 = (currentBpm * 2 / 3).toFixed(2);
-    const bpm3 = (currentBpm * 3 / 4).toFixed(2);
-    const bpm4 = (currentBpm * 4 / 5).toFixed(2);
-    const bpm5 = (currentBpm * 5 / 4).toFixed(2);
-    const bpm6 = (currentBpm * 4 / 3).toFixed(2);
-    const bpm7 = (currentBpm * 3 / 2).toFixed(2);
-    const bpm8 = (currentBpm * 2).toFixed(2);
-
-    document.getElementById('result1').innerText = bpm1 + " bpm";
-    document.getElementById('result2').innerText = bpm2 + " bpm";
-    document.getElementById('result3').innerText = bpm3 + " bpm";
-    document.getElementById('result4').innerText = bpm4 + " bpm";
-    document.getElementById('result5').innerText = bpm5 + " bpm";
-    document.getElementById('result6').innerText = bpm6 + " bpm";
-    document.getElementById('result7').innerText = bpm7 + " bpm";
-    document.getElementById('result8').innerText = bpm8 + " bpm";
+    const bpm12 = (currentBpm / 2).toFixed(2);
+    const bpm23 = (currentBpm * 2 / 3).toFixed(2);
+    const bpm34 = (currentBpm * 3 / 4).toFixed(2);
+    const bpm43 = (currentBpm * 4 / 3).toFixed(2);
+    const bpm32 = (currentBpm * 3 / 2).toFixed(2);
+    const bpm21 = (currentBpm * 2).toFixed(2);
+    //Addvanced
+    const bpm35 = (currentBpm * 3 / 5).toFixed(2);
+    const bpm45 = (currentBpm * 4 / 5).toFixed(2);
+    const bpm54 = (currentBpm * 5 / 4).toFixed(2);
+    const bpm53 = (currentBpm * 5 / 3).toFixed(2);
+   
+    document.getElementById('result12').innerText = bpm12 + " bpm";
+    document.getElementById('result23').innerText = bpm23 + " bpm";
+    document.getElementById('result34').innerText = bpm34 + " bpm";
+    document.getElementById('result43').innerText = bpm43 + " bpm";
+    document.getElementById('result32').innerText = bpm32 + " bpm";
+    document.getElementById('result21').innerText = bpm21 + " bpm";
+    //Advanced
+    document.getElementById('result35').innerText = bpm35 + " bpm";
+    document.getElementById('result45').innerText = bpm45 + " bpm";
+    document.getElementById('result54').innerText = bpm54 + " bpm";
+    document.getElementById('result53').innerText = bpm53 + " bpm";
 
     // Add event listeners to results for inserting into input
-    document.getElementById('result1').onclick = () => insertBpm(bpm1);
-    document.getElementById('result2').onclick = () => insertBpm(bpm2);
-    document.getElementById('result3').onclick = () => insertBpm(bpm3);
-    document.getElementById('result4').onclick = () => insertBpm(bpm4);
-    document.getElementById('result5').onclick = () => insertBpm(bpm5);
-    document.getElementById('result6').onclick = () => insertBpm(bpm6);
-    document.getElementById('result7').onclick = () => insertBpm(bpm7);
-    document.getElementById('result8').onclick = () => insertBpm(bpm8);
+    document.getElementById('result12').onclick = () => insertBpm(bpm12);
+    document.getElementById('result23').onclick = () => insertBpm(bpm23);
+    document.getElementById('result34').onclick = () => insertBpm(bpm34);
+    document.getElementById('result43').onclick = () => insertBpm(bpm43);
+    document.getElementById('result32').onclick = () => insertBpm(bpm32);
+    document.getElementById('result21').onclick = () => insertBpm(bpm21);
+    //Advanced
+    document.getElementById('result35').onclick = () => insertBpm(bpm35);
+    document.getElementById('result45').onclick = () => insertBpm(bpm45);
+    document.getElementById('result54').onclick = () => insertBpm(bpm54);
+    document.getElementById('result53').onclick = () => insertBpm(bpm53);
   }
 
   function handleInput() {

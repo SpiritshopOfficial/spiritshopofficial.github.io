@@ -1,3 +1,5 @@
+/* Global */
+
 * {
   padding: 0;
   margin: 0;
@@ -16,21 +18,9 @@ body {
   background: #222;
 }
 
-.wrapper {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-}
-
 @media (max-width: 50vh) {
   html {
     font-size: 2vw;
-  }
-}
-
-@media (max-width: 75vh) {
-  .wrapper {
-    scroll-snap-type: none;
   }
 }
 
@@ -44,69 +34,30 @@ body {
   }
 }
 
-.header, .footer, .container {
-  display: flex;
-  width: 100%;
-  height: 81rem;
-  flex: 0 0 auto;
+/* Z-Index */
+
+.menu-button {
+  z-index: 2;
 }
 
-.header {
-    scroll-snap-align: start;
+.menu {
+  z-index: 1;
 }
 
-.container {
-    scroll-snap-align: center;
+.logotype {
+  z-index: -2;
 }
 
-.footer {
-    scroll-snap-align: end;
+.spiritshop-photo {
+  z-index: -3;
 }
 
-.col, .column {
-  padding: 15rem 6rem;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.umn-1 {
-  align-items: center;
-}
-
-.umn-2 {
-  align-items: stretch;
-}
-
-.umn-3 {
-  align-items: flex-end;
-}
-
-.middle {
-  justify-content: space-evenly;
-}
-
-.text > * {
-  width: 100%;
-  max-width: 48rem;
-}
-
-.box {
-  display: flex;
-  flex-flow: column;
-}
-
-.box > * {
-  margin-bottom: 1.8rem;
-}
-
-.box > *:last-child {
-  margin-bottom: 0;
-}
+/* Typography & Links */
 
 a {
+  cursor: pointer;
   color: inherit;
-  font-size: 2.25rem;
+  font-size: 2.4rem;
   word-break: break-all;
 }
 
@@ -159,7 +110,6 @@ h1, h3 {
 }
 
 .right {
-  align-self: flex-end;
   text-align: right;
 }
 
@@ -172,18 +122,23 @@ h3 {
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 3.3rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+h5 {
+  font-size: 3.9rem;
+  font-weight: 400;
+}
+
 p {
-  font-size: 2.1rem;
+  font-size: 2.25rem;
 }
 
 .huge {
-  font-size: 12rem;
+  font-size: 13.5rem;
   line-height: 1em;
   word-wrap: break-word;
 }
@@ -201,22 +156,323 @@ p {
   text-align: center;
 }
 
-path {
-  fill: #fff;
+.right {
+  text-align: right;
 }
 
-.button {
-  display: block;
+/* Menu */
+
+.menu,
+.menu-button {
+  height: 7.5rem;
+}
+
+.menu {
+  margin-bottom: -7.5rem;
+}
+
+.menu-button {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 9rem;
+}
+
+.tg {
+  position: absolute;
+  left: 3rem;
+  margin-top: -0.12rem;
+  height: 0.24rem;
+  width: 3rem;
   background: #fff;
-  color: #222;
-  font-size: 2.1rem;
-  line-height: 2.7rem;
-  padding: 1.5rem 4.5rem;
-  border-radius: 10rem;
-  font-weight: 600; 
-  text-transform: uppercase;
+  transition: 0.45s;
+}
+
+.tg-top {
+  top: 35%;
+}
+
+.tg-bottom {
+  top: 65%;
+}
+
+.tg-center {
+  top: 50%;
+}
+
+.clicked > .tg-top,
+.clicked > .tg-bottom {
+  margin-top: -0.135rem;
+  height: 0.27rem;
+  top: calc(50% - 0.135rem);
+  left: 2.7rem;
+  width: 3.6rem;
+}
+
+.clicked > .tg-top {
+  transform: rotate(45deg);
+}
+
+.clicked > .tg-bottom {
+  transform: rotate(-45deg);
+}
+
+.clicked > .tg-center {
+  width: 0rem;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 0 3rem;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: rgba(34, 34, 34, 0.75);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  opacity: 0;
+  transition: .45s .15s, .45s opacity, 0s width;
+}
+
+.visible {
+  opacity: 1;
+  transition: .45s .15s, 0s width;
+}
+
+.open {
+  height: 100vh;
+  background: rgba(18, 18, 18, 0.75);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  opacity: 1;
+  transition: 0.45s, 0s width;
+}
+
+.menu > .menu-container {
+  opacity: 0;
+  transition: .45s opacity;
+}
+
+.open > .menu-container {
+  opacity: 1;
+  transition: .45s opacity .3s;
+}
+
+.menu > .menu-container > .menu-line {
+  width: 0;
+  transition: .45s width;
+}
+
+.open > .menu-container > .menu-line {
+  width: 100%;
+  transition: .45s width .3s;
+}
+
+.menu-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  max-width: 48rem;
+  flex: 0 0 auto;
+  flex-flow: column;
+  justify-content: center;
+  padding: 7.5vh 0;
+}
+
+.menu-box {
+  display: flex;
+  flex-flow: column;
+}
+
+.menu-container > * {
+  max-width: 48rem;
+  margin-bottom: 2.4rem;
+}
+
+.menu-container > *:last-child {
+  margin-bottom: 0;
+}
+
+.menu-line {
+  height: 0.24rem;
+  background: #ffffff;
+  margin: 3rem 0 4.5rem;
+}
+
+.menu-box {
+  width: 100%;
+}
+
+.menu a {
   text-decoration: none;
-  margin-top: 1rem;
+}
+
+.main-link {
+  font-size: 5.4rem;
+}
+
+.secondary-headline {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 0.45rem;
+}
+
+.secondary-link {
+  margin-top: 1.05rem;
+  font-size: 3.6rem;
+}
+
+/* Content */
+
+.wrapper {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+@media (max-width: 75vh) {
+  .wrapper {
+    scroll-snap-type: none;
+  }
+}
+
+.header, .footer, .container {
+  display: flex;
+  width: 100%;
+  padding: 15rem 3rem;
+  flex: 0 0 auto;
+}
+
+.header {
+  height: 92.5rem;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  height: 85rem;
+  scroll-snap-align: center;
+}
+
+.footer {
+  scroll-snap-align: end;
+  height: 92.5rem;
+}
+
+.col {
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.col > * {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.umn-1 {
+  align-items: center;
+}
+
+.umn-2 {
+  align-items: flex-start;
+}
+
+.umn-3 {
+  align-items: flex-end;
+}
+
+.umn-4 {
+  align-items: stretch;
+}
+
+.middle {
+  justify-content: space-evenly;
+}
+
+.center {
+  text-align: center;
+}
+
+.box > * {
+  margin-bottom: 3rem;
+}
+
+.box > *:last-child {
+  margin-bottom: none;
+}
+
+
+/* Header */
+
+.logotype {
+  width: 75%;
+  max-width: 48rem;
+  height: 6rem;
+}
+
+.spiritshop-photo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100% !important;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+/*  filter: grayscale(100%); */
+}
+
+.overlay {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.sp-1 {
+  animation: 16s opacity-1 step-end infinite, 16s zoom-1 linear infinite;
+}
+
+.sp-2 {
+  animation: 16s opacity-1 step-end 4s infinite, 16s zoom-1 linear 4s infinite;
+}
+
+.sp-3 {
+  animation: 16s opacity-1 step-end 8s infinite, 16s zoom-1 linear 8s infinite;
+}
+
+.sp-4 {
+  animation: 16s opacity-1 step-end 12s infinite, 16s zoom-1 linear 12s infinite;
+}
+
+@keyframes opacity-1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoom-1 {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+/* Styling */
+
+path {
+  fill: #ffffff;
 }
 
 .grey {
@@ -238,57 +494,89 @@ path {
   );
 }
 
-.spiritshop-logo-symbol {
-  height: 8.4rem;
-}
+/* Social icons */
 
-.banner {
-  position: relative;
-  overflow: hidden;
-}
-
-.logotype {
-  z-index: 1;
-  width: 75%;
-  max-width: 48rem;
-  height: 6rem;
-}
-
-.spiritshop-photo {
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100% !important;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  background-size: cover;
-/*  filter: grayscale(100%); */
-}
-
-.overlay {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-}
-
-.slideshow,
-.container-slideshow {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+.social-links {
   display: flex;
-  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
-.slideshow-photo {
-  flex: 0 0 auto;
-  height: 100%;
-  min-width: 90%;
-  background-size: cover;
-  background-position: center;
-  scroll-snap-align: center;
+.social-links > a {
+  margin: 0 1.8rem;
 }
 
-iframe {
-  height: 314px;
-  width: 100%;
-  max-width: 96rem;
+.instagram-logo {
+  width: 4.2rem;
+}
+
+.soundcloud-logo {
+  width: 7.2rem;
+}
+
+.youtube-logo {
+  width: 5.25rem;
+}
+
+.linktree-logo {
+  width: 3.75rem;
+  fill: #ffffff;
+}
+
+.beat-1 {
+  animation: beat 5s step-end infinite;
+}
+
+.beat-2 {
+  animation: beat 5s step-end 2s infinite;
+}
+
+.beat-3 {
+  animation: beat 5s step-end 4s infinite;
+}
+
+.beat-4 {
+  animation: beat 5s step-end 6s infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  92.5% {
+    transform: scale(1.15);
+  }
+  95% {
+    transform: scale(1);
+  }
+  97.5% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation */
+
+.pulse {
+  animation: 2s pulse step-end infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background: #222;
+  }
+  7.5% {
+    background: #262626;
+  }
+  15% {
+    background: #222;
+  }
+  22.5% {
+    background: #262626;
+  }
+  30% {
+    background: #222;
+  }
 }

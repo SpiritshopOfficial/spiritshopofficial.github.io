@@ -1,7 +1,7 @@
 /* Loading */
 
 window.addEventListener('load', function() {
-  const loadingOverlay = document.getElementById('loading-overlay');
+  const loadingOverlay = document.querySelector('.loading-overlay');
   loadingOverlay.classList.add('loaded');
 });
 

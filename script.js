@@ -50,10 +50,10 @@ function toggleMenu() {
   // Check if the menu is open
   if (menu.classList.contains("open")) {
     // Disable scrolling
-    body.style.overflow = "hidden";
+    body.style.overflowY = "hidden";
   } else {
     // Enable scrolling
-    body.style.overflow = "scroll";
+    body.style.overflowY = "scroll";
     /* setTimeout(() => {
       body.style.overflow = "scroll";
     }, 600); */

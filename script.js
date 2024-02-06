@@ -54,8 +54,7 @@ function toggleMenu() {
   } else {
     // Enable scrolling
     body.style.overflow = "scroll";
-    /*
-    setTimeout(() => {
+    /* setTimeout(() => {
       body.style.overflow = "scroll";
     }, 600); */
   }

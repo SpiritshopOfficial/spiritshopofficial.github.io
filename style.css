@@ -16,7 +16,7 @@ html {
 
 body {
   background: #222;
-  overflow: scroll;
+  overflowX: hidden;
 }
 
 @media (max-width: 50vh) {

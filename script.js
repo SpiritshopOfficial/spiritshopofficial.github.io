@@ -17,17 +17,6 @@ if (isInstagram) {
   document.querySelector('html').classList.add("html-insta");
 }
 
-/* Scroll to Top */
-
-function scrollToTop() {
-  if (document.documentElement) {
-    document.documentElement.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-}
-
 
 /* Copyright Date */
 
@@ -40,15 +29,13 @@ document.getElementById("year").innerHTML = year;
 menu = document.querySelector(".menu");
 body = document.body;
 
-body.onscroll = function () {
-  console.log('Scrolling...');
-  var currentScroll = body.scrollTop; 
-  if (currentScroll < 120) {
-    menu.classList.add("visible");
-  } else {
-    menu.classList.remove("visible");
-  }
-};
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 120) {
+        menu.classList.add("visible");
+    } else {
+        menu.classList.remove("visible");
+    }
+});
 
 
 function toggleMenu() {
@@ -63,11 +50,22 @@ function toggleMenu() {
   // Check if the menu is open
   if (menu.classList.contains("open")) {
     // Disable scrolling
-    body.style.overflow = "hidden";
+    body.style.overflowY = "hidden";
   } else {
     // Enable scrolling
     setTimeout(() => {
-      body.style.overflow = "";
+      body.style.overflowY = "";
     }, 600);
+  }
+}
+
+/* Scroll to Top */
+
+function scrollToTop() {
+  if (document.documentElement) {
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 }

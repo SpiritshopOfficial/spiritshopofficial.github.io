@@ -50,6 +50,7 @@ body {
 
 .loaded {
   opacity: 0;
+  pointer-events: none;
 }
 
 /* Z-Index */

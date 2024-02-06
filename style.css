@@ -34,6 +34,24 @@ body {
   }
 }
 
+/* Loading Overlay */
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+.loaded #loading-overlay {
+  opacity: 0;
+}
+
 /* Z-Index */
 
 .menu-button {

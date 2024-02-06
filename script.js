@@ -53,9 +53,11 @@ function toggleMenu() {
     body.style.overflow = "hidden";
   } else {
     // Enable scrolling
+    body.style.overflow = "scroll";
+    /*
     setTimeout(() => {
       body.style.overflow = "scroll";
-    }, 600);
+    }, 600); */
   }
 }
 

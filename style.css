@@ -302,6 +302,12 @@ p {
   padding: 7.5vh 0;
 }
 
+@media (max-width: 50vh) {
+  .menu-container {
+    padding: 7.5vh 0 15vh;
+  }
+}
+
 .menu-box {
   display: flex;
   flex-flow: column;
@@ -309,7 +315,7 @@ p {
 
 .menu-container > * {
   max-width: 48rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.1rem;
 }
 
 .menu-container > *:last-child {
@@ -331,7 +337,7 @@ p {
 }
 
 .main-link {
-  font-size: 5.1rem;
+  font-size: 4.8rem;
 }
 
 .secondary-headline {
@@ -340,8 +346,8 @@ p {
 }
 
 .secondary-link {
-  margin-top: 2.1rem;
-  font-size: 3.9rem;
+  margin-top: 1.8rem;
+  font-size: 3.3rem;
 }
 
 /* Content */

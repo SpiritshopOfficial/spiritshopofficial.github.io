@@ -304,7 +304,7 @@ p {
 
 @media (max-width: 50vh) {
   .menu-container {
-    padding: 7.5vh 0 15vh;
+    padding: 7.5vh 0 22.5vh;
   }
 }
 
@@ -315,7 +315,7 @@ p {
 
 .menu-container > * {
   max-width: 48rem;
-  margin-bottom: 2.1rem;
+  margin-bottom: 1.8rem;
 }
 
 .menu-container > *:last-child {
@@ -346,7 +346,7 @@ p {
 }
 
 .secondary-link {
-  margin-top: 1.8rem;
+  margin-top: 1.5rem;
   font-size: 3.3rem;
 }
 

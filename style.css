@@ -223,7 +223,7 @@ p {
 }
 
 .menu {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 0 3rem;
@@ -300,7 +300,7 @@ p {
 .menu-line {
   height: 0.24rem;
   background: #ffffff;
-  margin: 3rem 0 4.5rem;
+  margin: 3rem 0 4.2rem;
 }
 
 .menu-box {
@@ -312,17 +312,17 @@ p {
 }
 
 .main-link {
-  font-size: 5.4rem;
+  font-size: 5.1rem;
 }
 
 .secondary-headline {
   font-size: 1.8rem;
-  margin: 1.5rem 0 0.45rem;
+  margin: 1.8rem 0 0.3rem;
 }
 
 .secondary-link {
-  margin-top: 1.05rem;
-  font-size: 3.6rem;
+  margin-top: 2.1rem;
+  font-size: 3.9rem;
 }
 
 /* Content */

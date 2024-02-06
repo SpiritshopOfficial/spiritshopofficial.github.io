@@ -16,6 +16,7 @@ html {
 
 body {
   background: #222;
+  overflow: scroll;
 }
 
 @media (max-width: 50vh) {
@@ -157,7 +158,7 @@ p {
 }
 
 .huge {
-  font-size: 13.5rem;
+  font-size: 12rem;
   line-height: 1em;
   word-wrap: break-word;
 }

@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 /* Main */
 
 let menu;
-let wrapper;
+let body;
 
 /* Instagram Browser */
 
@@ -20,10 +20,8 @@ if (isInstagram) {
 /* Scroll to Top */
 
 function scrollToTop() {
-  const wrapper = document.querySelector('.wrapper');
-
-  if (wrapper) {
-    wrapper.scrollTo({
+  if (document.documentElement) {
+    document.documentElement.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
@@ -40,22 +38,20 @@ document.getElementById("year").innerHTML = year;
 /* Menu */
 
 menu = document.querySelector(".menu");
-wrapper = document.querySelector(".wrapper");
+body = document.body;
 
-wrapper.onscroll = function () {
-  var currentScroll = wrapper.scrollTop; // Use wrapper's scrollTop
-  // Check the scroll position
-  if (currentScroll > 120) {
-    // If scrolled down, remove the 'hidden' class from the menu
+body.onscroll = function () {
+  console.log('Scrolling...');
+  var currentScroll = body.scrollTop; 
+  if (currentScroll < 120) {
     menu.classList.add("visible");
   } else {
-    // If at the top, add the 'hidden' class
     menu.classList.remove("visible");
   }
 };
 
+
 function toggleMenu() {
-  const body = document.body;
   const menubutton = document.querySelector(".menu-button");
 
   // Toggle the 'open' class on the menu
@@ -67,11 +63,11 @@ function toggleMenu() {
   // Check if the menu is open
   if (menu.classList.contains("open")) {
     // Disable scrolling
-    wrapper.style.overflow = "hidden";
+    body.style.overflow = "hidden";
   } else {
     // Enable scrolling
     setTimeout(() => {
-      wrapper.style.overflow = "";
+      body.style.overflow = "";
     }, 600);
   }
 }

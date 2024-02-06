@@ -1,3 +1,12 @@
+/* Loading */
+
+window.addEventListener('load', function() {
+  const loadingOverlay = document.getElementById('loading-overlay');
+  loadingOverlay.classList.add('loaded');
+});
+
+/* Main */
+
 let menu;
 let wrapper;
 

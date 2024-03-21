@@ -342,13 +342,13 @@ p {
 }
 
 .secondary-headline {
-  font-size: 1.8rem;
-  margin: 1.8rem 0 0.3rem;
+  font-size: 1.5rem;
+  margin: 1.8rem 0 0.6rem;
 }
 
 .secondary-link {
-  margin-top: 1.5rem;
-  font-size: 3.3rem;
+  margin-top: 1.2rem;
+  font-size: 3.6rem;
 }
 
 /* Content */
@@ -373,14 +373,14 @@ p {
 }
 
 .header {
-  height: 92.5rem;
+  height: 85rem;
   scroll-snap-align: start;
   position: relative;
   overflow: hidden;
 }
 
 .container {
-  height: 85rem;
+  height: 77.5rem;
   scroll-snap-align: center;
 }
 
